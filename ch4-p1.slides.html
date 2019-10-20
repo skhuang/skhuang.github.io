@@ -13242,7 +13242,12 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="4.-Composite-Types">4. Composite Types<a class="anchor-link" href="#4.-Composite-Types">&#182;</a></h1>
+<h1 id="4.-Composite-Types">4. Composite Types<a class="anchor-link" href="#4.-Composite-Types">&#182;</a></h1><ul>
+<li>Arrays</li>
+<li>Slices</li>
+<li>Maps</li>
+</ul>
+
 </div>
 </div>
 </div></section></section><section><section>
@@ -13251,7 +13256,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="4.1.-Arrays">4.1. Arrays<a class="anchor-link" href="#4.1.-Arrays">&#182;</a></h2><ul>
 <li>An array is a fixed-length sequence of zero or mor element of a particular type</li>
-<li>Built-in function len returns the number of elements in the array</li>
+<li>Built-in function <i>len</i> returns the number of elements in the array</li>
 </ul>
 
 </div>
@@ -13259,7 +13264,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
@@ -13290,7 +13295,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[85]:</div>
 
 
 
@@ -13307,7 +13312,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">Print</span> <span class="n">the</span> <span class="n">indices</span> <span class="ow">and</span> <span class="n">elements</span><span class="o">.</span>
@@ -13343,7 +13348,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">Print</span> <span class="n">the</span> <span class="n">elements</span> <span class="n">only</span><span class="o">.</span>
@@ -13390,12 +13395,13 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">q</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="nb">int</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
+<span class="n">var</span> <span class="n">q</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="nb">int</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
 <span class="n">var</span> <span class="n">r</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="nb">int</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">}</span>
-<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">//</span> <span class="mi">0</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">q</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">//</span> <span class="mi">0</span>
 </pre></div>
 
     </div>
@@ -13412,20 +13418,20 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0
+<pre>2 3
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>2 &lt;nil&gt;</pre>
+<pre>4 &lt;nil&gt;</pre>
 </div>
 
 </div>
@@ -13436,10 +13442,10 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">}</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%T</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>   <span class="o">//</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="nb">int</span>
 </pre></div>
 
@@ -13457,14 +13463,14 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[3]int
+<pre>[7]int
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -13481,10 +13487,10 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
 <span class="n">q</span> <span class="o">=</span>  <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
 </pre></div>
 
@@ -13492,29 +13498,10 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-repl.go:2:1: error compiling assignment: q = [4]int{1, 2, 3, 4}
-	repl.go:2:1: incompatible types in assignment: [3]int = [4]int</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span> <span class="n">Currency</span> <span class="nb">int</span>
@@ -13524,7 +13511,7 @@ repl.go:2:1: error compiling assignment: q = [4]int{1, 2, 3, 4}
     <span class="n">GBP</span>
     <span class="n">RMB</span>
 <span class="p">)</span>
-<span class="n">symbol</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="n">string</span><span class="p">{</span><span class="n">USD</span><span class="p">:</span> <span class="s2">&quot;$&quot;</span><span class="p">,</span> <span class="n">EUR</span><span class="p">:</span> <span class="s2">&quot;€&quot;</span><span class="p">,</span> <span class="n">GBP</span><span class="p">:</span> <span class="s2">&quot;£&quot;</span><span class="p">,</span> <span class="n">RMB</span><span class="p">:</span> <span class="s2">&quot;¥&quot;</span><span class="p">}</span>
+<span class="n">symbol</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="n">string</span><span class="p">{</span><span class="n">USD</span><span class="p">:</span> <span class="s2">&quot;$&quot;</span><span class="p">,</span>  <span class="n">GBP</span><span class="p">:</span> <span class="s2">&quot;£&quot;</span><span class="p">,</span> <span class="n">RMB</span><span class="p">:</span> <span class="s2">&quot;¥&quot;</span><span class="p">,</span> <span class="n">EUR</span><span class="p">:</span> <span class="s2">&quot;€&quot;</span><span class="p">}</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">RMB</span><span class="p">,</span> <span class="n">symbol</span><span class="p">[</span><span class="n">RMB</span><span class="p">])</span>
 </pre></div>
 
@@ -13549,7 +13536,7 @@ repl.go:2:1: error compiling assignment: q = [4]int{1, 2, 3, 4}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[74]:</div>
 
 
 
@@ -13569,8 +13556,8 @@ repl.go:2:1: error compiling assignment: q = [4]int{1, 2, 3, 4}
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">99</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}</span>
-<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">99</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">199</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">}</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13587,7 +13574,7 @@ repl.go:2:1: error compiling assignment: q = [4]int{1, 2, 3, 4}
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1]
+<pre>[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2] 200
 </pre>
 </div>
 </div>
@@ -13600,7 +13587,7 @@ repl.go:2:1: error compiling assignment: q = [4]int{1, 2, 3, 4}
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>203 &lt;nil&gt;</pre>
+<pre>408 &lt;nil&gt;</pre>
 </div>
 
 </div>
@@ -13614,9 +13601,9 @@ repl.go:2:1: error compiling assignment: q = [4]int{1, 2, 3, 4}
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">}</span>
-<span class="n">b</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">}</span>
-<span class="n">c</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">}</span>
+<span class="n">b</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">}</span>
+<span class="n">c</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">==</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span> <span class="o">==</span> <span class="n">c</span><span class="p">)</span>
 <span class="n">d</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">}</span>
 <span class="o">//</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">d</span><span class="p">)</span>
@@ -13647,7 +13634,7 @@ repl.go:2:1: error compiling assignment: q = [4]int{1, 2, 3, 4}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">d</span><span class="p">)</span>  <span class="o">//</span> <span class="nb">compile</span> <span class="n">error</span><span class="p">:</span> <span class="n">cannot</span> <span class="n">compare</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="nb">int</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="nb">int</span>
@@ -13666,10 +13653,23 @@ repl.go:2:1: error compiling assignment: q = [4]int{1, 2, 3, 4}
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-repl.go:1:18: mismatched types in binary operation == between &lt;[2]int&gt; and &lt;[3]int&gt;: a == d</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+</pre>
 </div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6 &lt;nil&gt;</pre>
+</div>
+
 </div>
 
 </div>
@@ -13678,16 +13678,17 @@ repl.go:1:18: mismatched types in binary operation == between &lt;[2]int&gt; and
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ch4</span><span class="o">/</span><span class="n">sha256</span>
 <span class="kn">import</span> <span class="s2">&quot;crypto/sha256&quot;</span>
 <span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">c1</span> <span class="p">:</span><span class="o">=</span> <span class="n">sha256</span><span class="o">.</span><span class="n">Sum256</span><span class="p">([]</span><span class="n">byte</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">))</span>
-    <span class="n">c2</span> <span class="p">:</span><span class="o">=</span> <span class="n">sha256</span><span class="o">.</span><span class="n">Sum256</span><span class="p">([]</span><span class="n">byte</span><span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">))</span>
+    <span class="n">c1</span> <span class="p">:</span><span class="o">=</span> <span class="n">sha256</span><span class="o">.</span><span class="n">Sum256</span><span class="p">([]</span><span class="n">byte</span><span class="p">(</span><span class="s2">&quot;Y&quot;</span><span class="p">))</span>
+    <span class="n">c2</span> <span class="p">:</span><span class="o">=</span> <span class="n">sha256</span><span class="o">.</span><span class="n">Sum256</span><span class="p">([]</span><span class="n">byte</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">))</span>
     <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%x</span><span class="se">\n</span><span class="si">%x</span><span class="se">\n</span><span class="s2">%t</span><span class="se">\n</span><span class="s2">%T</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c1</span> <span class="o">==</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c1</span><span class="p">)</span>
 <span class="p">}</span>
+<span class="n">main</span><span class="p">()</span>
 <span class="o">//</span> <span class="n">Output</span><span class="p">:</span>
 <span class="o">//</span> <span class="mi">2</span><span class="n">d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881</span>
 <span class="o">//</span> <span class="mi">4</span><span class="n">b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015</span>
@@ -13699,10 +13700,31 @@ repl.go:1:18: mismatched types in binary operation == between &lt;[2]int&gt; and
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>18f5384d58bcb1bba0bcd9e6a6781d1a6ac2cc280c330ecbab6cb7931b721552
+2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881
+false
+[32]uint8
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span><span class="p">()</span>
@@ -13722,8 +13744,8 @@ repl.go:1:18: mismatched types in binary operation == between &lt;[2]int&gt; and
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881
-4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015
+<pre>18f5384d58bcb1bba0bcd9e6a6781d1a6ac2cc280c330ecbab6cb7931b721552
+2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881
 false
 [32]uint8
 </pre>
@@ -13748,7 +13770,7 @@ false
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">zero</span><span class="p">(</span><span class="n">ptr</span> <span class="o">*</span><span class="p">[</span><span class="mi">32</span><span class="p">]</span><span class="n">byte</span><span class="p">)</span> <span class="p">{</span>
@@ -13785,7 +13807,7 @@ false
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[65]:</div>
 
 
 
@@ -13802,7 +13824,7 @@ false
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">zero</span><span class="p">(</span><span class="n">ptr</span> <span class="o">*</span><span class="p">[</span><span class="mi">32</span><span class="p">]</span><span class="n">byte</span><span class="p">)</span> <span class="p">{</span>
@@ -13837,7 +13859,7 @@ false
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[39]:</div>
+    <div class="prompt output_prompt">Out[67]:</div>
 
 
 
@@ -13857,6 +13879,8 @@ false
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="4.2.-Slices">4.2. Slices<a class="anchor-link" href="#4.2.-Slices">&#182;</a></h2><ul>
 <li>Variable-length sequences whose elements all have the same type</li>
+<li>A slice type is written []T, with element type T</li>
+<li>A lightweight data structure with access to subsequence of the element of an array</li>
 <li>len and cap built-in functions</li>
 </ul>
 
@@ -13865,7 +13889,7 @@ false
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">months</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="n">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s2">&quot;January&quot;</span><span class="p">,</span> <span class="s2">&quot;February&quot;</span><span class="p">,</span> <span class="s2">&quot;March&quot;</span><span class="p">,</span> <span class="s2">&quot;April&quot;</span><span class="p">,</span> <span class="s2">&quot;May&quot;</span><span class="p">,</span> <span class="s2">&quot;June&quot;</span><span class="p">,</span> <span class="s2">&quot;July&quot;</span><span class="p">,</span> <span class="s2">&quot;August&quot;</span><span class="p">,</span> <span class="s2">&quot;September&quot;</span><span class="p">,</span> <span class="s2">&quot;October&quot;</span><span class="p">,</span> <span class="s2">&quot;November&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">:</span><span class="s2">&quot;December&quot;</span><span class="p">}</span>
@@ -13873,6 +13897,7 @@ false
 <span class="n">summer</span> <span class="p">:</span><span class="o">=</span> <span class="n">months</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">9</span><span class="p">]</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">Q2</span><span class="p">)</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">summer</span><span class="p">)</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%T</span><span class="se">\n</span><span class="s2">%T</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">Q2</span><span class="p">,</span> <span class="n">summer</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13891,19 +13916,21 @@ false
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[April May June]
 [June July August]
+[]string
+[]string
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>19 &lt;nil&gt;</pre>
+<pre>18 &lt;nil&gt;</pre>
 </div>
 
 </div>
@@ -13911,10 +13938,18 @@ false
 </div>
 </div>
 
-</div></section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<center>Two overlapping slices of an array of months
+<img src="https://skhuang.github.io/5-1.png"></center>
+</div>
+</div>
+</div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span><span class="o">=</span> <span class="nb">range</span> <span class="n">summer</span> <span class="p">{</span>
@@ -13951,10 +13986,10 @@ false
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">summer</span><span class="p">[:</span><span class="mi">20</span><span class="p">])</span> <span class="o">//</span> <span class="n">panic</span><span class="p">:</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">summer</span><span class="p">[:</span><span class="mi">8</span><span class="p">])</span> <span class="o">//</span> <span class="n">panic</span><span class="p">:</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
 </pre></div>
 
     </div>
@@ -13982,10 +14017,10 @@ reflect.Value.Slice: slice index out of bounds</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">endlessSummer</span> <span class="p">:</span><span class="o">=</span> <span class="n">summer</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span> <span class="o">//</span> <span class="n">extend</span> <span class="n">a</span> <span class="nb">slice</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">endlessSummer</span> <span class="p">:</span><span class="o">=</span> <span class="n">summer</span><span class="p">[:</span><span class="mi">7</span><span class="p">]</span> <span class="o">//</span> <span class="n">extend</span> <span class="n">a</span> <span class="nb">slice</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">endlessSummer</span><span class="p">)</span>  
 </pre></div>
 
@@ -14003,20 +14038,20 @@ reflect.Value.Slice: slice index out of bounds</pre>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[June July August September October]
+<pre>[June July August September October November December]
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[46]:</div>
+    <div class="prompt output_prompt">Out[82]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>37 &lt;nil&gt;</pre>
+<pre>55 &lt;nil&gt;</pre>
 </div>
 
 </div>
@@ -14027,7 +14062,7 @@ reflect.Value.Slice: slice index out of bounds</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ch4</span><span class="o">/</span><span class="n">rev</span>
@@ -14064,7 +14099,7 @@ reflect.Value.Slice: slice index out of bounds</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[59]:</div>
+    <div class="prompt output_prompt">Out[76]:</div>
 
 
 
@@ -14081,11 +14116,14 @@ reflect.Value.Slice: slice index out of bounds</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="nb">int</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">}</span>
-<span class="n">reverse</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">//</span><span class="n">a</span> <span class="p">:</span><span class="o">=</span> <span class="p">[]</span><span class="nb">int</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="o">//</span><span class="n">reverse</span><span class="p">(</span><span class="n">a</span><span class="p">[:])</span>
+<span class="o">//</span><span class="n">reverse</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%T</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">a</span><span class="p">[:])</span>
 </pre></div>
 
     </div>
@@ -14101,10 +14139,23 @@ reflect.Value.Slice: slice index out of bounds</pre>
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-repl.go:2:9: cannot use &lt;[6]int&gt; as &lt;[]int&gt; in argument to reverse</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[]int
+</pre>
 </div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[77]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6 &lt;nil&gt;</pre>
+</div>
+
 </div>
 
 </div>
@@ -14113,7 +14164,7 @@ repl.go:2:9: cannot use &lt;[6]int&gt; as &lt;[]int&gt; in argument to reverse</
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="p">:</span><span class="o">=</span> <span class="p">[]</span><span class="nb">int</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">}</span>
@@ -14142,7 +14193,7 @@ repl.go:2:9: cannot use &lt;[6]int&gt; as &lt;[]int&gt; in argument to reverse</
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[65]:</div>
+    <div class="prompt output_prompt">Out[78]:</div>
 
 
 
@@ -14159,7 +14210,7 @@ repl.go:2:9: cannot use &lt;[6]int&gt; as &lt;[]int&gt; in argument to reverse</
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="p">:</span><span class="o">=</span> <span class="p">[]</span><span class="nb">int</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">}</span>
@@ -14195,7 +14246,7 @@ repl.go:2:9: cannot use &lt;[6]int&gt; as &lt;[]int&gt; in argument to reverse</
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
+    <div class="prompt output_prompt">Out[79]:</div>
 
 
 
@@ -14292,7 +14343,7 @@ false
 
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[83]:</div>
@@ -14305,7 +14356,7 @@ false
 </div>
 </div>
 
-</div></section><section>
+</div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[84]:</div>
@@ -14373,7 +14424,7 @@ false
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">runes</span> <span class="p">[]</span><span class="n">rune</span>
@@ -14404,7 +14455,7 @@ false
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[92]:</div>
+    <div class="prompt output_prompt">Out[82]:</div>
 
 
 
@@ -14418,13 +14469,14 @@ false
 </div>
 </div>
 
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">runes</span> <span class="p">:</span><span class="o">=</span> <span class="p">[]</span><span class="n">rune</span><span class="p">(</span><span class="s2">&quot;Hello, 世界&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">Using</span> <span class="n">the</span> <span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">conversion</span>
+<span class="n">runes</span> <span class="p">:</span><span class="o">=</span> <span class="p">[]</span><span class="n">rune</span><span class="p">(</span><span class="s2">&quot;Hello, 世界&quot;</span><span class="p">)</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">runes</span><span class="p">)</span>
 </pre></div>
 
@@ -14449,7 +14501,7 @@ false
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[97]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -14463,29 +14515,23 @@ false
 </div>
 </div>
 
-</div></section><section>
+</div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Copyright</span> <span class="err">©</span> <span class="mi">2016</span> <span class="n">Alan</span> <span class="n">A</span><span class="o">.</span> <span class="n">A</span><span class="o">.</span> <span class="n">Donovan</span> <span class="o">&amp;</span> <span class="n">Brian</span> <span class="n">W</span><span class="o">.</span> <span class="n">Kernighan</span><span class="o">.</span>
-<span class="o">//</span> <span class="n">License</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">creativecommons</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">licenses</span><span class="o">/</span><span class="n">by</span><span class="o">-</span><span class="n">nc</span><span class="o">-</span><span class="n">sa</span><span class="o">/</span><span class="mf">4.0</span><span class="o">/</span>
-
-<span class="o">//</span> <span class="n">See</span> <span class="n">page</span> <span class="mf">88.</span>
-
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">See</span> <span class="n">page</span> <span class="mf">88.</span>
 <span class="o">//</span> <span class="n">Append</span> <span class="n">illustrates</span> <span class="n">the</span> <span class="n">behavior</span> <span class="n">of</span> <span class="n">the</span> <span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">append</span> <span class="n">function</span><span class="o">.</span>
 <span class="o">//</span><span class="n">package</span> <span class="n">main</span>
-
 <span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
-
 <span class="n">func</span> <span class="n">appendslice</span><span class="p">(</span><span class="n">x</span> <span class="p">[]</span><span class="nb">int</span><span class="p">,</span> <span class="n">y</span> <span class="o">...</span><span class="n">int</span><span class="p">)</span> <span class="p">[]</span><span class="nb">int</span> <span class="p">{</span>
 	<span class="n">var</span> <span class="n">z</span> <span class="p">[]</span><span class="nb">int</span>
 	<span class="n">zlen</span> <span class="p">:</span><span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 	<span class="k">if</span> <span class="n">zlen</span> <span class="o">&lt;=</span> <span class="n">cap</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
 		<span class="o">//</span> <span class="n">There</span> <span class="ow">is</span> <span class="n">room</span> <span class="n">to</span> <span class="n">expand</span> <span class="n">the</span> <span class="nb">slice</span><span class="o">.</span>
 		<span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:</span><span class="n">zlen</span><span class="p">]</span>
-	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span> 
 		<span class="o">//</span> <span class="n">There</span> <span class="ow">is</span> <span class="n">insufficient</span> <span class="n">space</span><span class="o">.</span>
 		<span class="o">//</span> <span class="n">Grow</span> <span class="n">by</span> <span class="n">doubling</span><span class="p">,</span> <span class="k">for</span> <span class="n">amortized</span> <span class="n">linear</span> <span class="n">complexity</span><span class="o">.</span>
 		<span class="n">zcap</span> <span class="p">:</span><span class="o">=</span> <span class="n">zlen</span>
@@ -14498,7 +14544,6 @@ false
 	<span class="n">copy</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">):],</span> <span class="n">y</span><span class="p">)</span>
 	<span class="k">return</span> <span class="n">z</span>
 <span class="p">}</span>
-
 <span class="o">//!</span>+append
 <span class="n">func</span> <span class="n">appendInt</span><span class="p">(</span><span class="n">x</span> <span class="p">[]</span><span class="nb">int</span><span class="p">,</span> <span class="n">y</span> <span class="nb">int</span><span class="p">)</span> <span class="p">[]</span><span class="nb">int</span> <span class="p">{</span>
 	<span class="n">var</span> <span class="n">z</span> <span class="p">[]</span><span class="nb">int</span>
@@ -14519,8 +14564,6 @@ false
 	<span class="n">z</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="o">=</span> <span class="n">y</span>
 	<span class="k">return</span> <span class="n">z</span>
 <span class="p">}</span>
-
-<span class="o">//!</span>-append
 </pre></div>
 
     </div>
@@ -14530,35 +14573,20 @@ false
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//!</span>+growth
+<span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
 <span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
 	<span class="n">var</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">[]</span><span class="nb">int</span>
 	<span class="k">for</span> <span class="n">i</span> <span class="p">:</span><span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">{</span>
 		<span class="n">y</span> <span class="o">=</span> <span class="n">appendInt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-		<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">  cap=</span><span class="si">%d</span><span class="se">\t</span><span class="s2">%v</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">cap</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">  cap=</span><span class="si">%d</span><span class="s2">, slice=%p</span><span class="se">\t</span><span class="s2">%v</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">cap</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 		<span class="n">x</span> <span class="o">=</span> <span class="n">y</span>
 	<span class="p">}</span>
 <span class="p">}</span>
 <span class="n">main</span><span class="p">()</span>
-<span class="o">//!</span>-growth
-
-<span class="o">/*</span>
-<span class="o">//!</span>+output
-<span class="mi">0</span>  <span class="n">cap</span><span class="o">=</span><span class="mi">1</span>   <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="mi">1</span>  <span class="n">cap</span><span class="o">=</span><span class="mi">2</span>   <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
-<span class="mi">2</span>  <span class="n">cap</span><span class="o">=</span><span class="mi">4</span>   <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">]</span>
-<span class="mi">3</span>  <span class="n">cap</span><span class="o">=</span><span class="mi">4</span>   <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
-<span class="mi">4</span>  <span class="n">cap</span><span class="o">=</span><span class="mi">8</span>   <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
-<span class="mi">5</span>  <span class="n">cap</span><span class="o">=</span><span class="mi">8</span>   <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
-<span class="mi">6</span>  <span class="n">cap</span><span class="o">=</span><span class="mi">8</span>   <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">]</span>
-<span class="mi">7</span>  <span class="n">cap</span><span class="o">=</span><span class="mi">8</span>   <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span><span class="p">]</span>
-<span class="mi">8</span>  <span class="n">cap</span><span class="o">=</span><span class="mi">16</span>  <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span><span class="p">]</span>
-<span class="mi">9</span>  <span class="n">cap</span><span class="o">=</span><span class="mi">16</span>  <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="p">]</span>
-<span class="o">//!</span>-output
-<span class="o">*/</span>
 </pre></div>
 
     </div>
@@ -14575,16 +14603,16 @@ false
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0  cap=1	[0]
-1  cap=2	[0 1]
-2  cap=4	[0 1 2]
-3  cap=4	[0 1 2 3]
-4  cap=8	[0 1 2 3 4]
-5  cap=8	[0 1 2 3 4 5]
-6  cap=8	[0 1 2 3 4 5 6]
-7  cap=8	[0 1 2 3 4 5 6 7]
-8  cap=16	[0 1 2 3 4 5 6 7 8]
-9  cap=16	[0 1 2 3 4 5 6 7 8 9]
+<pre>0  cap=1, slice=0xc000034da0	[0]
+1  cap=2, slice=0xc000034de0	[0 1]
+2  cap=4, slice=0xc00023c940	[0 1 2]
+3  cap=4, slice=0xc00023c940	[0 1 2 3]
+4  cap=8, slice=0xc000568a80	[0 1 2 3 4]
+5  cap=8, slice=0xc000568a80	[0 1 2 3 4 5]
+6  cap=8, slice=0xc000568a80	[0 1 2 3 4 5 6]
+7  cap=8, slice=0xc000568a80	[0 1 2 3 4 5 6 7]
+8  cap=16, slice=0xc00046ad00	[0 1 2 3 4 5 6 7 8]
+9  cap=16, slice=0xc00046ad00	[0 1 2 3 4 5 6 7 8 9]
 </pre>
 </div>
 </div>
@@ -14592,7 +14620,444 @@ false
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">x</span> <span class="p">[]</span><span class="nb">int</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">...</span><span class="p">)</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1 2 3 4 5 6 1 2 3 4 5 6]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[92]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>26 &lt;nil&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">appendInt</span><span class="p">(</span><span class="n">x</span> <span class="p">[]</span><span class="nb">int</span><span class="p">,</span> <span class="n">y</span> <span class="o">...</span><span class="n">int</span><span class="p">)</span> <span class="p">[]</span><span class="nb">int</span> <span class="p">{</span>
+    <span class="n">var</span> <span class="n">z</span> <span class="p">[]</span><span class="nb">int</span> 
+    <span class="n">zlen</span> <span class="p">:</span><span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">make</span><span class="p">([]</span><span class="nb">int</span><span class="p">,</span> <span class="n">zlen</span><span class="p">)</span>
+    <span class="n">copy</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">copy</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">):],</span> <span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">z</span>
+<span class="p">}</span>
+<span class="n">var</span> <span class="n">x</span> <span class="p">[]</span><span class="nb">int</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">appendInt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">appendInt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">appendInt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">appendInt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">...</span><span class="p">)</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1]
+[1 2 3]
+[1 2 3 4 5 6 1 2 3 4 5 6]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[52]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>26 &lt;nil&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+    <tr><td>
+        <img src="https://skhuang.github.io/f4-2.png"></td><td><img src="https://skhuang.github.io/f4-3.png"></td></tr>
+</table>
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.2.2.-In-Place-Slice-Techniques">4.2.2. In-Place Slice Techniques<a class="anchor-link" href="#4.2.2.-In-Place-Slice-Techniques">&#182;</a></h3>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Modify the elements of a slice in place</li>
+<li>nonempty() returns a slice holding only the non-empty strings</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
+<span class="n">func</span> <span class="n">nonempty</span><span class="p">(</span><span class="n">strings</span> <span class="p">[]</span><span class="n">string</span><span class="p">)</span> <span class="p">[]</span><span class="n">string</span> <span class="p">{</span>
+    <span class="n">i</span> <span class="p">:</span><span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">s</span> <span class="p">:</span><span class="o">=</span> <span class="nb">range</span> <span class="n">strings</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">s</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="p">{</span>
+            <span class="n">strings</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span>
+            <span class="n">i</span><span class="o">++</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">strings</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="n">data</span> <span class="p">:</span><span class="o">=</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">}</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">nonempty</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#34;one&#34; &#34;three&#34;]
+[&#34;one&#34; &#34;three&#34; &#34;three&#34;]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[93]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>24 &lt;nil&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">nonempty</span> <span class="n">using</span> <span class="n">append</span>
+<span class="n">func</span> <span class="n">nonempty2</span><span class="p">(</span><span class="n">strings</span> <span class="p">[]</span><span class="n">string</span><span class="p">)</span> <span class="p">[]</span><span class="n">string</span> <span class="p">{</span>
+    <span class="n">out</span> <span class="p">:</span><span class="o">=</span> <span class="n">strings</span><span class="p">[:</span><span class="mi">0</span><span class="p">]</span> <span class="o">//</span> <span class="n">zero</span><span class="o">-</span><span class="n">length</span> <span class="nb">slice</span> <span class="n">of</span> <span class="n">original</span>
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">s</span> <span class="p">:</span><span class="o">=</span> <span class="nb">range</span> <span class="n">strings</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">s</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="p">{</span>
+            <span class="n">out</span> <span class="o">=</span> <span class="n">append</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">out</span>
+<span class="p">}</span>
+<span class="n">data</span> <span class="p">:</span><span class="o">=</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">}</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">nonempty2</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#34;one&#34; &#34;three&#34;]
+[&#34;one&#34; &#34;three&#34; &#34;three&#34;]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[94]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>24 &lt;nil&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use a slice to implement a stack</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stack</span> <span class="p">:</span><span class="o">=</span> <span class="n">make</span><span class="p">([]</span><span class="n">string</span><span class="p">,</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">stack</span> <span class="o">=</span> <span class="n">stack</span><span class="p">[:</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">v</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;first&quot;</span>
+<span class="n">stack</span> <span class="o">=</span> <span class="n">append</span><span class="p">(</span><span class="n">stack</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">//</span> <span class="n">push</span> <span class="n">v</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">stack</span><span class="p">)</span>
+<span class="n">top</span> <span class="p">:</span><span class="o">=</span> <span class="n">stack</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q, </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">stack</span><span class="p">,</span><span class="n">top</span><span class="p">)</span>
+<span class="n">stack</span> <span class="o">=</span> <span class="n">stack</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">//</span><span class="n">pop</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">stack</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#34;first&#34;]
+[&#34;first&#34;], first
+[]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[95]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3 &lt;nil&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Remove an element from the middle of a slice, preserving the order</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">remove</span><span class="p">(</span><span class="nb">slice</span> <span class="p">[]</span><span class="nb">int</span><span class="p">,</span> <span class="n">i</span> <span class="nb">int</span><span class="p">)</span> <span class="p">[]</span><span class="nb">int</span> <span class="p">{</span>
+    <span class="n">copy</span><span class="p">(</span><span class="nb">slice</span><span class="p">[</span><span class="n">i</span><span class="p">:],</span> <span class="nb">slice</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">return</span> <span class="nb">slice</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="nb">slice</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">s</span> <span class="p">:</span><span class="o">=</span> <span class="p">[]</span><span class="nb">int</span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">}</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">remove</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[5 6 8 9]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[72]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10 &lt;nil&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Remove an element without preserving the order</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">remove</span><span class="p">(</span><span class="nb">slice</span> <span class="p">[]</span><span class="nb">int</span><span class="p">,</span> <span class="n">i</span> <span class="nb">int</span><span class="p">)</span> <span class="p">[]</span> <span class="nb">int</span> <span class="p">{</span>
+    <span class="nb">slice</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nb">slice</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">slice</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="nb">slice</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">s</span> <span class="p">:</span><span class="o">=</span> <span class="p">[]</span><span class="nb">int</span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">}</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">remove</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[5 6 9 8]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[65]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10 &lt;nil&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14605,7 +15070,7 @@ false
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>The hash table is an unordered collection of key/value pairs </li>
-<li>All the keys are distict, and the value associated with a given key can be retrieved, updated, or removed </li>
+<li>All the keys are distinct, and the value associated with a given key can be retrieved, updated, or removed </li>
 <li>in Go, a map is a reference to a hash table, and a map type is written map[K]V, where K and V are the types of its keys and values</li>
 </ul>
 
@@ -14614,10 +15079,11 @@ false
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ages</span> <span class="p">:</span><span class="o">=</span> <span class="n">make</span><span class="p">(</span><span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nb">int</span><span class="p">)</span> <span class="o">//</span> <span class="n">mapping</span> <span class="kn">from</span> <span class="nn">string</span> <span class="n">to</span> <span class="n">ints</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
+<span class="n">ages</span> <span class="p">:</span><span class="o">=</span> <span class="n">make</span><span class="p">(</span><span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nb">int</span><span class="p">)</span> <span class="o">//</span> <span class="n">mapping</span> <span class="kn">from</span> <span class="nn">string</span> <span class="n">to</span> <span class="n">ints</span>
 <span class="n">ages</span><span class="p">[</span><span class="s2">&quot;alice&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">31</span>
 <span class="n">ages</span><span class="p">[</span><span class="s2">&quot;charlie&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">34</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q, </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ages</span><span class="p">,</span> <span class="n">ages</span><span class="p">[</span><span class="s2">&quot;charlie&quot;</span><span class="p">])</span>
@@ -14656,7 +15122,7 @@ map[&#34;alice&#34;:&#39;\x1f&#39; &#34;charlie&#34;:&#39;&#34;&#39;], 34
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -14673,7 +15139,7 @@ map[&#34;alice&#34;:&#39;\x1f&#39; &#34;charlie&#34;:&#39;&#34;&#39;], 34
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
@@ -14706,7 +15172,7 @@ map[&#34;alice&#34;:&#39;\x1f&#39; &#34;charlie&#34;:&#39;&#34;&#39;], 34
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -14723,11 +15189,11 @@ map[&#34;alice&#34;:&#39;\x1f&#39; &#34;charlie&#34;:&#39;&#34;&#39;], 34
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">A</span> <span class="nb">map</span> <span class="n">element</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">variable</span> <span class="ow">and</span> <span class="n">we</span> <span class="n">cannot</span> <span class="n">take</span> <span class="n">its</span> <span class="n">address</span>
-<span class="n">_</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ages</span><span class="p">[</span><span class="s2">&quot;bob&quot;</span><span class="p">]</span>
+<span class="n">_</span><span class="o">=</span> <span class="o">&amp;</span><span class="n">ages</span><span class="p">[</span><span class="s2">&quot;bob&quot;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -14745,7 +15211,7 @@ map[&#34;alice&#34;:&#39;\x1f&#39; &#34;charlie&#34;:&#39;&#34;&#39;], 34
 
 <div class="output_subarea output_text output_error">
 <pre>
-repl.go:2:11: cannot take the address of a map element: ages[&#34;bob&#34;]</pre>
+repl.go:2:10: cannot take the address of a map element: ages[&#34;bob&#34;]</pre>
 </div>
 </div>
 
@@ -14755,7 +15221,7 @@ repl.go:2:11: cannot take the address of a map element: ages[&#34;bob&#34;]</pre
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">To</span> <span class="nb">enumerate</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">key</span><span class="o">/</span><span class="n">pairs</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">map</span><span class="p">,</span> <span class="n">use</span> <span class="nb">range</span> <span class="k">for</span> <span class="n">loop</span>
@@ -14778,8 +15244,8 @@ repl.go:2:11: cannot take the address of a map element: ages[&#34;bob&#34;]</pre
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>bob	6
-charlie	34
+<pre>charlie	34
+bob	6
 </pre>
 </div>
 </div>
@@ -14790,7 +15256,7 @@ charlie	34
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">The</span> <span class="n">order</span> <span class="n">of</span> <span class="nb">map</span> <span class="n">iteration</span> <span class="ow">is</span> <span class="n">unspecified</span>
@@ -14820,7 +15286,7 @@ charlie	34
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>bob	6
+<pre>bob	3
 charlie	34
 </pre>
 </div>
@@ -14832,7 +15298,7 @@ charlie	34
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="nb">hash</span> <span class="nb">map</span> <span class="n">must</span> <span class="n">be</span> <span class="n">allocated</span>
@@ -14863,7 +15329,7 @@ true
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[109]:</div>
 
 
 
@@ -14880,7 +15346,7 @@ true
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ages</span><span class="p">[</span><span class="s2">&quot;carol&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">21</span>
@@ -14911,7 +15377,7 @@ assignment to entry in nil map</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ages</span> <span class="p">:</span><span class="o">=</span> <span class="n">make</span><span class="p">(</span><span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nb">int</span><span class="p">)</span>
@@ -14940,7 +15406,7 @@ assignment to entry in nil map</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[112]:</div>
 
 
 
@@ -14957,7 +15423,7 @@ assignment to entry in nil map</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">to</span> <span class="n">distinguish</span> <span class="n">between</span> <span class="n">a</span> <span class="n">nonexistent</span> <span class="n">element</span> <span class="ow">and</span> <span class="n">an</span> <span class="n">element</span> <span class="n">that</span> <span class="n">happens</span> <span class="n">to</span> 
@@ -14990,7 +15456,7 @@ assignment to entry in nil map</pre>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0 true
+<pre>6 true
 0 true
 0 true
 </pre>
@@ -15091,7 +15557,7 @@ first
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Copyright</span> <span class="err">©</span> <span class="mi">2016</span> <span class="n">Alan</span> <span class="n">A</span><span class="o">.</span> <span class="n">A</span><span class="o">.</span> <span class="n">Donovan</span> <span class="o">&amp;</span> <span class="n">Brian</span> <span class="n">W</span><span class="o">.</span> <span class="n">Kernighan</span><span class="o">.</span>
@@ -15172,7 +15638,7 @@ second
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">m</span> <span class="o">=</span> <span class="n">make</span><span class="p">(</span><span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nb">int</span><span class="p">)</span>
@@ -15195,7 +15661,7 @@ second
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -15338,22 +15804,11 @@ len	count
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Copyright</span> <span class="err">©</span> <span class="mi">2016</span> <span class="n">Alan</span> <span class="n">A</span><span class="o">.</span> <span class="n">A</span><span class="o">.</span> <span class="n">Donovan</span> <span class="o">&amp;</span> <span class="n">Brian</span> <span class="n">W</span><span class="o">.</span> <span class="n">Kernighan</span><span class="o">.</span>
-<span class="o">//</span> <span class="n">License</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">creativecommons</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">licenses</span><span class="o">/</span><span class="n">by</span><span class="o">-</span><span class="n">nc</span><span class="o">-</span><span class="n">sa</span><span class="o">/</span><span class="mf">4.0</span><span class="o">/</span>
-
-<span class="o">//</span> <span class="n">See</span> <span class="n">page</span> <span class="mf">99.</span>
-
-<span class="o">//</span> <span class="n">Graph</span> <span class="n">shows</span> <span class="n">how</span> <span class="n">to</span> <span class="n">use</span> <span class="n">a</span> <span class="nb">map</span> <span class="n">of</span> <span class="n">maps</span> <span class="n">to</span> <span class="n">represent</span> <span class="n">a</span> <span class="n">directed</span> <span class="n">graph</span><span class="o">.</span>
-<span class="o">//</span><span class="n">package</span> <span class="n">main</span>
-
-<span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
-
-<span class="o">//!</span>+
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
 <span class="n">var</span> <span class="n">graph</span> <span class="o">=</span> <span class="n">make</span><span class="p">(</span><span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nb">bool</span><span class="p">)</span>
-
 <span class="n">func</span> <span class="n">addEdge</span><span class="p">(</span><span class="n">from</span><span class="p">,</span> <span class="n">to</span> <span class="n">string</span><span class="p">)</span> <span class="p">{</span>
 	<span class="n">edges</span> <span class="p">:</span><span class="o">=</span> <span class="n">graph</span><span class="p">[</span><span class="n">from</span><span class="p">]</span>
 	<span class="k">if</span> <span class="n">edges</span> <span class="o">==</span> <span class="n">nil</span> <span class="p">{</span>
@@ -15362,13 +15817,9 @@ len	count
 	<span class="p">}</span>
 	<span class="n">edges</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="n">true</span>
 <span class="p">}</span>
-
 <span class="n">func</span> <span class="n">hasEdge</span><span class="p">(</span><span class="n">from</span><span class="p">,</span> <span class="n">to</span> <span class="n">string</span><span class="p">)</span> <span class="nb">bool</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="n">graph</span><span class="p">[</span><span class="n">from</span><span class="p">][</span><span class="n">to</span><span class="p">]</span>
 <span class="p">}</span>
-
-<span class="o">//!</span>-
-
 <span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
 	<span class="n">addEdge</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
 	<span class="n">addEdge</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">)</span>
@@ -15388,6 +15839,31 @@ len	count
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>true
+true
+true
+true
+false
+true
+false
+false
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
