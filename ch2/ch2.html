@@ -13217,11 +13217,11 @@ div#notebook {
 <p>Predefined names for built-in constants, types, and functions
 <code>
 Constants:  true false iota nil
-Types:      int int8 int16 int32 int64
+[Types](https://golang.org/ref/spec#Types):      int int8 int16 int32 int64
             unit unit8 unit16 uint32 uint64 uintptr
             float32 float64 complex64 complex128
             bool byte rune string error
-Functions:  make len cap new append cop close delete 
+[Functions](https://golang.org/ref/spec#Built-in_functions):  make len cap new append copy close delete 
             complex real imag 
             panic recover
 </code></p>
@@ -13231,10 +13231,11 @@ Functions:  make len cap new append cop close delete
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">package</span> <span class="n">main</span>
+<span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
 
 <span class="nb">type</span> <span class="n">整數</span> <span class="nb">int</span>
 <span class="n">func</span> <span class="n">轉換程式</span><span class="p">(</span><span class="n">金</span> <span class="n">整數</span><span class="p">){</span>
@@ -13243,7 +13244,7 @@ Functions:  make len cap new append cop close delete
 
 <span class="n">func</span> <span class="n">main</span><span class="p">(){</span>
     <span class="n">銅</span> <span class="p">:</span><span class="o">=</span> <span class="mi">2</span>
-    <span class="n">轉換程式</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">轉換程式</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
     <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">銅</span><span class="p">)</span>
 <span class="p">}</span>
 
@@ -13264,7 +13265,7 @@ Functions:  make len cap new append cop close delete
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1
+<pre>11
 2
 </pre>
 </div>
@@ -13283,10 +13284,12 @@ Functions:  make len cap new append cop close delete
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ch2</span><span class="o">/</span><span class="n">boiling</span>
+<span class="o">//</span> <span class="n">Boiling</span> <span class="n">prints</span> <span class="n">the</span> <span class="n">boiling</span> <span class="n">point</span> <span class="n">of</span> <span class="n">water</span>
+<span class="n">package</span> <span class="n">main</span>
 <span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
 
 <span class="n">const</span> <span class="n">boilingF</span> <span class="o">=</span> <span class="mf">212.0</span>
@@ -13307,7 +13310,7 @@ Functions:  make len cap new append cop close delete
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span><span class="p">()</span>
@@ -13338,7 +13341,7 @@ Functions:  make len cap new append cop close delete
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ch2</span><span class="o">/</span><span class="n">ftoc</span>
@@ -13362,7 +13365,7 @@ Functions:  make len cap new append cop close delete
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span><span class="p">()</span>
@@ -13402,9 +13405,53 @@ Functions:  make len cap new append cop close delete
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.3.1-Short-Variable-Declarations">2.3.1 Short Variable Declarations<a class="anchor-link" href="#2.3.1-Short-Variable-Declarations">&#182;</a></h3>
+<h3 id="2.3.1-Short-Variable-Declarations">2.3.1 Short Variable Declarations<a class="anchor-link" href="#2.3.1-Short-Variable-Declarations">&#182;</a></h3><ul>
+<li>Declaration and initialize local variables<ul>
+<li>within functions</li>
+<li>name := expression</li>
+<li>type of name is determined by the type of expression</li>
+<li>A short variable declaration must declare at least one new variable </li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;image&quot;</span><span class="p">;</span><span class="s2">&quot;image/gif&quot;</span><span class="p">;</span><span class="s2">&quot;math/rand&quot;</span><span class="p">)</span>
+<span class="n">nframes</span> <span class="p">:</span><span class="o">=</span> <span class="mi">100</span>
+<span class="n">anim</span> <span class="p">:</span><span class="o">=</span> <span class="n">gif</span><span class="o">.</span><span class="n">GIF</span><span class="p">{</span><span class="n">LoopCount</span><span class="p">:</span> <span class="n">nframes</span><span class="p">}</span>
+<span class="n">freq</span> <span class="p">:</span><span class="o">=</span> <span class="n">rand</span><span class="o">.</span><span class="n">Float64</span><span class="p">()</span> <span class="o">*</span> <span class="mf">3.0</span>
+<span class="n">t</span> <span class="p">:</span><span class="o">=</span> <span class="mf">0.0</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="p">:</span><span class="o">=</span> <span class="mi">100</span>    <span class="o">//</span> <span class="n">an</span> <span class="nb">int</span>
+<span class="n">var</span> <span class="n">boiling</span> <span class="n">float64</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">//</span> <span class="n">a</span> <span class="n">float64</span>
+<span class="n">var</span> <span class="n">names</span> <span class="p">[]</span><span class="n">string</span>
+<span class="n">var</span> <span class="n">err</span> <span class="n">error</span>
+<span class="nb">type</span> <span class="n">Point</span> <span class="nb">int</span>
+<span class="n">var</span> <span class="n">p</span> <span class="n">Point</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13415,7 +13462,7 @@ Functions:  make len cap new append cop close delete
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="p">:</span><span class="o">=</span> <span class="mi">1</span>
@@ -13447,7 +13494,7 @@ Functions:  make len cap new append cop close delete
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -13464,7 +13511,7 @@ Functions:  make len cap new append cop close delete
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="nb">int</span>
@@ -13492,7 +13539,7 @@ Functions:  make len cap new append cop close delete
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -13509,7 +13556,7 @@ Functions:  make len cap new append cop close delete
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">p</span> <span class="o">=</span> <span class="n">f</span><span class="p">()</span>
@@ -13542,7 +13589,7 @@ Functions:  make len cap new append cop close delete
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -13559,7 +13606,7 @@ Functions:  make len cap new append cop close delete
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">incr</span><span class="p">(</span><span class="n">p</span> <span class="o">*</span><span class="nb">int</span><span class="p">)</span> <span class="nb">int</span> <span class="p">{</span>
@@ -13592,7 +13639,7 @@ Functions:  make len cap new append cop close delete
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[52]:</div>
 
 
 
@@ -13652,6 +13699,20 @@ Functions:  make len cap new append cop close delete
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$ go install gopl.io/ch2/echo4@latest
+$ bin/echo4 -help
+Usage of ./echo4:
+$ bin/echo -s / a bc def
+a/bc/def
+$ bin/echo -n a bc def
+a bc def$</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13820,7 +13881,7 @@ the variable t is created each time the for loop begins, and variables x and y a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="p">:</span><span class="o">=</span><span class="p">[]</span><span class="nb">int</span> <span class="p">{</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">}</span>
@@ -13855,7 +13916,7 @@ the variable t is created each time the for loop begins, and variables x and y a
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13897,7 +13958,7 @@ the variable t is created each time the for loop begins, and variables x and y a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">gcd</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">gcd</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">120</span><span class="p">),</span> <span class="n">gcd</span><span class="p">(</span><span class="mi">37</span><span class="p">,</span> <span class="mi">39</span><span class="p">))</span>
@@ -13926,7 +13987,7 @@ the variable t is created each time the for loop begins, and variables x and y a
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13950,7 +14011,7 @@ the variable t is created each time the for loop begins, and variables x and y a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">modals</span> <span class="p">:</span><span class="o">=</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;gold&quot;</span><span class="p">,</span><span class="s2">&quot;silver&quot;</span><span class="p">,</span><span class="s2">&quot;brone&quot;</span><span class="p">}</span>
@@ -13978,7 +14039,7 @@ the variable t is created each time the for loop begins, and variables x and y a
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -13995,7 +14056,7 @@ the variable t is created each time the for loop begins, and variables x and y a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">modals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;gold&quot;</span>
@@ -14025,7 +14086,7 @@ the variable t is created each time the for loop begins, and variables x and y a
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -14049,7 +14110,7 @@ the variable t is created each time the for loop begins, and variables x and y a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Copyright</span> <span class="err">©</span> <span class="mi">2016</span> <span class="n">Alan</span> <span class="n">A</span><span class="o">.</span> <span class="n">A</span><span class="o">.</span> <span class="n">Donovan</span> <span class="o">&amp;</span> <span class="n">Brian</span> <span class="n">W</span><span class="o">.</span> <span class="n">Kernighan</span><span class="o">.</span>
@@ -14057,9 +14118,9 @@ the variable t is created each time the for loop begins, and variables x and y a
 
 <span class="o">//</span> <span class="n">See</span> <span class="n">page</span> <span class="mf">39.</span>
 <span class="o">//!</span>+
-
+<span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ch2</span><span class="o">/</span><span class="n">tempconv0</span><span class="o">/</span><span class="n">celsius</span><span class="o">.</span><span class="n">go</span>
 <span class="o">//</span> <span class="n">Package</span> <span class="n">tempconv</span> <span class="n">performs</span> <span class="n">Celsius</span> <span class="ow">and</span> <span class="n">Fahrenheit</span> <span class="n">temperature</span> <span class="n">computations</span><span class="o">.</span>
-<span class="o">//</span><span class="n">package</span> <span class="n">tempconv</span>
+<span class="n">package</span> <span class="n">tempconv</span>
 
 <span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
 
@@ -14088,13 +14149,13 @@ the variable t is created each time the for loop begins, and variables x and y a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Copyright</span> <span class="err">©</span> <span class="mi">2016</span> <span class="n">Alan</span> <span class="n">A</span><span class="o">.</span> <span class="n">A</span><span class="o">.</span> <span class="n">Donovan</span> <span class="o">&amp;</span> <span class="n">Brian</span> <span class="n">W</span><span class="o">.</span> <span class="n">Kernighan</span><span class="o">.</span>
 <span class="o">//</span> <span class="n">License</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">creativecommons</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">licenses</span><span class="o">/</span><span class="n">by</span><span class="o">-</span><span class="n">nc</span><span class="o">-</span><span class="n">sa</span><span class="o">/</span><span class="mf">4.0</span><span class="o">/</span>
 
-<span class="o">//</span><span class="n">package</span> <span class="n">tempconv</span>
+<span class="n">package</span> <span class="n">tempconv</span>
 
 <span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
 
@@ -14163,7 +14224,7 @@ ok      gopl.io/ch2/tempconv0   0.020s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Copyright</span> <span class="err">©</span> <span class="mi">2016</span> <span class="n">Alan</span> <span class="n">A</span><span class="o">.</span> <span class="n">A</span><span class="o">.</span> <span class="n">Donovan</span> <span class="o">&amp;</span> <span class="n">Brian</span> <span class="n">W</span><span class="o">.</span> <span class="n">Kernighan</span><span class="o">.</span>
@@ -14173,7 +14234,7 @@ ok      gopl.io/ch2/tempconv0   0.020s
 <span class="o">//!</span>+
 
 <span class="o">//</span> <span class="n">Cf</span> <span class="n">converts</span> <span class="n">its</span> <span class="n">numeric</span> <span class="n">argument</span> <span class="n">to</span> <span class="n">Celsius</span> <span class="ow">and</span> <span class="n">Fahrenheit</span><span class="o">.</span>
-<span class="o">//</span><span class="n">package</span> <span class="n">main</span>
+<span class="n">package</span> <span class="n">main</span>
 
 <span class="kn">import</span> <span class="p">(</span>
 	<span class="s2">&quot;fmt&quot;</span>
@@ -14205,11 +14266,46 @@ ok      gopl.io/ch2/tempconv0   0.020s
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;os&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">Args</span> <span class="o">=</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;cf&quot;</span><span class="p">,</span><span class="s2">&quot;32&quot;</span><span class="p">}</span>
+<span class="n">main</span><span class="p">()</span>
+<span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>32°F = 0°C, 32°C = 89.6°F
+32°F = 0°C, 32°C = 89.6°F
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>
-$ go build gopl.io/ch2/cf
+$ go install gopl.io/ch2/cf@latest
 $./cf 32
 32°F = 0°C, 32°C = 89.6°F
 $ ./cf 212
@@ -14230,7 +14326,7 @@ $ ./cf -40
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>    <span class="o">//</span> <span class="n">a</span> <span class="n">initialized</span> <span class="n">third</span><span class="p">,</span> <span class="n">to</span> <span class="mi">3</span>
@@ -14261,7 +14357,7 @@ $ ./cf -40
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -14278,7 +14374,7 @@ $ ./cf -40
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Copyright</span> <span class="err">©</span> <span class="mi">2016</span> <span class="n">Alan</span> <span class="n">A</span><span class="o">.</span> <span class="n">A</span><span class="o">.</span> <span class="n">Donovan</span> <span class="o">&amp;</span> <span class="n">Brian</span> <span class="n">W</span><span class="o">.</span> <span class="n">Kernighan</span><span class="o">.</span>
@@ -14288,7 +14384,7 @@ $ ./cf -40
 
 <span class="o">//</span> <span class="p">(</span><span class="n">Package</span> <span class="n">doc</span> <span class="n">comment</span> <span class="n">intentionally</span> <span class="n">malformed</span> <span class="n">to</span> <span class="n">demonstrate</span> <span class="n">golint</span><span class="o">.</span><span class="p">)</span>
 <span class="o">//!</span>+
-<span class="o">//</span><span class="n">package</span> <span class="n">popcount</span>
+<span class="n">package</span> <span class="n">popcount</span>
 
 <span class="o">//</span> <span class="n">pc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">population</span> <span class="n">count</span> <span class="n">of</span> <span class="n">i</span><span class="o">.</span>
 <span class="n">var</span> <span class="n">pc</span> <span class="p">[</span><span class="mi">256</span><span class="p">]</span><span class="n">byte</span>
@@ -14321,13 +14417,13 @@ $ ./cf -40
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Copyright</span> <span class="err">©</span> <span class="mi">2016</span> <span class="n">Alan</span> <span class="n">A</span><span class="o">.</span> <span class="n">A</span><span class="o">.</span> <span class="n">Donovan</span> <span class="o">&amp;</span> <span class="n">Brian</span> <span class="n">W</span><span class="o">.</span> <span class="n">Kernighan</span><span class="o">.</span>
 <span class="o">//</span> <span class="n">License</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">creativecommons</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">licenses</span><span class="o">/</span><span class="n">by</span><span class="o">-</span><span class="n">nc</span><span class="o">-</span><span class="n">sa</span><span class="o">/</span><span class="mf">4.0</span><span class="o">/</span>
 
-<span class="o">//</span><span class="n">package</span> <span class="n">popcount_test</span>
+<span class="n">package</span> <span class="n">popcount_test</span>
 
 <span class="kn">import</span> <span class="p">(</span>
 	<span class="s2">&quot;testing&quot;</span>
@@ -14466,7 +14562,7 @@ ok      gopl.io/ch2/popcount    3.661s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">f</span><span class="p">()</span> <span class="p">{}</span>
@@ -14487,7 +14583,7 @@ ok      gopl.io/ch2/popcount    3.661s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span><span class="p">()</span>
@@ -14519,7 +14615,7 @@ g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">three</span> <span class="n">different</span> <span class="n">variables</span> <span class="n">called</span> <span class="n">x</span> <span class="k">for</span> <span class="n">each</span> <span class="n">declaration</span> <span class="n">appears</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">different</span> <span class="n">lexical</span> <span class="n">block</span>
@@ -14542,7 +14638,7 @@ g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span><span class="p">()</span>
@@ -14572,7 +14668,7 @@ g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">main</span><span class="p">(){</span>
@@ -14591,7 +14687,7 @@ g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span><span class="p">()</span>
@@ -14621,7 +14717,7 @@ g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">f</span><span class="p">()</span> <span class="nb">int</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1</span><span class="p">}</span>
@@ -14660,7 +14756,7 @@ g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;os&quot;</span>
@@ -14715,7 +14811,7 @@ repl.go:6:5: not a package: &#34;f&#34; in f.Stat &lt;*ast.SelectorExpr&gt;</pre
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">f</span><span class="p">,</span> <span class="n">err</span> <span class="p">:</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">fname</span><span class="p">);</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
@@ -14734,7 +14830,7 @@ repl.go:6:5: not a package: &#34;f&#34; in f.Stat &lt;*ast.SelectorExpr&gt;</pre
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span> <span class="s2">&quot;os&quot;</span><span class="p">;</span> <span class="s2">&quot;log&quot;</span><span class="p">)</span>
@@ -14754,7 +14850,7 @@ repl.go:6:5: not a package: &#34;f&#34; in f.Stat &lt;*ast.SelectorExpr&gt;</pre
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">cwd</span> <span class="n">string</span>
@@ -14773,7 +14869,7 @@ repl.go:6:5: not a package: &#34;f&#34; in f.Stat &lt;*ast.SelectorExpr&gt;</pre
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">cwd</span> <span class="n">string</span>    <span class="o">//</span> <span class="n">avoid</span> <span class="p">:</span><span class="o">=</span> <span class="n">by</span> <span class="n">declaring</span> <span class="n">err</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">separte</span> <span class="n">var</span> <span class="n">declaration</span>
