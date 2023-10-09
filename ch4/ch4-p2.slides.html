@@ -14689,7 +14689,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">Employee</span>
@@ -14713,9 +14713,12 @@ div.jp-OutputPrompt {
 <span class="n">position</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="n">dilbert</span><span class="o">.</span><span class="n">Position</span>
 <span class="o">*</span><span class="n">position</span> <span class="o">=</span> <span class="s2">&quot;Senior&quot;</span> <span class="o">+</span> <span class="o">*</span><span class="n">position</span>
 <span class="n">var</span> <span class="n">employeeOfTheMonth</span> <span class="o">*</span><span class="n">Employee</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">dilbert</span>
-<span class="o">//</span><span class="n">employeeOfTheMonth</span><span class="o">.</span><span class="n">Position</span> <span class="o">+=</span> <span class="s2">&quot; (proactive team player)&quot;</span>
-<span class="p">(</span><span class="o">*</span><span class="n">employeeOfTheMonth</span><span class="p">)</span><span class="o">.</span><span class="n">Position</span> <span class="o">+=</span> <span class="s2">&quot; (proactive team player)&quot;</span>
-<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q&quot;</span><span class="p">,</span><span class="n">employeeDB</span><span class="p">)</span>
+<span class="n">employeeOfTheMonth</span><span class="o">.</span><span class="n">Position</span> <span class="o">+=</span> <span class="s2">&quot; (proactive team player)&quot;</span>
+<span class="o">//</span><span class="p">(</span><span class="o">*</span><span class="n">employeeOfTheMonth</span><span class="p">)</span><span class="o">.</span><span class="n">Position</span> <span class="o">+=</span> <span class="s2">&quot; (proactive team player)&quot;</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">employeeDB</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">_</span><span class="p">,</span><span class="n">emp</span> <span class="o">:=</span> <span class="nb">range</span> <span class="n">employeeDB</span> <span class="p">{</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">emp</span><span class="p">)</span>
+<span class="p">}</span>
 </pre></div>
 
      </div>
@@ -14737,22 +14740,11 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>map[&#39;\x01&#39;:%!q(*struct { ID int; Name string; Address string; DoB time.Time; Position string; Salary int; ManagerID int }=&amp;{1   {0 0 &lt;nil&gt;} Vice President 0 3}) &#39;\x02&#39;:%!q(*struct { ID int; Name string; Address string; DoB time.Time; Position string; Salary int; ManagerID int }=&amp;{2   {0 0 &lt;nil&gt;} Senior (proactive team player) -5000 1})]</pre>
+<pre>map[&#39;\x01&#39;:%!q(*struct { ID int; Name string; Address string; DoB time.Time; Position string; Salary int; ManagerID int }=&amp;{1   {0 0 &lt;nil&gt;} Vice President 0 3}) &#39;\x02&#39;:%!q(*struct { ID int; Name string; Address string; DoB time.Time; Position string; Salary int; ManagerID int }=&amp;{2   {0 0 &lt;nil&gt;} Senior (proactive team player) -5000 1})]
+&amp;{&#39;\x01&#39; &#34;&#34; &#34;&#34; &#34;0001-01-01 00:00:00 +0000 UTC&#34; &#34;Vice President&#34; &#39;\x00&#39; &#39;\x03&#39;}
+&amp;{&#39;\x02&#39; &#34;&#34; &#34;&#34; &#34;0001-01-01 00:00:00 +0000 UTC&#34; &#34;Senior (proactive team player)&#34; &#39;�&#39; &#39;\x01&#39;}
+</pre>
 </div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>338 &lt;nil&gt;</pre>
-</div>
-
 </div>
 
 </div>
@@ -14770,8 +14762,8 @@ div.jp-OutputPrompt {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
 <span class="n">func</span> <span class="n">EmployeeByID</span><span class="p">(</span><span class="nb">id</span> <span class="nb">int</span><span class="p">)</span> <span class="o">*</span><span class="n">Employee</span> <span class="p">{</span> <span class="k">return</span> <span class="n">employeeDB</span><span class="p">[</span><span class="nb">id</span><span class="p">]}</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">EmployeeByID</span><span class="p">(</span><span class="n">dilbert</span><span class="o">.</span><span class="n">ManagerID</span><span class="p">)</span><span class="o">.</span><span class="n">Position</span><span class="p">)</span>
-<span class="nb">id</span> <span class="o">:=</span> <span class="n">dilbert</span><span class="o">.</span><span class="n">ID</span>
-<span class="n">EmployeeByID</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span><span class="o">.</span><span class="n">Salary</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">id</span> <span class="o">:=</span> <span class="n">dilbert</span><span class="o">.</span><span class="n">ID</span>    
+<span class="n">EmployeeByID</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span><span class="o">.</span><span class="n">Salary</span> <span class="o">=</span> <span class="mi">0</span>  <span class="o">//</span><span class="n">dilert</span> <span class="ow">is</span> <span class="n">fired</span>
 </pre></div>
 
      </div>
@@ -14802,16 +14794,38 @@ div.jp-OutputPrompt {
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Recursive-Data-Structures">Recursive Data Structures<a class="anchor-link" href="#Recursive-Data-Structures">&#182;</a></h3><ul>
+<li>Struc type <strong><em>S</em></strong> can't declare a field of the same type <strong><em>S</em></strong><ul>
+<li>aggregate value cannot containt itself</li>
+</ul>
+</li>
+<li>S may declare a field of the pointer type *<strong><em>S</em></strong><ul>
+<li>create recursive data structure like lists and trees</li>
+</ul>
+</li>
+<li>Implement an insertion sort in the following</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[88]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ch4</span><span class="o">/</span><span class="n">treesort</span>
-<span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;math/rand&quot;</span><span class="p">;</span><span class="s2">&quot;sort&quot;</span><span class="p">;</span><span class="s2">&quot;fmt&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;math/rand&quot;</span><span class="p">;</span><span class="s2">&quot;sort&quot;</span><span class="p">;</span><span class="s2">&quot;fmt&quot;</span><span class="p">)</span>  
 <span class="nb">type</span> <span class="n">tree</span> <span class="n">struct</span> <span class="p">{</span>
 	<span class="n">value</span>       <span class="nb">int</span>
 	<span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">*</span><span class="n">tree</span>
@@ -14823,12 +14837,15 @@ div.jp-OutputPrompt {
 	<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">v</span> <span class="o">:=</span> <span class="nb">range</span> <span class="n">values</span> <span class="p">{</span>
 		<span class="n">root</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
 	<span class="p">}</span>
-	<span class="n">appendValues</span><span class="p">(</span><span class="n">values</span><span class="p">[:</span><span class="mi">0</span><span class="p">],</span> <span class="n">root</span><span class="p">)</span>
+	<span class="n">appendValues</span><span class="p">(</span><span class="n">values</span><span class="p">[:</span><span class="mi">0</span><span class="p">],</span> <span class="n">root</span><span class="p">)</span> <span class="o">//</span> <span class="n">append</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">slice</span><span class="p">,</span> <span class="n">the</span> <span class="n">first</span> <span class="n">position</span>
+    <span class="o">//</span><span class="n">appendValues</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">root</span><span class="p">)</span>     <span class="o">//</span> <span class="n">append</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">last</span> <span class="n">position</span>
+    <span class="o">//</span><span class="n">appendValues</span><span class="p">(</span><span class="n">values</span><span class="p">[:],</span> <span class="n">root</span><span class="p">)</span>    <span class="o">//</span> <span class="n">append</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">last</span> <span class="n">position</span>
 <span class="p">}</span>
 
 <span class="o">//</span> <span class="n">appendValues</span> <span class="n">appends</span> <span class="n">the</span> <span class="n">elements</span> <span class="n">of</span> <span class="n">t</span> <span class="n">to</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">order</span>
 <span class="o">//</span> <span class="ow">and</span> <span class="n">returns</span> <span class="n">the</span> <span class="n">resulting</span> <span class="nb">slice</span><span class="o">.</span>
 <span class="n">func</span> <span class="n">appendValues</span><span class="p">(</span><span class="n">values</span> <span class="p">[]</span><span class="nb">int</span><span class="p">,</span> <span class="n">t</span> <span class="o">*</span><span class="n">tree</span><span class="p">)</span> <span class="p">[]</span><span class="nb">int</span> <span class="p">{</span>
+    <span class="o">//</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">values</span><span class="p">,</span><span class="s2">&quot;len&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">),</span><span class="n">cap</span><span class="p">(</span><span class="n">values</span><span class="p">))</span>
 	<span class="k">if</span> <span class="n">t</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
 		<span class="n">values</span> <span class="o">=</span> <span class="n">appendValues</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
 		<span class="n">values</span> <span class="o">=</span> <span class="n">append</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
@@ -14887,7 +14904,7 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>sorted: [0 0 1 3 5 6 7 8 8 8 9 11 13 14 16 16 17 18 20 21 22 22 26 26 26 27 27 28 29 31 32 33 33 34 35 35 35 35 37 38 40 41 41 46 47 47 48 49 49 49]</pre>
+<pre>sorted: [0 1 5 5 5 5 6 7 7 8 8 9 9 12 12 16 18 19 19 21 21 22 22 23 26 26 26 27 28 30 31 31 31 32 32 34 35 35 36 37 40 42 42 43 44 44 46 46 46 47]</pre>
 </div>
 </div>
 
@@ -14895,7 +14912,7 @@ div.jp-OutputPrompt {
 
 </div>
 
-</div></section><section>
+</div></div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14945,7 +14962,7 @@ $go test gopl.io/ch4/treesort</code></pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[97]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span> <span class="n">Point</span> <span class="n">struct</span><span class="p">{</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="nb">int</span><span class="p">}</span>
@@ -14963,11 +14980,14 @@ $go test gopl.io/ch4/treesort</code></pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[105]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span> <span class="n">T</span> <span class="n">struct</span><span class="p">{</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="nb">int</span><span class="p">}</span> <span class="o">//</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">exported</span>
-<span class="n">var</span> <span class="n">_</span> <span class="o">=</span> <span class="n">T</span><span class="p">{</span><span class="n">a</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">package</span> <span class="n">p</span>
+<span class="nb">type</span> <span class="n">T</span> <span class="n">struct</span><span class="p">{</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="nb">int</span><span class="p">}</span> <span class="o">//</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">exported</span>
+<span class="n">package</span> <span class="n">q</span>
+<span class="kn">import</span> <span class="s2">&quot;p&quot;</span>
+<span class="n">var</span> <span class="n">_</span> <span class="o">=</span> <span class="n">T</span><span class="p">{</span><span class="n">a</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span> <span class="o">//</span><span class="nb">compile</span> <span class="n">error</span><span class="p">,</span> <span class="n">can</span><span class="s1">&#39;t reference a  and b </span>
 </pre></div>
 
      </div>
@@ -14995,7 +15015,7 @@ $go test gopl.io/ch4/treesort</code></pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">comparing</span> <span class="n">two</span> <span class="n">points</span>
@@ -15034,7 +15054,7 @@ false
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[91]:</div>
 
 
 
@@ -15068,7 +15088,7 @@ false
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">comparable</span> <span class="n">struct</span> <span class="n">types</span> <span class="k">as</span> <span class="nb">map</span> <span class="n">key</span>
@@ -15109,7 +15129,7 @@ false
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[92]:</div>
 
 
 
@@ -15180,7 +15200,7 @@ false
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[93]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
@@ -15230,7 +15250,7 @@ false
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[93]:</div>
 
 
 
@@ -15266,7 +15286,7 @@ false
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[94]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">access</span> <span class="n">the</span> <span class="n">anonymous</span> <span class="n">field</span>
@@ -15313,7 +15333,7 @@ false
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[94]:</div>
 
 
 
@@ -15425,7 +15445,7 @@ repl.go:1:5: unknown field &#39;X&#39; in struct literal of type main.Wheel</pre
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[110]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">Anonymous</span> <span class="n">Fields</span>
@@ -15452,6 +15472,9 @@ repl.go:1:5: unknown field &#39;X&#39; in struct literal of type main.Wheel</pre
 <span class="p">}</span>
 
 <span class="o">//</span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%#v</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+<span class="o">//%</span><span class="k">v</span>	the value in a default format
+<span class="o">//</span>	<span class="n">when</span> <span class="n">printing</span> <span class="n">structs</span><span class="p">,</span> <span class="n">the</span> <span class="n">plus</span> <span class="n">flag</span> <span class="p">(</span><span class="o">%+</span><span class="n">v</span><span class="p">)</span> <span class="n">adds</span> <span class="n">field</span> <span class="n">names</span>
+<span class="o">//%</span><span class="c1">#v	a Go-syntax representation of the value</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%+v</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">w</span><span class="p">)</span>
 	<span class="o">//</span> <span class="n">Output</span><span class="p">:</span>
 	<span class="o">//</span> <span class="n">Wheel</span><span class="p">{</span><span class="n">Circle</span><span class="p">:</span><span class="n">Circle</span><span class="p">{</span><span class="n">Point</span><span class="p">:</span><span class="n">Point</span><span class="p">{</span><span class="n">X</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="n">Y</span><span class="p">:</span><span class="mi">8</span><span class="p">},</span> <span class="n">Radius</span><span class="p">:</span><span class="mi">5</span><span class="p">},</span> <span class="n">Spokes</span><span class="p">:</span><span class="mi">20</span><span class="p">}</span>
@@ -15494,7 +15517,7 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[110]:</div>
 
 
 
@@ -15581,7 +15604,7 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[112]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">pl</span><span class="o">/</span><span class="n">ch4</span><span class="o">/</span><span class="n">movie</span>
@@ -15615,7 +15638,7 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[117]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span>		<span class="o">//!</span>+Marshal
@@ -15679,7 +15702,7 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[118]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">MarshalIndent</span>	
@@ -15761,170 +15784,27 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Github-HTTP-request">Github HTTP request<a class="anchor-link" href="#Github-HTTP-request">&#182;</a></h4><ul>
+<li>decode the result as JSON</li>
+<li>url.QueryEscape to escape \? and |&amp;</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;encoding/json&quot;</span><span class="p">;</span><span class="s2">&quot;fmt&quot;</span><span class="p">;</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
-<span class="nb">type</span> <span class="n">Movie</span> <span class="n">struct</span> <span class="p">{</span>
-	<span class="n">Title</span>  <span class="n">string</span>
-	<span class="n">Year</span>   <span class="nb">int</span>  <span class="err">`</span><span class="n">json</span><span class="p">:</span><span class="s2">&quot;released&quot;</span><span class="err">`</span>
-	<span class="n">Color</span>  <span class="nb">bool</span> <span class="err">`</span><span class="n">json</span><span class="p">:</span><span class="s2">&quot;color,omitempty&quot;</span><span class="err">`</span>
-	<span class="n">Actors</span> <span class="p">[]</span><span class="n">string</span>
-<span class="p">}</span>
-<span class="n">var</span> <span class="n">movies</span> <span class="o">=</span> <span class="p">[]</span><span class="n">Movie</span><span class="p">{</span>
-	<span class="p">{</span><span class="n">Title</span><span class="p">:</span> <span class="s2">&quot;Casablanca&quot;</span><span class="p">,</span> <span class="n">Year</span><span class="p">:</span> <span class="mi">1942</span><span class="p">,</span> <span class="n">Color</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-		<span class="n">Actors</span><span class="p">:</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;Humphrey Bogart&quot;</span><span class="p">,</span> <span class="s2">&quot;Ingrid Bergman&quot;</span><span class="p">}},</span>
-	<span class="p">{</span><span class="n">Title</span><span class="p">:</span> <span class="s2">&quot;Cool Hand Luke&quot;</span><span class="p">,</span> <span class="n">Year</span><span class="p">:</span> <span class="mi">1967</span><span class="p">,</span> <span class="n">Color</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
-		<span class="n">Actors</span><span class="p">:</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;Paul Newman&quot;</span><span class="p">}},</span>
-	<span class="p">{</span><span class="n">Title</span><span class="p">:</span> <span class="s2">&quot;Bullitt&quot;</span><span class="p">,</span> <span class="n">Year</span><span class="p">:</span> <span class="mi">1968</span><span class="p">,</span> <span class="n">Color</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
-		<span class="n">Actors</span><span class="p">:</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;Steve McQueen&quot;</span><span class="p">,</span> <span class="s2">&quot;Jacqueline Bisset&quot;</span><span class="p">}},</span>
-<span class="p">}</span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span>
-		<span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">json</span><span class="o">.</span><span class="n">Marshal</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span>
-		<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
-			<span class="n">log</span><span class="o">.</span><span class="n">Fatalf</span><span class="p">(</span><span class="s2">&quot;JSON marshaling failed: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
-		<span class="p">}</span>
-		<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-		<span class="o">//!</span>-Marshal
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[{&#34;Title&#34;:&#34;Casablanca&#34;,&#34;released&#34;:1942,&#34;Actors&#34;:[&#34;Humphrey Bogart&#34;,&#34;Ingrid Bergman&#34;]},{&#34;Title&#34;:&#34;Cool Hand Luke&#34;,&#34;released&#34;:1967,&#34;color&#34;:true,&#34;Actors&#34;:[&#34;Paul Newman&#34;]},{&#34;Title&#34;:&#34;Bullitt&#34;,&#34;released&#34;:1968,&#34;color&#34;:true,&#34;Actors&#34;:[&#34;Steve McQueen&#34;,&#34;Jacqueline Bisset&#34;]}]
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span>
-		<span class="o">//!</span>+MarshalIndent
-		<span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">json</span><span class="o">.</span><span class="n">MarshalIndent</span><span class="p">(</span><span class="n">movies</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;    &quot;</span><span class="p">)</span>
-		<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
-			<span class="n">log</span><span class="o">.</span><span class="n">Fatalf</span><span class="p">(</span><span class="s2">&quot;JSON marshaling failed: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
-		<span class="p">}</span>
-		<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-		<span class="o">//!</span>-MarshalIndent
-
-		<span class="o">//!</span>+Unmarshal
-		<span class="n">var</span> <span class="n">titles</span> <span class="p">[]</span><span class="n">struct</span><span class="p">{</span> <span class="n">Title</span> <span class="n">string</span> <span class="p">}</span>
-		<span class="k">if</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">json</span><span class="o">.</span><span class="n">Unmarshal</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">titles</span><span class="p">);</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
-			<span class="n">log</span><span class="o">.</span><span class="n">Fatalf</span><span class="p">(</span><span class="s2">&quot;JSON unmarshaling failed: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
-		<span class="p">}</span>
-		<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">titles</span><span class="p">)</span> <span class="o">//</span> <span class="s2">&quot;[</span><span class="si">{Casablanca}</span><span class="s2"> {Cool Hand Luke} </span><span class="si">{Bullitt}</span><span class="s2">]&quot;</span>
-		<span class="o">//!</span>-Unmarshal
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[
-    {
-        &#34;Title&#34;: &#34;Casablanca&#34;,
-        &#34;released&#34;: 1942,
-        &#34;Actors&#34;: [
-            &#34;Humphrey Bogart&#34;,
-            &#34;Ingrid Bergman&#34;
-        ]
-    },
-    {
-        &#34;Title&#34;: &#34;Cool Hand Luke&#34;,
-        &#34;released&#34;: 1967,
-        &#34;color&#34;: true,
-        &#34;Actors&#34;: [
-            &#34;Paul Newman&#34;
-        ]
-    },
-    {
-        &#34;Title&#34;: &#34;Bullitt&#34;,
-        &#34;released&#34;: 1968,
-        &#34;color&#34;: true,
-        &#34;Actors&#34;: [
-            &#34;Steve McQueen&#34;,
-            &#34;Jacqueline Bisset&#34;
-        ]
-    }
-]
-[{Casablanca} {Cool Hand Luke} {Bullitt}]
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[119]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ch4</span><span class="o">/</span><span class="n">github</span>
@@ -15965,7 +15845,7 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[132]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;encoding/json&quot;</span><span class="p">;</span><span class="s2">&quot;fmt&quot;</span><span class="p">;</span><span class="s2">&quot;net/http&quot;</span><span class="p">;</span><span class="s2">&quot;net/url&quot;</span><span class="p">;</span><span class="s2">&quot;strings&quot;</span><span class="p">)</span>
@@ -15997,12 +15877,12 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[150]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;fmt&quot;</span><span class="p">;</span><span class="s2">&quot;log&quot;</span><span class="p">;</span><span class="s2">&quot;os&quot;</span><span class="p">;</span><span class="s2">&quot;gopl.io/ch4/github&quot;</span><span class="p">)</span>
@@ -16010,7 +15890,8 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 <span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
 	<span class="o">//</span><span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">github</span><span class="o">.</span><span class="n">SearchIssues</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
     <span class="n">t</span> <span class="o">:=</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;repo:golang/go&quot;</span><span class="p">,</span><span class="s2">&quot;is:open&quot;</span><span class="p">,</span><span class="s2">&quot;json&quot;</span><span class="p">,</span><span class="s2">&quot;decoder&quot;</span><span class="p">}</span>
-    <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">github</span><span class="o">.</span><span class="n">SearchIssues</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="o">//</span><span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">github</span><span class="o">.</span><span class="n">SearchIssues</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">SearchIssues</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> 
 	<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
 		<span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
 	<span class="p">}</span>
@@ -16027,35 +15908,12 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-repl.go:6:20: undefined &#34;github&#34; in github.SearchIssues &lt;*ast.SelectorExpr&gt;</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[143]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">Args</span> <span class="o">=</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;./issues&quot;</span><span class="p">,</span> <span class="s2">&quot;repo:golang/go&quot;</span><span class="p">,</span> <span class="s2">&quot;is:open&quot;</span><span class="p">,</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="s2">&quot;decoder&quot;</span><span class="p">}</span>
@@ -16081,37 +15939,38 @@ repl.go:6:20: undefined &#34;github&#34; in github.SearchIssues &lt;*ast.Selecto
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>42 issues:
-#33416   bserdar encoding/json: This CL adds Decoder.InternKeys
-#34647 babolivie encoding/json: fix byte counter increments when using d
-#34543  maxatome encoding/json: Unmarshal &amp; json.(*Decoder).Token report
-#29035    jaswdr proposal: encoding/json: add error var to compare  the 
-#32779       rsc proposal: encoding/json: memoize strings during decode?
-#34564  mdempsky go/internal/gcimporter: single source of truth for deco
-#28923     mvdan encoding/json: speed up the decoding scanner
+<pre>&amp;{[] {0x140002fec00} &lt;nil&gt; &lt;nil&gt;}
+85 issues:
+#48298     dsnet encoding/json: add Decoder.DisallowDuplicateFields
 #11046     kurin encoding/json: Decoder internally buffers full input
-#33854     Qhesz encoding/json: unmarshal option to treat omitted fields
-#30301     zelch encoding/xml: option to treat unknown fields as an erro
-#26946    deuill encoding/json: clarify what happens when unmarshaling i
-#12001 lukescott encoding/json: Marshaler/Unmarshaler not stream friendl
-#33835     Qhesz encoding/json: unmarshalling null into non-nullable gol
-#31701    lr1980 encoding/json: second decode after error impossible
-#31789  mgritter encoding/json: provide a way to limit recursion depth
-#16212 josharian encoding/json: do all reflect work before decoding
-#22480     blixt proposal: encoding/json: add omitnil option
-#28189     adnsv encoding/json: confusing errors when unmarshaling custo
-#5901        rsc encoding/json: allow override type marshaling
+#36225     dsnet encoding/json: the Decoder.Decode API lends itself to m
+#56733 rolandsho encoding/json: add (*Decoder).SetLimit
+#61627    nabice x/tools/gopls: The rename command line may accept ident
+#40128  rogpeppe proposal: encoding/json: garbage-free reading of tokens
+#29035    jaswdr proposal: encoding/json: add error var to compare  the 
+#41144 alvaroale encoding/json: Unmarshaler breaks DisallowUnknownFields
+#5901        rsc encoding/json: allow per-Encoder/per-Decoder registrati
+#42571     dsnet encoding/json: clarify Decoder.InputOffset semantics
+#40127  rogpeppe encoding/json: add Encoder.EncodeToken method
+#14750 cyberphon encoding/json: parser ignores the case of member names
+#43716 ggaaooppe encoding/json: increment byte counter when using decode
+#34543  maxatome encoding/json: Unmarshal &amp; json.(*Decoder).Token report
+#59053   joerdav proposal: encoding/json: add a generic Decode function
+#32779       rsc encoding/json: memoize strings during decode
+#48950 Alexander encoding/json: calculate correct SyntaxError.Offset in 
 #33714    flimzy proposal: encoding/json: Opt-in for true streaming supp
 #7872  extempora encoding/json: Encoder internally buffers full output
-#14750 cyberphon encoding/json: parser ignores the case of member names
-#28143    arp242 proposal: encoding/json: add &#34;readonly&#34; tag
-#30701 LouAdrien encoding/json: ignore tag &#34;-&#34; not working on embedded s
-#22752  buyology proposal: encoding/json: add access to the underlying d
-#27179  lavalamp encoding/json: no way to preserve the order of map keys
-#20754       rsc encoding/xml: unmarshal only processes first XML elemen
-#20528  jvshahid net/http: connection reuse does not work happily with n
-#22816 ganelon13 encoding/json: include field name in unmarshal error me
-#21823  243083df encoding/xml: very low performance in xml parser
+#31701    lr1980 encoding/json: second decode after error impossible
+#6647    btracey x/tools/cmd/godoc: display type kind of each named type
+#22533      ibrt proposal: encoding/json: preserve unknown fields
+#43513 Alexander encoding/json: add line number to SyntaxError
+#40982   Segflow encoding/json: use different error type for unknown fie
+#16212 josharian encoding/json: do all reflect work before decoding
+#22480     blixt proposal: encoding/json: add omitnil option
+#56332    gansvv encoding/json: clearer error message for boolean like p
+#33854     Qhesz encoding/json: unmarshal option to treat omitted fields
+#34564  mdempsky go/internal/gcimporter: single source of truth for deco
+#58649 nabokihms encoding/json: show nested fields path if DisallowUnkno
 </pre>
 </div>
 </div>
@@ -16145,6 +16004,13 @@ repl.go:6:20: undefined &#34;github&#34; in github.SearchIssues &lt;*ast.Selecto
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>template is a string or file containing one or more portions enclosed in double braces, {{...}}, called actions</li>
+<li>Each action contains an expression in the template language<ul>
+<li>Printing values</li>
+<li>Selecting struct fields</li>
+<li>Calling functions and methods</li>
+<li>Control flow such as if-else, range, and instantiating other templates</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -16155,7 +16021,7 @@ repl.go:6:20: undefined &#34;github&#34; in github.SearchIssues &lt;*ast.Selecto
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[144]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">template</span>
@@ -16203,7 +16069,7 @@ Age:    {{.CreatedAt | daysAgo}} days
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[144]:</div>
 
 
 
@@ -16223,7 +16089,7 @@ Age:    {{.CreatedAt | daysAgo}} days
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[152]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">Parse</span> <span class="n">the</span> <span class="n">template</span> <span class="n">into</span> <span class="n">a</span> <span class="n">suitable</span> <span class="n">internal</span> <span class="n">represntation</span>
@@ -16260,13 +16126,13 @@ Age:    {{.CreatedAt | daysAgo}} days
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&amp;{&#34;report&#34; %!q(*parse.Tree=&amp;{report report 0xc0003c7380 {{.TotalCount}} issues:
+<pre>&amp;{&#34;report&#34; %!q(*parse.Tree=&amp;{report report 0x14000a410b0 0 {{.TotalCount}} issues:
 {{range .Items}}----------------------------------------
 Number: {{.Number}}
 User:   {{.User.Login}}
 Title:  {{.Title | printf &#34;%.64s&#34;}}
 Age:    {{.CreatedAt | daysAgo}} days
-{{end}} [] &lt;nil&gt; [{7 206  7} {10 24 {{ 2} {0 0  0}] 1 [] map[]}) %!q(*template.common=&amp;{map[report:0xc000f16f80] {0} {{0 0} 0 0 0 0} map[daysAgo:0xa98950] map[daysAgo:{0xc0004f92c0 0xc0005b2840 19}]}) &#34;&#34; &#34;&#34;}
+{{end}} [] &lt;nil&gt; [{8 206  7} {11 24 {{ 2} {0 0  0}] 1 [] map[] 0 0}) %!q(*template.common=&amp;{map[report:0x14000666b00] {{0 0} 0 0 {{} 0} {{} 0}} {0} {{0 0} 0 0 {{} 0} {{} 0}} map[daysAgo:0x1000dd370] map[daysAgo:{0x100e8f4e0 0x14000a40ed0 19}]}) &#34;&#34; &#34;&#34;}
 </pre>
 </div>
 </div>
@@ -16280,7 +16146,7 @@ Age:    {{.CreatedAt | daysAgo}} days
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[153]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Template</span> <span class="n">fixed</span> <span class="n">at</span> <span class="nb">compile</span> <span class="n">time</span> <span class="ow">and</span> <span class="n">template</span><span class="o">.</span><span class="n">Must</span> <span class="n">handle</span> <span class="n">the</span> <span class="n">error</span> <span class="n">condition</span>
@@ -16302,7 +16168,8 @@ Age:    {{.CreatedAt | daysAgo}} days
 	<span class="n">Parse</span><span class="p">(</span><span class="n">templ</span><span class="p">))</span>
 
 <span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-	<span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">github</span><span class="o">.</span><span class="n">SearchIssues</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+	<span class="o">//</span><span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">github</span><span class="o">.</span><span class="n">SearchIssues</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">SearchIssues</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 	<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
 		<span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
 	<span class="p">}</span>
@@ -16323,7 +16190,7 @@ Age:    {{.CreatedAt | daysAgo}} days
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[157]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">noMust</span><span class="p">()</span> <span class="p">{</span>
@@ -16335,9 +16202,10 @@ Age:    {{.CreatedAt | daysAgo}} days
 		<span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
 	<span class="p">}</span>
 	<span class="o">//!</span>-parse
-	<span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">github</span><span class="o">.</span><span class="n">Sea</span><span class="o">-</span><span class="n">rchIssues</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+	<span class="o">//</span><span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">github</span><span class="o">.</span><span class="n">SearchIssues</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">SearchIssues</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 	<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
-		<span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span><span class="o">-</span>
+		<span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
 	<span class="p">}</span>
 	<span class="k">if</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">report</span><span class="o">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Stdout</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
 		<span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
@@ -16355,7 +16223,7 @@ Age:    {{.CreatedAt | daysAgo}} days
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[158]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">Args</span> <span class="o">=</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;issuereport&quot;</span><span class="p">,</span> <span class="s2">&quot;repo:golang/go&quot;</span><span class="p">,</span><span class="s2">&quot;is:open&quot;</span><span class="p">,</span><span class="s2">&quot;json&quot;</span><span class="p">,</span><span class="s2">&quot;decoder&quot;</span><span class="p">}</span>
@@ -16381,158 +16249,159 @@ Age:    {{.CreatedAt | daysAgo}} days
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&amp;{42 [0xc0007a03f0 0xc0007a0460 0xc0007a08c0 0xc0007a12d0 0xc0007a1340 0xc0007a13b0 0xc0007a1420 0xc0007a1490 0xc0007a1500 0xc0007a15e0 0xc0007a1650 0xc0007a16c0 0xc0007a1730 0xc0007a17a0 0xc0007a1810 0xc0007a1880 0xc0007a18f0 0xc0007a1960 0xc0007a19d0 0xc0007a1a40 0xc0007a1ab0 0xc0007a1b20 0xc0007a1b90 0xc0007a1c00 0xc0007a1c70 0xc0007a1ce0 0xc0007a1d50 0xc0007a1dc0 0xc0007a1e30 0xc0007a1ea0]}
-42 issues:
+<pre>&amp;{[] {0x140007f4180} &lt;nil&gt; &lt;nil&gt;}
+&amp;{85 [0x14000fa07e0 0x14000fa08c0 0x14000fa0930 0x14000fa09a0 0x14000fa0a10 0x14000fa0a80 0x14000fa0af0 0x14000fa0b60 0x14000fa0bd0 0x14000fa0c40 0x14000fa0cb0 0x14000fa0d20 0x14000fa0d90 0x14000fa0e00 0x14000fa0e70 0x14000fa0ee0 0x14000fa0f50 0x14000fa0fc0 0x14000fa1030 0x14000fa1e30 0x14000fa1ea0 0x14000fa1f10 0x14000fa1f80 0x14000c99570 0x14000c99810 0x14000c99880 0x14000c998f0 0x14000c99960 0x14000c999d0 0x14000c99a40]}
+85 issues:
 ----------------------------------------
-Number: 33416
-User:   bserdar
-Title:  encoding/json: This CL adds Decoder.InternKeys
-Age:    90 days
-----------------------------------------
-Number: 34647
-User:   babolivier
-Title:  encoding/json: fix byte counter increments when using decoder.To
-Age:    29 days
-----------------------------------------
-Number: 34543
-User:   maxatome
-Title:  encoding/json: Unmarshal &amp; json.(*Decoder).Token report differen
-Age:    35 days
-----------------------------------------
-Number: 29035
-User:   jaswdr
-Title:  proposal: encoding/json: add error var to compare  the returned 
-Age:    334 days
-----------------------------------------
-Number: 32779
-User:   rsc
-Title:  proposal: encoding/json: memoize strings during decode?
-Age:    127 days
-----------------------------------------
-Number: 34564
-User:   mdempsky
-Title:  go/internal/gcimporter: single source of truth for decoder logic
-Age:    34 days
-----------------------------------------
-Number: 28923
-User:   mvdan
-Title:  encoding/json: speed up the decoding scanner
-Age:    342 days
+Number: 48298
+User:   dsnet
+Title:  encoding/json: add Decoder.DisallowDuplicateFields
+Age:    759 days
 ----------------------------------------
 Number: 11046
 User:   kurin
 Title:  encoding/json: Decoder internally buffers full input
-Age:    1610 days
+Age:    3049 days
 ----------------------------------------
-Number: 33854
-User:   Qhesz
-Title:  encoding/json: unmarshal option to treat omitted fields as null
-Age:    65 days
+Number: 36225
+User:   dsnet
+Title:  encoding/json: the Decoder.Decode API lends itself to misuse
+Age:    1389 days
 ----------------------------------------
-Number: 30301
-User:   zelch
-Title:  encoding/xml: option to treat unknown fields as an error
-Age:    254 days
+Number: 56733
+User:   rolandshoemaker
+Title:  encoding/json: add (*Decoder).SetLimit
+Age:    328 days
 ----------------------------------------
-Number: 26946
-User:   deuill
-Title:  encoding/json: clarify what happens when unmarshaling into a non
-Age:    444 days
+Number: 61627
+User:   nabice
+Title:  x/tools/gopls: The rename command line may accept identifiers in
+Age:    73 days
 ----------------------------------------
-Number: 12001
-User:   lukescott
-Title:  encoding/json: Marshaler/Unmarshaler not stream friendly
-Age:    1549 days
+Number: 40128
+User:   rogpeppe
+Title:  proposal: encoding/json: garbage-free reading of tokens
+Age:    1187 days
 ----------------------------------------
-Number: 33835
-User:   Qhesz
-Title:  encoding/json: unmarshalling null into non-nullable golang types
-Age:    65 days
+Number: 29035
+User:   jaswdr
+Title:  proposal: encoding/json: add error var to compare  the returned 
+Age:    1774 days
 ----------------------------------------
-Number: 31701
-User:   lr1980
-Title:  encoding/json: second decode after error impossible
-Age:    187 days
-----------------------------------------
-Number: 31789
-User:   mgritter
-Title:  encoding/json: provide a way to limit recursion depth
-Age:    182 days
-----------------------------------------
-Number: 16212
-User:   josharian
-Title:  encoding/json: do all reflect work before decoding
-Age:    1218 days
-----------------------------------------
-Number: 22480
-User:   blixt
-Title:  proposal: encoding/json: add omitnil option
-Age:    732 days
-----------------------------------------
-Number: 28189
-User:   adnsv
-Title:  encoding/json: confusing errors when unmarshaling custom types
-Age:    382 days
+Number: 41144
+User:   alvaroaleman
+Title:  encoding/json: Unmarshaler breaks DisallowUnknownFields
+Age:    1133 days
 ----------------------------------------
 Number: 5901
 User:   rsc
-Title:  encoding/json: allow override type marshaling
-Age:    2296 days
+Title:  encoding/json: allow per-Encoder/per-Decoder registration of mar
+Age:    3735 days
 ----------------------------------------
-Number: 33714
-User:   flimzy
-Title:  proposal: encoding/json: Opt-in for true streaming support
-Age:    72 days
+Number: 42571
+User:   dsnet
+Title:  encoding/json: clarify Decoder.InputOffset semantics
+Age:    1060 days
 ----------------------------------------
-Number: 7872
-User:   extemporalgenome
-Title:  encoding/json: Encoder internally buffers full output
-Age:    2013 days
+Number: 40127
+User:   rogpeppe
+Title:  encoding/json: add Encoder.EncodeToken method
+Age:    1187 days
 ----------------------------------------
 Number: 14750
 User:   cyberphone
 Title:  encoding/json: parser ignores the case of member names
-Age:    1329 days
+Age:    2769 days
 ----------------------------------------
-Number: 28143
-User:   arp242
-Title:  proposal: encoding/json: add &#34;readonly&#34; tag
-Age:    384 days
+Number: 43716
+User:   ggaaooppeenngg
+Title:  encoding/json: increment byte counter when using decoder.Token
+Age:    997 days
 ----------------------------------------
-Number: 30701
-User:   LouAdrien
-Title:  encoding/json: ignore tag &#34;-&#34; not working on embedded sub struct
-Age:    235 days
+Number: 34543
+User:   maxatome
+Title:  encoding/json: Unmarshal &amp; json.(*Decoder).Token report differen
+Age:    1474 days
 ----------------------------------------
-Number: 22752
-User:   buyology
-Title:  proposal: encoding/json: add access to the underlying data causi
-Age:    714 days
+Number: 59053
+User:   joerdav
+Title:  proposal: encoding/json: add a generic Decode function
+Age:    207 days
 ----------------------------------------
-Number: 27179
-User:   lavalamp
-Title:  encoding/json: no way to preserve the order of map keys
-Age:    433 days
-----------------------------------------
-Number: 20754
+Number: 32779
 User:   rsc
-Title:  encoding/xml: unmarshal only processes first XML element
-Age:    860 days
+Title:  encoding/json: memoize strings during decode
+Age:    1566 days
 ----------------------------------------
-Number: 20528
-User:   jvshahid
-Title:  net/http: connection reuse does not work happily with normal use
-Age:    883 days
+Number: 48950
+User:   AlexanderYastrebov
+Title:  encoding/json: calculate correct SyntaxError.Offset in the strea
+Age:    725 days
 ----------------------------------------
-Number: 22816
-User:   ganelon13
-Title:  encoding/json: include field name in unmarshal error messages wh
-Age:    709 days
+Number: 33714
+User:   flimzy
+Title:  proposal: encoding/json: Opt-in for true streaming support
+Age:    1512 days
 ----------------------------------------
-Number: 21823
-User:   243083df
-Title:  encoding/xml: very low performance in xml parser
-Age:    781 days
+Number: 7872
+User:   extemporalgenome
+Title:  encoding/json: Encoder internally buffers full output
+Age:    3452 days
+----------------------------------------
+Number: 31701
+User:   lr1980
+Title:  encoding/json: second decode after error impossible
+Age:    1626 days
+----------------------------------------
+Number: 6647
+User:   btracey
+Title:  x/tools/cmd/godoc: display type kind of each named type
+Age:    3637 days
+----------------------------------------
+Number: 22533
+User:   ibrt
+Title:  proposal: encoding/json: preserve unknown fields
+Age:    2167 days
+----------------------------------------
+Number: 40982
+User:   Segflow
+Title:  encoding/json: use different error type for unknown field if the
+Age:    1142 days
+----------------------------------------
+Number: 43513
+User:   AlexanderYastrebov
+Title:  encoding/json: add line number to SyntaxError
+Age:    1007 days
+----------------------------------------
+Number: 16212
+User:   josharian
+Title:  encoding/json: do all reflect work before decoding
+Age:    2657 days
+----------------------------------------
+Number: 22480
+User:   blixt
+Title:  proposal: encoding/json: add omitnil option
+Age:    2171 days
+----------------------------------------
+Number: 56332
+User:   gansvv
+Title:  encoding/json: clearer error message for boolean like prefix in 
+Age:    354 days
+----------------------------------------
+Number: 33854
+User:   Qhesz
+Title:  encoding/json: unmarshal option to treat omitted fields as null
+Age:    1504 days
+----------------------------------------
+Number: 34564
+User:   mdempsky
+Title:  go/internal/gcimporter: single source of truth for decoder logic
+Age:    1473 days
+----------------------------------------
+Number: 58649
+User:   nabokihms
+Title:  encoding/json: show nested fields path if DisallowUnknownFields 
+Age:    228 days
 </pre>
 </div>
 </div>
@@ -16546,10 +16415,10 @@ Age:    781 days
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[159]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">noMust</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">noMust</span><span class="p">()</span>  
 </pre></div>
 
      </div>
@@ -16571,157 +16440,158 @@ Age:    781 days
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>42 issues:
+<pre>&amp;{[] {0x140007f5980} &lt;nil&gt; &lt;nil&gt;}
+85 issues:
 ----------------------------------------
-Number: 33416
-User:   bserdar
-Title:  encoding/json: This CL adds Decoder.InternKeys
-Age:    90 days
-----------------------------------------
-Number: 34647
-User:   babolivier
-Title:  encoding/json: fix byte counter increments when using decoder.To
-Age:    29 days
-----------------------------------------
-Number: 34543
-User:   maxatome
-Title:  encoding/json: Unmarshal &amp; json.(*Decoder).Token report differen
-Age:    35 days
-----------------------------------------
-Number: 29035
-User:   jaswdr
-Title:  proposal: encoding/json: add error var to compare  the returned 
-Age:    334 days
-----------------------------------------
-Number: 32779
-User:   rsc
-Title:  proposal: encoding/json: memoize strings during decode?
-Age:    127 days
-----------------------------------------
-Number: 34564
-User:   mdempsky
-Title:  go/internal/gcimporter: single source of truth for decoder logic
-Age:    34 days
-----------------------------------------
-Number: 28923
-User:   mvdan
-Title:  encoding/json: speed up the decoding scanner
-Age:    342 days
+Number: 48298
+User:   dsnet
+Title:  encoding/json: add Decoder.DisallowDuplicateFields
+Age:    759 days
 ----------------------------------------
 Number: 11046
 User:   kurin
 Title:  encoding/json: Decoder internally buffers full input
-Age:    1610 days
+Age:    3049 days
 ----------------------------------------
-Number: 33854
-User:   Qhesz
-Title:  encoding/json: unmarshal option to treat omitted fields as null
-Age:    65 days
+Number: 36225
+User:   dsnet
+Title:  encoding/json: the Decoder.Decode API lends itself to misuse
+Age:    1389 days
 ----------------------------------------
-Number: 30301
-User:   zelch
-Title:  encoding/xml: option to treat unknown fields as an error
-Age:    254 days
+Number: 56733
+User:   rolandshoemaker
+Title:  encoding/json: add (*Decoder).SetLimit
+Age:    328 days
 ----------------------------------------
-Number: 26946
-User:   deuill
-Title:  encoding/json: clarify what happens when unmarshaling into a non
-Age:    444 days
+Number: 61627
+User:   nabice
+Title:  x/tools/gopls: The rename command line may accept identifiers in
+Age:    73 days
 ----------------------------------------
-Number: 12001
-User:   lukescott
-Title:  encoding/json: Marshaler/Unmarshaler not stream friendly
-Age:    1549 days
+Number: 40128
+User:   rogpeppe
+Title:  proposal: encoding/json: garbage-free reading of tokens
+Age:    1187 days
 ----------------------------------------
-Number: 33835
-User:   Qhesz
-Title:  encoding/json: unmarshalling null into non-nullable golang types
-Age:    65 days
+Number: 29035
+User:   jaswdr
+Title:  proposal: encoding/json: add error var to compare  the returned 
+Age:    1774 days
 ----------------------------------------
-Number: 31701
-User:   lr1980
-Title:  encoding/json: second decode after error impossible
-Age:    187 days
-----------------------------------------
-Number: 31789
-User:   mgritter
-Title:  encoding/json: provide a way to limit recursion depth
-Age:    182 days
-----------------------------------------
-Number: 16212
-User:   josharian
-Title:  encoding/json: do all reflect work before decoding
-Age:    1218 days
-----------------------------------------
-Number: 22480
-User:   blixt
-Title:  proposal: encoding/json: add omitnil option
-Age:    732 days
-----------------------------------------
-Number: 28189
-User:   adnsv
-Title:  encoding/json: confusing errors when unmarshaling custom types
-Age:    382 days
+Number: 41144
+User:   alvaroaleman
+Title:  encoding/json: Unmarshaler breaks DisallowUnknownFields
+Age:    1133 days
 ----------------------------------------
 Number: 5901
 User:   rsc
-Title:  encoding/json: allow override type marshaling
-Age:    2296 days
+Title:  encoding/json: allow per-Encoder/per-Decoder registration of mar
+Age:    3735 days
 ----------------------------------------
-Number: 33714
-User:   flimzy
-Title:  proposal: encoding/json: Opt-in for true streaming support
-Age:    72 days
+Number: 42571
+User:   dsnet
+Title:  encoding/json: clarify Decoder.InputOffset semantics
+Age:    1060 days
 ----------------------------------------
-Number: 7872
-User:   extemporalgenome
-Title:  encoding/json: Encoder internally buffers full output
-Age:    2013 days
+Number: 40127
+User:   rogpeppe
+Title:  encoding/json: add Encoder.EncodeToken method
+Age:    1187 days
 ----------------------------------------
 Number: 14750
 User:   cyberphone
 Title:  encoding/json: parser ignores the case of member names
-Age:    1329 days
+Age:    2769 days
 ----------------------------------------
-Number: 28143
-User:   arp242
-Title:  proposal: encoding/json: add &#34;readonly&#34; tag
-Age:    384 days
+Number: 43716
+User:   ggaaooppeenngg
+Title:  encoding/json: increment byte counter when using decoder.Token
+Age:    997 days
 ----------------------------------------
-Number: 30701
-User:   LouAdrien
-Title:  encoding/json: ignore tag &#34;-&#34; not working on embedded sub struct
-Age:    235 days
+Number: 34543
+User:   maxatome
+Title:  encoding/json: Unmarshal &amp; json.(*Decoder).Token report differen
+Age:    1474 days
 ----------------------------------------
-Number: 22752
-User:   buyology
-Title:  proposal: encoding/json: add access to the underlying data causi
-Age:    714 days
+Number: 59053
+User:   joerdav
+Title:  proposal: encoding/json: add a generic Decode function
+Age:    207 days
 ----------------------------------------
-Number: 27179
-User:   lavalamp
-Title:  encoding/json: no way to preserve the order of map keys
-Age:    433 days
-----------------------------------------
-Number: 20754
+Number: 32779
 User:   rsc
-Title:  encoding/xml: unmarshal only processes first XML element
-Age:    860 days
+Title:  encoding/json: memoize strings during decode
+Age:    1566 days
 ----------------------------------------
-Number: 20528
-User:   jvshahid
-Title:  net/http: connection reuse does not work happily with normal use
-Age:    883 days
+Number: 48950
+User:   AlexanderYastrebov
+Title:  encoding/json: calculate correct SyntaxError.Offset in the strea
+Age:    725 days
 ----------------------------------------
-Number: 22816
-User:   ganelon13
-Title:  encoding/json: include field name in unmarshal error messages wh
-Age:    709 days
+Number: 33714
+User:   flimzy
+Title:  proposal: encoding/json: Opt-in for true streaming support
+Age:    1512 days
 ----------------------------------------
-Number: 21823
-User:   243083df
-Title:  encoding/xml: very low performance in xml parser
-Age:    781 days
+Number: 7872
+User:   extemporalgenome
+Title:  encoding/json: Encoder internally buffers full output
+Age:    3452 days
+----------------------------------------
+Number: 31701
+User:   lr1980
+Title:  encoding/json: second decode after error impossible
+Age:    1626 days
+----------------------------------------
+Number: 6647
+User:   btracey
+Title:  x/tools/cmd/godoc: display type kind of each named type
+Age:    3637 days
+----------------------------------------
+Number: 22533
+User:   ibrt
+Title:  proposal: encoding/json: preserve unknown fields
+Age:    2167 days
+----------------------------------------
+Number: 40982
+User:   Segflow
+Title:  encoding/json: use different error type for unknown field if the
+Age:    1142 days
+----------------------------------------
+Number: 43513
+User:   AlexanderYastrebov
+Title:  encoding/json: add line number to SyntaxError
+Age:    1007 days
+----------------------------------------
+Number: 16212
+User:   josharian
+Title:  encoding/json: do all reflect work before decoding
+Age:    2657 days
+----------------------------------------
+Number: 22480
+User:   blixt
+Title:  proposal: encoding/json: add omitnil option
+Age:    2171 days
+----------------------------------------
+Number: 56332
+User:   gansvv
+Title:  encoding/json: clearer error message for boolean like prefix in 
+Age:    354 days
+----------------------------------------
+Number: 33854
+User:   Qhesz
+Title:  encoding/json: unmarshal option to treat omitted fields as null
+Age:    1504 days
+----------------------------------------
+Number: 34564
+User:   mdempsky
+Title:  go/internal/gcimporter: single source of truth for decoder logic
+Age:    1473 days
+----------------------------------------
+Number: 58649
+User:   nabokihms
+Title:  encoding/json: show nested fields path if DisallowUnknownFields 
+Age:    228 days
 </pre>
 </div>
 </div>
@@ -16750,7 +16620,7 @@ Age:    781 days
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[160]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ch4</span><span class="o">/</span><span class="n">issueshtml</span>
@@ -16786,11 +16656,12 @@ Age:    781 days
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[161]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-	<span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">github</span><span class="o">.</span><span class="n">SearchIssues</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+	<span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">SearchIssues</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="o">//</span><span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">github</span><span class="o">.</span><span class="n">SearchIssues</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 	<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
 		<span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
 	<span class="p">}</span>
@@ -16810,7 +16681,7 @@ Age:    781 days
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[162]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">Args</span> <span class="o">=</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;issuehtml&quot;</span><span class="p">,</span><span class="s2">&quot;repo:golang/go&quot;</span><span class="p">,</span><span class="s2">&quot;commenter:gopherbot&quot;</span><span class="p">,</span><span class="s2">&quot;json&quot;</span><span class="p">,</span><span class="s2">&quot;encoder&quot;</span><span class="p">}</span>
@@ -16836,8 +16707,9 @@ Age:    781 days
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-&lt;h1&gt;37 issues&lt;/h1&gt;
+<pre>&amp;{[] {0x14000d2a600} &lt;nil&gt; &lt;nil&gt;}
+
+&lt;h1&gt;83 issues&lt;/h1&gt;
 &lt;table border=1&gt;
 &lt;tr style=&#39;text-align: left&#39;&gt;
   &lt;th&gt;#&lt;/th&gt;
@@ -16854,6 +16726,41 @@ Age:    781 days
 &lt;/tr&gt;
 
 &lt;tr&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/40127&#39;&gt;40127&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/rogpeppe&#39;&gt;rogpeppe&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/40127&#39;&gt;encoding/json: add Encoder.EncodeToken method&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/5901&#39;&gt;5901&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/rsc&#39;&gt;rsc&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/5901&#39;&gt;encoding/json: allow per-Encoder/per-Decoder registration of marshal/unmarshal functions&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/33422&#39;&gt;33422&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/rittneje&#39;&gt;rittneje&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/33422&#39;&gt;encoding/json: marshaling RawMessage has poor performance&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/27589&#39;&gt;27589&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/pjebs&#39;&gt;pjebs&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/27589&#39;&gt;proposal: encoding/json: &amp;#34;nonil&amp;#34; struct tag to marshal nil slices and maps as non-null&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/6213&#39;&gt;6213&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/gopherbot&#39;&gt;gopherbot&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/6213&#39;&gt;proposal: encoding/json: add &amp;#34;inline&amp;#34; struct tag&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
   &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/27735&#39;&gt;27735&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;open&lt;/td&gt;
   &lt;td&gt;&lt;a href=&#39;https://github.com/dsnet&#39;&gt;dsnet&lt;/a&gt;&lt;/td&gt;
@@ -16861,17 +16768,31 @@ Age:    781 days
 &lt;/tr&gt;
 
 &lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/10769&#39;&gt;10769&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/14750&#39;&gt;14750&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;open&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/bep&#39;&gt;bep&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/10769&#39;&gt;encoding/json: detect circular data structures when encoding&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/cyberphone&#39;&gt;cyberphone&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/14750&#39;&gt;encoding/json: parser ignores the case of member names&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/28923&#39;&gt;28923&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/5161&#39;&gt;5161&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;open&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/mvdan&#39;&gt;mvdan&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/28923&#39;&gt;encoding/json: speed up the decoding scanner&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/orofarne&#39;&gt;orofarne&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/5161&#39;&gt;encoding/json: use the Error method to marshal an error value?&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/11939&#39;&gt;11939&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/joeshaw&#39;&gt;joeshaw&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/11939&#39;&gt;proposal: encoding/json, encoding/xml: support zero values of structs with omitempty&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/35501&#39;&gt;35501&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/ainar-g&#39;&gt;ainar-g&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/35501&#39;&gt;encoding/json: tag `json:&amp;#34;-&amp;#34;` doesn&amp;#39;t hide an embedded field&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -16896,13 +16817,6 @@ Age:    781 days
 &lt;/tr&gt;
 
 &lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/11939&#39;&gt;11939&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;open&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/joeshaw&#39;&gt;joeshaw&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/11939&#39;&gt;proposal: encoding/json, encoding/xml: support zero values of structs with omitempty&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
   &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/20206&#39;&gt;20206&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;open&lt;/td&gt;
   &lt;td&gt;&lt;a href=&#39;https://github.com/markdryan&#39;&gt;markdryan&lt;/a&gt;&lt;/td&gt;
@@ -16910,17 +16824,45 @@ Age:    781 days
 &lt;/tr&gt;
 
 &lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/34471&#39;&gt;34471&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/32779&#39;&gt;32779&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;open&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/lmb&#39;&gt;lmb&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/34471&#39;&gt;proposal: encoding/binary: cache dataSize across invocations of Read and Write&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/rsc&#39;&gt;rsc&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/32779&#39;&gt;encoding/json: memoize strings during decode&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/34235&#39;&gt;34235&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/8717&#39;&gt;8717&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/dvyukov&#39;&gt;dvyukov&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/8717&#39;&gt;cmd/compile: random performance fluctuations after unrelated changes&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/59345&#39;&gt;59345&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/wI2L&#39;&gt;wI2L&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/34235&#39;&gt;encoding/json: marshaling a zero value encoding.TextMarshaler interface struct field panics&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/jba&#39;&gt;jba&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/59345&#39;&gt;log/slog: JSONHandler should format everything like json.Marshal&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/58452&#39;&gt;58452&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/neild&#39;&gt;neild&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/58452&#39;&gt;proposal: io: allocate copy buffers from a pool&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/37237&#39;&gt;37237&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/myitcv&#39;&gt;myitcv&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/37237&#39;&gt;x/tools/gopls: support advanced query syntax for Symbol&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/61758&#39;&gt;61758&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;closed&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/pohly&#39;&gt;pohly&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/61758&#39;&gt;testing/slogtest: support sub-tests&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -16931,31 +16873,24 @@ Age:    781 days
 &lt;/tr&gt;
 
 &lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/33675&#39;&gt;33675&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/58428&#39;&gt;58428&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/wI2L&#39;&gt;wI2L&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/33675&#39;&gt;encoding/json: panic for nil map key types implementing TextMarshaler&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/tpaschalis&#39;&gt;tpaschalis&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/58428&#39;&gt;cmd/link: compilation failure on armv6/armv7 due to truncated relocations&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/32896&#39;&gt;32896&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/59040&#39;&gt;59040&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/nkovacs&#39;&gt;nkovacs&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/32896&#39;&gt;encoding/json: addrMarshalerEncoder does not respect SetEscapeHTML&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/bradfitz&#39;&gt;bradfitz&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/59040&#39;&gt;expvar: Map.String can make invalid JSON with low ASCII bytes&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/5683&#39;&gt;5683&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/gopherbot&#39;&gt;gopherbot&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/5683&#39;&gt;encoding/json: performance slower than expected&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/17704&#39;&gt;17704&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/23199&#39;&gt;23199&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
   &lt;td&gt;&lt;a href=&#39;https://github.com/dsnet&#39;&gt;dsnet&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/17704&#39;&gt;encoding/json: regression in handling of nil RawMessage&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/23199&#39;&gt;sync: Pool example suggests incorrect usage&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -16966,94 +16901,31 @@ Age:    781 days
 &lt;/tr&gt;
 
 &lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/11940&#39;&gt;11940&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/lukescott&#39;&gt;lukescott&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/11940&#39;&gt;proposal: encoding/json: Encode channel as array&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/34298&#39;&gt;34298&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/pmalek&#39;&gt;pmalek&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/34298&#39;&gt;x/tools/gopls: error checking package&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/4146&#39;&gt;4146&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/49480&#39;&gt;49480&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;open&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/bradfitz&#39;&gt;bradfitz&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/4146&#39;&gt;reflect: MakeInterface&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/quasilyte&#39;&gt;quasilyte&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/49480&#39;&gt;cmd/compile,runtime: introduce growbyteslice?&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/23077&#39;&gt;23077&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/pciet&#39;&gt;pciet&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/23077&#39;&gt;proposal: Go 2: remove interface{} use from the standard library&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/21590&#39;&gt;21590&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/Hamcha&#39;&gt;Hamcha&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/21590&#39;&gt;proposal: encoding/hex: add an encoder and decoder&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/19348&#39;&gt;19348&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/davidlazar&#39;&gt;davidlazar&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/19348&#39;&gt;cmd/compile: enable mid-stack inlining&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/28792&#39;&gt;28792&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/thinkerou&#39;&gt;thinkerou&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/28792&#39;&gt;cmd/vet: incorrect error on a MarshalXML method&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/26264&#39;&gt;26264&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/mvdan&#39;&gt;mvdan&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/26264&#39;&gt;bytes: WriteString, WriteByte and Write vary in performance&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/30101&#39;&gt;30101&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/38751&#39;&gt;38751&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
   &lt;td&gt;&lt;a href=&#39;https://github.com/dmitshur&#39;&gt;dmitshur&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/30101&#39;&gt;x/build/maintner: GerritCL.Subject doesn&amp;#39;t include entire subject if it&amp;#39;s split across multiple lines&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/38751&#39;&gt;x/playground: very large output is sometimes corrupted&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/17255&#39;&gt;17255&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/55973&#39;&gt;55973&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/xoba&#39;&gt;xoba&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/17255&#39;&gt;encoding/json docs reference an unknown entity &amp;#34;DisableHTMLEscaping&amp;#34;&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/Thorleon&#39;&gt;Thorleon&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/55973&#39;&gt;encoding/asn1: remove allocation from init&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/14493&#39;&gt;14493&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/niemeyer&#39;&gt;niemeyer&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/14493&#39;&gt;encoding/json: RawMessage marshals as base64&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/6492&#39;&gt;6492&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/kisielk&#39;&gt;kisielk&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/6492&#39;&gt;encoding/json: Add Encoder.Indent&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/6901&#39;&gt;6901&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;closed&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/lukescott&#39;&gt;lukescott&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/6901&#39;&gt;encoding/json, encoding/xml: option to treat unknown fields as an error&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/15808&#39;&gt;15808&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;open&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/randall77&#39;&gt;randall77&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;a href=&#39;https://github.com/golang/go/issues/15808&#39;&gt;cmd/compile: loads/constants not lifted out of loop&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;/table&gt;
