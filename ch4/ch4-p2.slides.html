@@ -15784,16 +15784,16 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Github-HTTP-request">Github HTTP request<a class="anchor-link" href="#Github-HTTP-request">&#182;</a></h4><ul>
+<h4 id="github-HTTP-request">github HTTP request<a class="anchor-link" href="#github-HTTP-request">&#182;</a></h4><ul>
 <li>decode the result as JSON</li>
-<li>url.QueryEscape to escape \? and |&amp;</li>
+<li>url.QueryEscape to escape \? and \&amp;</li>
 </ul>
 
 </div>
@@ -15804,7 +15804,7 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[119]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ch4</span><span class="o">/</span><span class="n">github</span>
@@ -15840,12 +15840,28 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="github-api-for-issues">github api for issues<a class="anchor-link" href="#github-api-for-issues">&#182;</a></h4><ul>
+<li><a href="https://api.github.com/search/issues?q=repo:golang/go%20is:open%20json%20decoder">github issue api</a></li>
+<li>struct fields are capitalized for public access even if JSON names are not</li>
+<li>matching process with JSON names and Go struct names is case-insensitive</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[132]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;encoding/json&quot;</span><span class="p">;</span><span class="s2">&quot;fmt&quot;</span><span class="p">;</span><span class="s2">&quot;net/http&quot;</span><span class="p">;</span><span class="s2">&quot;net/url&quot;</span><span class="p">;</span><span class="s2">&quot;strings&quot;</span><span class="p">)</span>
@@ -15861,7 +15877,8 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 		<span class="n">resp</span><span class="o">.</span><span class="n">Body</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span>
 		<span class="k">return</span> <span class="n">nil</span><span class="p">,</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Errorf</span><span class="p">(</span><span class="s2">&quot;search query failed: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">Status</span><span class="p">)</span>
 	<span class="p">}</span>
-    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">Body</span><span class="p">)</span>
+    <span class="o">//</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">Body</span><span class="p">)</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q&quot;</span><span class="p">,</span><span class="n">resp</span><span class="o">.</span><span class="n">Body</span><span class="p">)</span>
 	<span class="n">var</span> <span class="n">result</span> <span class="n">IssuesSearchResult</span>
 	<span class="k">if</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">json</span><span class="o">.</span><span class="n">NewDecoder</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">Body</span><span class="p">)</span><span class="o">.</span><span class="n">Decode</span><span class="p">(</span><span class="o">&amp;</span><span class="n">result</span><span class="p">);</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
 		<span class="n">resp</span><span class="o">.</span><span class="n">Body</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span>
@@ -15877,12 +15894,12 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[150]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;fmt&quot;</span><span class="p">;</span><span class="s2">&quot;log&quot;</span><span class="p">;</span><span class="s2">&quot;os&quot;</span><span class="p">;</span><span class="s2">&quot;gopl.io/ch4/github&quot;</span><span class="p">)</span>
@@ -15890,8 +15907,8 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 <span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
 	<span class="o">//</span><span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">github</span><span class="o">.</span><span class="n">SearchIssues</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
     <span class="n">t</span> <span class="o">:=</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;repo:golang/go&quot;</span><span class="p">,</span><span class="s2">&quot;is:open&quot;</span><span class="p">,</span><span class="s2">&quot;json&quot;</span><span class="p">,</span><span class="s2">&quot;decoder&quot;</span><span class="p">}</span>
-    <span class="o">//</span><span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">github</span><span class="o">.</span><span class="n">SearchIssues</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-    <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">SearchIssues</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> 
+    <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">github</span><span class="o">.</span><span class="n">SearchIssues</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="o">//</span><span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">SearchIssues</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> 
 	<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
 		<span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
 	<span class="p">}</span>
@@ -15908,12 +15925,35 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+repl.go:6:20: undefined &#34;github&#34; in github.SearchIssues &lt;*ast.SelectorExpr&gt;</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[143]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[167]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">Args</span> <span class="o">=</span> <span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;./issues&quot;</span><span class="p">,</span> <span class="s2">&quot;repo:golang/go&quot;</span><span class="p">,</span> <span class="s2">&quot;is:open&quot;</span><span class="p">,</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="s2">&quot;decoder&quot;</span><span class="p">}</span>
@@ -15939,8 +15979,7 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&amp;{[] {0x140002fec00} &lt;nil&gt; &lt;nil&gt;}
-85 issues:
+<pre>&amp;{[] {%!q(*http.http2clientStream=&amp;{0x14000269e00 {{}} &lt;nil&gt; &lt;nil&gt; 1 {{0 0} {{} &lt;nil&gt; {0 0 0 &lt;nil&gt; &lt;nil&gt;} 0} 0x14000aecc80 0 &lt;nil&gt; &lt;nil&gt; &lt;nil&gt; &lt;nil&gt;} true false {0 {0 0}} 0x140001009c0 &lt;nil&gt; 0x14000100960 0x14000100b40 &lt;nil&gt; 0x14000100ae0 0x14000b386c0 {[] 67108864 0x14000269e68} {4194304 0} -1 &lt;nil&gt; &lt;nil&gt; 0 &lt;nil&gt; true true true true false 0 false false map[] 0x14000b38738})} %!q(*gzip.Reader=&lt;nil&gt;) &lt;nil&gt;}85 issues:
 #48298     dsnet encoding/json: add Decoder.DisallowDuplicateFields
 #11046     kurin encoding/json: Decoder internally buffers full input
 #36225     dsnet encoding/json: the Decoder.Decode API lends itself to m
@@ -15958,13 +15997,13 @@ struct { Circle struct { Point struct { X int; Y int }; Radius int }; Spokes int
 #59053   joerdav proposal: encoding/json: add a generic Decode function
 #32779       rsc encoding/json: memoize strings during decode
 #48950 Alexander encoding/json: calculate correct SyntaxError.Offset in 
+#31701    lr1980 encoding/json: second decode after error impossible
 #33714    flimzy proposal: encoding/json: Opt-in for true streaming supp
 #7872  extempora encoding/json: Encoder internally buffers full output
-#31701    lr1980 encoding/json: second decode after error impossible
 #6647    btracey x/tools/cmd/godoc: display type kind of each named type
 #22533      ibrt proposal: encoding/json: preserve unknown fields
-#43513 Alexander encoding/json: add line number to SyntaxError
 #40982   Segflow encoding/json: use different error type for unknown fie
+#43513 Alexander encoding/json: add line number to SyntaxError
 #16212 josharian encoding/json: do all reflect work before decoding
 #22480     blixt proposal: encoding/json: add omitnil option
 #56332    gansvv encoding/json: clearer error message for boolean like p
@@ -16193,7 +16232,8 @@ Age:    {{.CreatedAt | daysAgo}} days
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[157]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">noMust</span><span class="p">()</span> <span class="p">{</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="ow">not</span> <span class="n">handle</span> <span class="n">error</span><span class="p">,</span> <span class="k">if</span> <span class="n">parse</span> <span class="n">error</span><span class="p">,</span> <span class="n">exceptions</span> <span class="n">occur</span>
+<span class="n">func</span> <span class="n">noMust</span><span class="p">()</span> <span class="p">{</span>
 	<span class="o">//!</span>+parse
 	<span class="n">report</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">template</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="s2">&quot;report&quot;</span><span class="p">)</span><span class="o">.</span>
 		<span class="n">Funcs</span><span class="p">(</span><span class="n">template</span><span class="o">.</span><span class="n">FuncMap</span><span class="p">{</span><span class="s2">&quot;daysAgo&quot;</span><span class="p">:</span> <span class="n">daysAgo</span><span class="p">})</span><span class="o">.</span>
@@ -16651,7 +16691,7 @@ Age:    228 days
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16676,7 +16716,7 @@ Age:    228 days
 </div>
 </div>
 
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16944,7 +16984,13 @@ Age:    228 days
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="http://skhuang.github.io/ch4/issues.html">issues.html</a></p>
+<ul>
+<li><a href="http://skhuang.github.io/ch4/issues.html">issues.html</a>
+<code>
+$ go build gopl.io/ch4/issueshtml
+$ ./issueshtml repo:golang/go commenter:gopherbot json encoder >issues.html
+</code></li>
+</ul>
 
 </div>
 </div>
@@ -17020,7 +17066,10 @@ Age:    228 days
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="https://skhuang.github.io/ch4/issues2.html">issue2.html</a></p>
+<p><a href="https://skhuang.github.io/ch4/issues2.html">issues2.html</a>
+<code>
+$ ./issueshtml repo:golang/go 3133 10535 >issues2.html
+</code></p>
 
 </div>
 </div>
@@ -17041,8 +17090,8 @@ Age:    228 days
 	<span class="n">const</span> <span class="n">templ</span> <span class="o">=</span> <span class="err">`</span><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">A</span><span class="p">:</span> <span class="p">{{</span><span class="o">.</span><span class="n">A</span><span class="p">}}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">B</span><span class="p">:</span> <span class="p">{{</span><span class="o">.</span><span class="n">B</span><span class="p">}}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span><span class="err">`</span>
 	<span class="n">t</span> <span class="o">:=</span> <span class="n">template</span><span class="o">.</span><span class="n">Must</span><span class="p">(</span><span class="n">template</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="s2">&quot;escape&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">templ</span><span class="p">))</span>
 	<span class="n">var</span> <span class="n">data</span> <span class="n">struct</span> <span class="p">{</span>
-		<span class="n">A</span> <span class="n">string</span>        <span class="o">//</span> <span class="n">untrusted</span> <span class="n">plain</span> <span class="n">text</span>
-		<span class="n">B</span> <span class="n">template</span><span class="o">.</span><span class="n">HTML</span> <span class="o">//</span> <span class="n">trusted</span> <span class="n">HTML</span>
+		<span class="n">A</span> <span class="n">string</span>        <span class="o">//</span> <span class="n">untrusted</span> <span class="n">plain</span> <span class="n">text</span><span class="p">,</span> <span class="n">will</span> <span class="n">be</span> <span class="n">escaped</span> 
+		<span class="n">B</span> <span class="n">template</span><span class="o">.</span><span class="n">HTML</span> <span class="o">//</span> <span class="n">trusted</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">preseve</span> <span class="n">the</span> <span class="n">markup</span>
 	<span class="p">}</span>
     <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%T</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
     <span class="n">data</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;Hello!&lt;/b&gt;&quot;</span>
@@ -17091,6 +17140,24 @@ repl.go:14:5: error compiling assignment: data.B = &#34;&lt;b&gt;Hello!&lt;/b&gt
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><a href="http://skhuang.github.io/ch4/autoescape.html">autoescape.html</a></p>
+
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>for more information: 
+<code>
+$ go doc text/template
+$ go doc html/template
+</code></li>
+</ul>
 
 </div>
 </div>
