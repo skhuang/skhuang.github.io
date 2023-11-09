@@ -14643,7 +14643,7 @@ div.jp-OutputPrompt {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Interfaces" data-toc-modified-id="Interfaces-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Interfaces</a></span><ul class="toc-item"><li><span><a href="#Interfaces-as-Contracts" data-toc-modified-id="Interfaces-as-Contracts-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>Interfaces as Contracts</a></span></li><li><span><a href="#Interface-Types" data-toc-modified-id="Interface-Types-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>Interface Types</a></span></li><li><span><a href="#Interface-Satisfaction" data-toc-modified-id="Interface-Satisfaction-7.3"><span class="toc-item-num">7.3&nbsp;&nbsp;</span>Interface Satisfaction</a></span></li><li><span><a href="#Parsing-Flags-with-flag.Value" data-toc-modified-id="Parsing-Flags-with-flag.Value-7.4"><span class="toc-item-num">7.4&nbsp;&nbsp;</span>Parsing Flags with flag.Value</a></span></li><li><span><a href="#Interface-Values" data-toc-modified-id="Interface-Values-7.5"><span class="toc-item-num">7.5&nbsp;&nbsp;</span>Interface Values</a></span></li><li><span><a href="#Sorting-with-sort.Interface" data-toc-modified-id="Sorting-with-sort.Interface-7.6"><span class="toc-item-num">7.6&nbsp;&nbsp;</span>Sorting with sort.Interface</a></span></li><li><span><a href="#The-http.Handler-Interface" data-toc-modified-id="The-http.Handler-Interface-7.7"><span class="toc-item-num">7.7&nbsp;&nbsp;</span>The http.Handler Interface</a></span></li><li><span><a href="#The-error-Interface" data-toc-modified-id="The-error-Interface-7.8"><span class="toc-item-num">7.8&nbsp;&nbsp;</span>The error Interface</a></span></li><li><span><a href="#Example:-Expression-Evaluator" data-toc-modified-id="Example:-Expression-Evaluator-7.9"><span class="toc-item-num">7.9&nbsp;&nbsp;</span>Example: Expression Evaluator</a></span></li><li><span><a href="#Type-Assertions" data-toc-modified-id="Type-Assertions-7.10"><span class="toc-item-num">7.10&nbsp;&nbsp;</span>Type Assertions</a></span></li><li><span><a href="#Discriminating-Errors-with-Type-Assertions" data-toc-modified-id="Discriminating-Errors-with-Type-Assertions-7.11"><span class="toc-item-num">7.11&nbsp;&nbsp;</span>Discriminating Errors with Type Assertions</a></span></li><li><span><a href="#Querying-Behaviors-with-Interface-Type-Assertions" data-toc-modified-id="Querying-Behaviors-with-Interface-Type-Assertions-7.12"><span class="toc-item-num">7.12&nbsp;&nbsp;</span>Querying Behaviors with Interface Type Assertions</a></span></li><li><span><a href="#Type-Switches" data-toc-modified-id="Type-Switches-7.13"><span class="toc-item-num">7.13&nbsp;&nbsp;</span>Type Switches</a></span></li><li><span><a href="#Example:-Token-Based-XML-Decoding" data-toc-modified-id="Example:-Token-Based-XML-Decoding-7.14"><span class="toc-item-num">7.14&nbsp;&nbsp;</span>Example: Token-Based XML Decoding</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Interfaces" data-toc-modified-id="Interfaces-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Interfaces</a></span><ul class="toc-item"><li><span><a href="#Interfaces-as-Contracts" data-toc-modified-id="Interfaces-as-Contracts-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>Interfaces as Contracts</a></span><ul class="toc-item"><li><span><a href="#Concept-of-Interfaces" data-toc-modified-id="Concept-of-Interfaces-7.1.1"><span class="toc-item-num">7.1.1&nbsp;&nbsp;</span>Concept of Interfaces</a></span></li></ul></li><li><span><a href="#Interface-Types" data-toc-modified-id="Interface-Types-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>Interface Types</a></span></li><li><span><a href="#Interface-Satisfaction" data-toc-modified-id="Interface-Satisfaction-7.3"><span class="toc-item-num">7.3&nbsp;&nbsp;</span>Interface Satisfaction</a></span></li><li><span><a href="#Parsing-Flags-with-flag.Value" data-toc-modified-id="Parsing-Flags-with-flag.Value-7.4"><span class="toc-item-num">7.4&nbsp;&nbsp;</span>Parsing Flags with flag.Value</a></span></li><li><span><a href="#Interface-Values" data-toc-modified-id="Interface-Values-7.5"><span class="toc-item-num">7.5&nbsp;&nbsp;</span>Interface Values</a></span></li><li><span><a href="#Sorting-with-sort.Interface" data-toc-modified-id="Sorting-with-sort.Interface-7.6"><span class="toc-item-num">7.6&nbsp;&nbsp;</span>Sorting with sort.Interface</a></span><ul class="toc-item"><li><span><a href="#sort.Interface" data-toc-modified-id="sort.Interface-7.6.1"><span class="toc-item-num">7.6.1&nbsp;&nbsp;</span>sort.Interface</a></span></li><li><span><a href="#Sorting-a-slice-of-strings" data-toc-modified-id="Sorting-a-slice-of-strings-7.6.2"><span class="toc-item-num">7.6.2&nbsp;&nbsp;</span>Sorting a slice of strings</a></span></li></ul></li><li><span><a href="#The-http.Handler-Interface" data-toc-modified-id="The-http.Handler-Interface-7.7"><span class="toc-item-num">7.7&nbsp;&nbsp;</span>The http.Handler Interface</a></span></li><li><span><a href="#The-error-Interface" data-toc-modified-id="The-error-Interface-7.8"><span class="toc-item-num">7.8&nbsp;&nbsp;</span>The error Interface</a></span></li><li><span><a href="#Example:-Expression-Evaluator" data-toc-modified-id="Example:-Expression-Evaluator-7.9"><span class="toc-item-num">7.9&nbsp;&nbsp;</span>Example: Expression Evaluator</a></span></li><li><span><a href="#Type-Assertions" data-toc-modified-id="Type-Assertions-7.10"><span class="toc-item-num">7.10&nbsp;&nbsp;</span>Type Assertions</a></span><ul class="toc-item"><li><span><a href="#Use-of-Type-Assertion" data-toc-modified-id="Use-of-Type-Assertion-7.10.1"><span class="toc-item-num">7.10.1&nbsp;&nbsp;</span>Use of Type Assertion</a></span></li></ul></li><li><span><a href="#Discriminating-Errors-with-Type-Assertions" data-toc-modified-id="Discriminating-Errors-with-Type-Assertions-7.11"><span class="toc-item-num">7.11&nbsp;&nbsp;</span>Discriminating Errors with Type Assertions</a></span></li><li><span><a href="#Querying-Behaviors-with-Interface-Type-Assertions" data-toc-modified-id="Querying-Behaviors-with-Interface-Type-Assertions-7.12"><span class="toc-item-num">7.12&nbsp;&nbsp;</span>Querying Behaviors with Interface Type Assertions</a></span></li><li><span><a href="#Type-Switches" data-toc-modified-id="Type-Switches-7.13"><span class="toc-item-num">7.13&nbsp;&nbsp;</span>Type Switches</a></span></li><li><span><a href="#Example:-Token-Based-XML-Decoding" data-toc-modified-id="Example:-Token-Based-XML-Decoding-7.14"><span class="toc-item-num">7.14&nbsp;&nbsp;</span>Example: Token-Based XML Decoding</a></span></li></ul></li></ul></div>
 </div>
 </div>
 </div>
@@ -14655,8 +14655,41 @@ div.jp-OutputPrompt {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Interfaces">Interfaces<a class="anchor-link" href="#Interfaces">&#182;</a></h1><h2 id="Interfaces-as-Contracts">Interfaces as Contracts<a class="anchor-link" href="#Interfaces-as-Contracts">&#182;</a></h2><ul>
-<li>Concrete type specifies the exact representation of its values and exposes the intrinsic operations of tht representation</li>
-<li>Interface is an abstract type</li>
+<li>Concrete type specifies the exact representation of its values and exposes the intrinsic operations of the representation<ul>
+<li>we have seen so far with representations and operations</li>
+<li>You know exactly what it is and what you can do with it</li>
+</ul>
+</li>
+<li>Interface is an abstract type<ul>
+<li>Abstract Types: Interfaces</li>
+<li>don’t express the representation or internal structure of its values</li>
+<li>You know nothing about what it is</li>
+<li>You only know what it can do (what behaviors are provided by its methods)</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Concept-of-Interfaces">Concept of Interfaces<a class="anchor-link" href="#Concept-of-Interfaces">&#182;</a></h3><ul>
+<li>Interface types are<ul>
+<li>generalizations: not tied to the details of one particular implementations</li>
+<li>abstractions </li>
+</ul>
+</li>
+<li>No need to declare all the interfaces for a given concrete type to satisfy</li>
+<li>We can create new interfaces satisfied by existing concrete types without changing the existing types<ul>
+<li>useful for types defined in packages we don’t control</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -15118,11 +15151,19 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Interface-Satisfaction">Interface Satisfaction<a class="anchor-link" href="#Interface-Satisfaction">&#182;</a></h2><ul>
 <li>A type satisfies an interface if it possesses all the methods the interface requires<ul>
-<li>*os.File satisfies io.Reader, Writer, Closer and ReadWriter</li>
-<li>*bytes.Buffer satisfies Reader, Writer, and ReaderWriter, but not Closer (no Close method)</li>
+<li>*os.File satisfies io.Reader, Writer, Closer, and ReadWriter</li>
+<li>*bytes.Buffer satisfies Reader, Writer, and ReadWriter, but not Closer (no close method) </li>
 </ul>
 </li>
-<li>An expression may be assigned to an interface only if its type satisfies the interface</li>
+<li>A concrete type is a particular interface type, meaning that it satisfies the interface<ul>
+<li>*bytes.Buffer is an io.Writer</li>
+<li>*os.File is an io.ReadWriter</li>
+</ul>
+</li>
+<li>Assignability rule for interface<ul>
+<li>an expression may be assigned to an interface only if its type satisfies the interface</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -16237,7 +16278,20 @@ failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Interface-Values">Interface Values<a class="anchor-link" href="#Interface-Values">&#182;</a></h2>
+<h2 id="Interface-Values">Interface Values<a class="anchor-link" href="#Interface-Values">&#182;</a></h2><ul>
+<li>value of an interface type, called interface value<ul>
+<li>a concrete type, called interface’s dynamic type</li>
+<li>a value of that type, called dynamic value</li>
+</ul>
+</li>
+</ul>
+<p><code>
+var w io.Writer
+w = os.Stdout
+w = new(bytes.Buffer)
+w = nil
+</code></p>
+
 </div>
 </div>
 </div>
@@ -16521,7 +16575,79 @@ exit status 2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Sorting-with-sort.Interface">Sorting with sort.Interface<a class="anchor-link" href="#Sorting-with-sort.Interface">&#182;</a></h2>
+<h2 id="Sorting-with-sort.Interface">Sorting with sort.Interface<a class="anchor-link" href="#Sorting-with-sort.Interface">&#182;</a></h2><ul>
+<li>String formatting and sorting are frequently used operations</li>
+<li>Traditional sorting<ul>
+<li>any sequence<ul>
+<li>sorting algorithm</li>
+</ul>
+</li>
+<li>any ordering function<ul>
+<li>associated with the type of the elements</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sort package provides in-place sorting <ul>
+<li>assumes nothing about the representation of the sequence or the elements</li>
+<li>specifies the contract between the generic sort algorithm and the sequence type</li>
+</ul>
+</li>
+<li>Implementation of the sort interface<ul>
+<li>concrete implementation of the sequence (often a slice)</li>
+<li>desired ordering of the elemnts</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="sort.Interface">sort.Interface<a class="anchor-link" href="#sort.Interface">&#182;</a></h3><ul>
+<li>the length of the sequence</li>
+<li>means of comparing two elements</li>
+<li>way to swap two elements</li>
+</ul>
+<table>
+<tr><td style="text-align:left;">
+<code>
+package sort
+type Interface interface {
+       Len() int
+       Less(i, j int) bool    // i, j are indices of sequence elements
+       Swap(i, j int)
+}</code>
+    </td>
+    </tr>
+</table><ul>
+<li>To sort any sequence, define a type to implement these three methods and apply sort.Sort to an instance of that type </li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Sorting-a-slice-of-strings">Sorting a slice of strings<a class="anchor-link" href="#Sorting-a-slice-of-strings">&#182;</a></h3><p><code>
+type StringSlice []string
+func (p StringSlice) Len() int             { return len(p)}
+func (p StringSlice) Less(i, j int) bool { return p[i] < p[j]}
+func (p StingSlice) Swap(i, j int)        { p[i], p[j] = p[j], p[i] }
+sort.Sort(StringSlice(names))
+                                                              </code></p>
+
 </div>
 </div>
 </div>
@@ -18156,16 +18282,34 @@ signal: interrupt
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Type-Assertions">Type Assertions<a class="anchor-link" href="#Type-Assertions">&#182;</a></h2>
+<h2 id="Type-Assertions">Type Assertions<a class="anchor-link" href="#Type-Assertions">&#182;</a></h2><ul>
+<li>x.(T)<ul>
+<li>x: an expression of an interface type</li>
+<li>T: asserted type</li>
+</ul>
+</li>
+<li>dynamic type of its operand maches the asserted type</li>
+<li>if the asserted type is a concrete type, check if x’s dynamic type is identical to T<ul>
+<li>succeed: return x’s dynamic value with type T</li>
+<li>fail: panic</li>
+</ul>
+</li>
+<li>if the asserted type is an interface type, check if x’s dynamic type satisfies T<ul>
+<li>succeed: interface value with the same type and value</li>
+<li>fail: panic</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;os&quot;</span><span class="p">;</span><span class="s2">&quot;bytes&quot;</span><span class="p">;</span><span class="s2">&quot;io&quot;</span><span class="p">)</span>
@@ -18181,12 +18325,12 @@ signal: interrupt
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
@@ -18217,7 +18361,7 @@ signal: interrupt
 
 goroutine 1 [running]:
 main.main()
-	 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">[[ Cell [66] Line 2 ]]</span> /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_164f98e1/main.go:396 +0x98
+	 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">[[ Cell [2] Line 2 ]]</span> /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_164ebb43/main.go:16 +0x98
 exit status 2
 </pre>
 </div>
@@ -18227,7 +18371,7 @@ exit status 2
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18247,7 +18391,7 @@ exit status 2
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18296,6 +18440,31 @@ exit status 2
 
 </div>
 
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Use-of-Type-Assertion">Use of Type Assertion<a class="anchor-link" href="#Use-of-Type-Assertion">&#182;</a></h3><table><tr><td style="text-align:left;">
+<code>
+if f, ok := w.(*os.File); ok {
+     // … use f …
+}
+    </code>
+    </td><td></td>
+    <td style="text-align:left;">
+        <code>
+    if w, ok := w.(*os.File); ok {
+     // … use w…
+}
+
+</code></td>   
+</tr></table>
+</div>
+</div>
+</div>
 </div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -18303,165 +18472,27 @@ exit status 2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Discriminating-Errors-with-Type-Assertions">Discriminating Errors with Type Assertions<a class="anchor-link" href="#Discriminating-Errors-with-Type-Assertions">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">IsExist</span><span class="p">(</span><span class="n">err</span> <span class="n">error</span><span class="p">)</span> <span class="nb">bool</span>
-<span class="n">func</span> <span class="n">IsNotExist</span><span class="p">(</span><span class="n">err</span> <span class="n">error</span><span class="p">)</span> <span class="nb">bool</span>
-<span class="n">func</span> <span class="n">isPermission</span><span class="p">(</span><span class="n">err</span> <span class="n">error</span><span class="p">)</span> <span class="nb">bool</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-
-<style>
-.gonb-err-location {
-	background: var(--jp-err-color2);  
-	border-radius: 3px;
-	border-style: dotted;
-	border-width: 1px;
-	border-color: var(--jp-border-color2);
-}
-.gonb-err-location:hover {
-	border-width: 2px;
-	border-style: solid;
-	border-color: var(--jp-border-color2);
-}
-.gonb-err-context {
-	display: none;
-}
-.gonb-err-location:hover + .gonb-err-context {
-	background: var(--jp-dialog-background);  
-	border-radius: 3px;
-	border-style: solid;
-	border-width: 1px;
-	border-color: var(--jp-border-color2);
-	display: block;
-	white-space: pre;
-	font-family: monospace;
-}
-.gonb-err-line {
-	border-radius: 3px;
-	border-style: dotted;
-	border-width: 1px;	
-	border-color: var(--jp-border-color2);
-	background-color: var(--jp-rendermime-err-background);
-	font-weight: bold;
-}
-.gonb-cell-line-info {
-	background: var(--jp-layout-color2);
-	color: #999;
-	margin: 0.1em;
-	border: 1px solid var(--jp-border-color1);
-	padding-left: 0.2em;
-	padding-right: 0.2em;
-}
-</style>
-<div class="lm-Widget p-Widget lm-Panel p-Panel jp-OutputArea-child">
-<div class="lm-Widget p-Widget jp-RenderedText jp-mod-trusted jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" style="font-family: monospace;">
-
-
-<span style="white-space: pre;"> # gonb_164f98e1</span>
-
-<br/>
-
-<span class="gonb-cell-line-info">Cell[69]: Line 1</span>
-<span class="gonb-err-location">./main.go:155:6: </span> missing function body
-<div class="gonb-err-context">
-
-func (a *IntSet) String() string { return fmt.Sprintf(&#34;%b&#34;,a)}
-
-<div class="gonb-err-line">func IsExist(err error) bool
-</div>
-func IsNotExist(err error) bool
+<h2 id="Discriminating-Errors-with-Type-Assertions">Discriminating Errors with Type Assertions<a class="anchor-link" href="#Discriminating-Errors-with-Type-Assertions">&#182;</a></h2><ul>
+<li>Consider the set of errors returned by file operations in the os package</li>
+<li>I/O an fail with three kinds of failure<ul>
+<li>file already exists (for create operations)</li>
+<li>file not found( for read operations)</li>
+<li>permission denied</li>
+</ul>
+</li>
+<li>os package provides three helper functions to classify the failure<ul>
+<li>func IsExist(err error) bool</li>
+<li>func IsNotExist(err error) bool</li>
+<li>func IsPermission(err error) bool</li>
+</ul>
+</li>
+<li>Not reliable implementation</li>
+</ul>
 
 </div>
-
-<br/>
-
-<span class="gonb-cell-line-info">Cell[69]: Line 2</span>
-<span class="gonb-err-location">./main.go:157:6: </span> missing function body
-<div class="gonb-err-context">
-
-func IsExist(err error) bool
-
-<div class="gonb-err-line">func IsNotExist(err error) bool
-</div>
-func Printf(format string, args ...interface{})(int, error) {
-
-</div>
-
-<br/>
-
-<span class="gonb-cell-line-info">Cell[69]: Line 3</span>
-<span class="gonb-err-location">./main.go:299:6: </span> missing function body
-<div class="gonb-err-context">
-
-func (d dollars) String() string { return fmt.Sprintf(&#34;$%.2f&#34;, d) }
-
-<div class="gonb-err-line">func isPermission(err error) bool
-</div>
-func length(s string) time.Duration {
-
-</div>
-
-<br/>
-
-
-<span style="white-space: pre;"> </span>
-
-<br/>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_164f98e1/gonb_164f98e1&#34;: exit status 1</pre>
 </div>
 </div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18480,7 +18511,7 @@ failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18524,7 +18555,7 @@ failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18547,7 +18578,7 @@ failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18678,7 +18709,7 @@ failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18730,7 +18761,7 @@ failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18891,7 +18922,7 @@ failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -19034,7 +19065,7 @@ failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -19053,7 +19084,7 @@ failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -19206,7 +19237,27 @@ failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Type-Switches">Type Switches<a class="anchor-link" href="#Type-Switches">&#182;</a></h2>
+<h2 id="Type-Switches">Type Switches<a class="anchor-link" href="#Type-Switches">&#182;</a></h2><ul>
+<li>Interfaces are used in two distinct styles<ul>
+<li>interface’s methods express the similarities of the concrete types that satisfy the interface but hide the representation details and intrinsic operations of those concrete types<ul>
+<li>emplasis on the methods, not on the concrete types</li>
+<li>subtype polymorphism </li>
+</ul>
+</li>
+<li>exploit the ability of an interface value to hold values of a variety of concrete types and consider the interface to be the union of those types<ul>
+<li>ad hoc polymorphism </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Discriminated unions<ul>
+<li>discriminate the types dynamically and treat each case differently</li>
+<li>emphasis on the concrete types that satisfy the interface, not on the interface’s methods</li>
+<li>no hiding of information</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
