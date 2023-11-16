@@ -14581,7 +14581,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Interfaces" data-toc-modified-id="Interfaces-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Interfaces</a></span><ul class="toc-item"><li><span><a href="#Interfaces-as-Contracts" data-toc-modified-id="Interfaces-as-Contracts-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>Interfaces as Contracts</a></span><ul class="toc-item"><li><span><a href="#Concept-of-Interfaces" data-toc-modified-id="Concept-of-Interfaces-7.1.1"><span class="toc-item-num">7.1.1&nbsp;&nbsp;</span>Concept of Interfaces</a></span></li></ul></li><li><span><a href="#Interface-Types" data-toc-modified-id="Interface-Types-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>Interface Types</a></span></li><li><span><a href="#Interface-Satisfaction" data-toc-modified-id="Interface-Satisfaction-7.3"><span class="toc-item-num">7.3&nbsp;&nbsp;</span>Interface Satisfaction</a></span></li><li><span><a href="#Parsing-Flags-with-flag.Value" data-toc-modified-id="Parsing-Flags-with-flag.Value-7.4"><span class="toc-item-num">7.4&nbsp;&nbsp;</span>Parsing Flags with flag.Value</a></span></li><li><span><a href="#Interface-Values" data-toc-modified-id="Interface-Values-7.5"><span class="toc-item-num">7.5&nbsp;&nbsp;</span>Interface Values</a></span></li><li><span><a href="#Sorting-with-sort.Interface" data-toc-modified-id="Sorting-with-sort.Interface-7.6"><span class="toc-item-num">7.6&nbsp;&nbsp;</span>Sorting with sort.Interface</a></span><ul class="toc-item"><li><span><a href="#sort.Interface" data-toc-modified-id="sort.Interface-7.6.1"><span class="toc-item-num">7.6.1&nbsp;&nbsp;</span>sort.Interface</a></span></li><li><span><a href="#Sorting-a-slice-of-strings" data-toc-modified-id="Sorting-a-slice-of-strings-7.6.2"><span class="toc-item-num">7.6.2&nbsp;&nbsp;</span>Sorting a slice of strings</a></span></li></ul></li><li><span><a href="#The-http.Handler-Interface" data-toc-modified-id="The-http.Handler-Interface-7.7"><span class="toc-item-num">7.7&nbsp;&nbsp;</span>The http.Handler Interface</a></span></li><li><span><a href="#The-error-Interface" data-toc-modified-id="The-error-Interface-7.8"><span class="toc-item-num">7.8&nbsp;&nbsp;</span>The error Interface</a></span></li><li><span><a href="#Example:-Expression-Evaluator" data-toc-modified-id="Example:-Expression-Evaluator-7.9"><span class="toc-item-num">7.9&nbsp;&nbsp;</span>Example: Expression Evaluator</a></span></li><li><span><a href="#Type-Assertions" data-toc-modified-id="Type-Assertions-7.10"><span class="toc-item-num">7.10&nbsp;&nbsp;</span>Type Assertions</a></span><ul class="toc-item"><li><span><a href="#Use-of-Type-Assertion" data-toc-modified-id="Use-of-Type-Assertion-7.10.1"><span class="toc-item-num">7.10.1&nbsp;&nbsp;</span>Use of Type Assertion</a></span></li></ul></li><li><span><a href="#Discriminating-Errors-with-Type-Assertions" data-toc-modified-id="Discriminating-Errors-with-Type-Assertions-7.11"><span class="toc-item-num">7.11&nbsp;&nbsp;</span>Discriminating Errors with Type Assertions</a></span></li><li><span><a href="#Querying-Behaviors-with-Interface-Type-Assertions" data-toc-modified-id="Querying-Behaviors-with-Interface-Type-Assertions-7.12"><span class="toc-item-num">7.12&nbsp;&nbsp;</span>Querying Behaviors with Interface Type Assertions</a></span></li><li><span><a href="#Type-Switches" data-toc-modified-id="Type-Switches-7.13"><span class="toc-item-num">7.13&nbsp;&nbsp;</span>Type Switches</a></span></li><li><span><a href="#Example:-Token-Based-XML-Decoding" data-toc-modified-id="Example:-Token-Based-XML-Decoding-7.14"><span class="toc-item-num">7.14&nbsp;&nbsp;</span>Example: Token-Based XML Decoding</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Interfaces" data-toc-modified-id="Interfaces-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Interfaces</a></span><ul class="toc-item"><li><span><a href="#Interfaces-as-Contracts" data-toc-modified-id="Interfaces-as-Contracts-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>Interfaces as Contracts</a></span><ul class="toc-item"><li><span><a href="#Concept-of-Interfaces" data-toc-modified-id="Concept-of-Interfaces-7.1.1"><span class="toc-item-num">7.1.1&nbsp;&nbsp;</span>Concept of Interfaces</a></span></li></ul></li><li><span><a href="#Interface-Types" data-toc-modified-id="Interface-Types-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>Interface Types</a></span></li><li><span><a href="#Interface-Satisfaction" data-toc-modified-id="Interface-Satisfaction-7.3"><span class="toc-item-num">7.3&nbsp;&nbsp;</span>Interface Satisfaction</a></span></li><li><span><a href="#Parsing-Flags-with-flag.Value" data-toc-modified-id="Parsing-Flags-with-flag.Value-7.4"><span class="toc-item-num">7.4&nbsp;&nbsp;</span>Parsing Flags with flag.Value</a></span></li><li><span><a href="#Interface-Values" data-toc-modified-id="Interface-Values-7.5"><span class="toc-item-num">7.5&nbsp;&nbsp;</span>Interface Values</a></span><ul class="toc-item"><li><span><a href="#An-interface-containing-a-Nil-pointer-is-Non-Nil" data-toc-modified-id="An-interface-containing-a-Nil-pointer-is-Non-Nil-7.5.1"><span class="toc-item-num">7.5.1&nbsp;&nbsp;</span>An interface containing a Nil pointer is Non-Nil</a></span></li></ul></li><li><span><a href="#Sorting-with-sort.Interface" data-toc-modified-id="Sorting-with-sort.Interface-7.6"><span class="toc-item-num">7.6&nbsp;&nbsp;</span>Sorting with sort.Interface</a></span><ul class="toc-item"><li><span><a href="#sort.Interface" data-toc-modified-id="sort.Interface-7.6.1"><span class="toc-item-num">7.6.1&nbsp;&nbsp;</span>sort.Interface</a></span></li><li><span><a href="#Sorting-a-slice-of-strings" data-toc-modified-id="Sorting-a-slice-of-strings-7.6.2"><span class="toc-item-num">7.6.2&nbsp;&nbsp;</span>Sorting a slice of strings</a></span></li></ul></li><li><span><a href="#The-http.Handler-Interface" data-toc-modified-id="The-http.Handler-Interface-7.7"><span class="toc-item-num">7.7&nbsp;&nbsp;</span>The http.Handler Interface</a></span></li><li><span><a href="#The-error-Interface" data-toc-modified-id="The-error-Interface-7.8"><span class="toc-item-num">7.8&nbsp;&nbsp;</span>The error Interface</a></span></li><li><span><a href="#Example:-Expression-Evaluator" data-toc-modified-id="Example:-Expression-Evaluator-7.9"><span class="toc-item-num">7.9&nbsp;&nbsp;</span>Example: Expression Evaluator</a></span></li><li><span><a href="#Type-Assertions" data-toc-modified-id="Type-Assertions-7.10"><span class="toc-item-num">7.10&nbsp;&nbsp;</span>Type Assertions</a></span><ul class="toc-item"><li><span><a href="#Use-of-Type-Assertion" data-toc-modified-id="Use-of-Type-Assertion-7.10.1"><span class="toc-item-num">7.10.1&nbsp;&nbsp;</span>Use of Type Assertion</a></span></li></ul></li><li><span><a href="#Discriminating-Errors-with-Type-Assertions" data-toc-modified-id="Discriminating-Errors-with-Type-Assertions-7.11"><span class="toc-item-num">7.11&nbsp;&nbsp;</span>Discriminating Errors with Type Assertions</a></span></li><li><span><a href="#Querying-Behaviors-with-Interface-Type-Assertions" data-toc-modified-id="Querying-Behaviors-with-Interface-Type-Assertions-7.12"><span class="toc-item-num">7.12&nbsp;&nbsp;</span>Querying Behaviors with Interface Type Assertions</a></span></li><li><span><a href="#Type-Switches" data-toc-modified-id="Type-Switches-7.13"><span class="toc-item-num">7.13&nbsp;&nbsp;</span>Type Switches</a></span></li><li><span><a href="#Example:-Token-Based-XML-Decoding" data-toc-modified-id="Example:-Token-Based-XML-Decoding-7.14"><span class="toc-item-num">7.14&nbsp;&nbsp;</span>Example: Token-Based XML Decoding</a></span></li></ul></li></ul></div>
 </div>
 </div>
 </div>
@@ -16580,10 +16580,12 @@ w = nil
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<table>
-<tr><td</tr>
-<tr></tr>
-</table>
+<ul>
+<li>A set of values: type descriptor about each type</li>
+</ul>
+<p>w , a nil interface value</p>
+<p><img src="https://github.com/skhuang/go2023/blob/main/ch7/fig7-1.png?raw=true" alt="SegmentLocal"></p>
+
 </div>
 </div>
 </div>
@@ -16592,7 +16594,7 @@ w = nil
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;fmt&quot;</span><span class="p">;</span><span class="s2">&quot;io&quot;</span><span class="p">)</span>
@@ -16629,12 +16631,26 @@ w = nil
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Calling any method of a nil interface value causes a panic</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
@@ -16661,11 +16677,11 @@ w = nil
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>panic: runtime error: invalid memory address or nil pointer dereference
-[signal SIGSEGV: segmentation violation code=0x2 addr=0x18 pc=0x1042f3df0]
+[signal SIGSEGV: segmentation violation code=0x2 addr=0x18 pc=0x104465330]
 
 goroutine 1 [running]:
 main.main()
-	 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">[[ Cell [35] Line 2 ]]</span> /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_164f98e1/main.go:119 +0x90
+	 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">[[ Cell [31] Line 2 ]]</span> /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_c51d8ed0/main.go:226 +0x90
 exit status 2
 </pre>
 </div>
@@ -16675,12 +16691,31 @@ exit status 2
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Implict conversion from a concrete type to an interface type<ul>
+<li>w = os.Stdout</li>
+<li>like explicit type conversion: io.Writer(os.Stdout)</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://github.com/skhuang/go2023/blob/main/ch7/fig7-2.png?raw=true" alt="SegmentLocal"></p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;os&quot;</span>
@@ -16708,7 +16743,7 @@ exit status 2
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&amp;{0x14000124060}, *os.File
+<pre>&amp;{0x1400013a060}, *os.File
 </pre>
 </div>
 </div>
@@ -16717,6 +16752,26 @@ exit status 2
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>call (*os.File).Write</li>
+<li>like calling os.Stdout.Write([]byte("hello")</li>
+<li>dynamic dispatch<ul>
+<li>obtain the address of the method named Write from the type descriptor</li>
+<li>the receiver is the interface's dynamic value (os.Stdout in this case)</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16758,6 +16813,23 @@ exit status 2
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>assign bytes.Buffer to w with dynamic type *bytes.Buffer</li>
+<li>a dynamic value to the newly allocated buffer</li>
+<li>an interface value containing a *bytes.Buffer pointer</li>
+</ul>
+<p><img src="https://github.com/skhuang/go2023/blob/main/ch7/fig7-3.png?raw=true" alt="drawing"/></p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16818,6 +16890,22 @@ exit status 2
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>var x interface{} = time.Now()</li>
+<li>an interface value to hold arbitrarily large dynamic values</li>
+</ul>
+<p><img src="https://github.com/skhuang/go2023/blob/main/ch7/fig7-4.png?raw=true" alt="drawing"/></p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16860,6 +16948,280 @@ exit status 2
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Interface values may be compared using == and !=</li>
+<li>Interface values are equal if both are nil, or dynamic types are indentical and dynamic values are equal according to the == behavior of that type<ul>
+<li>may be used as the keys of a map or as the operand of a switch statement</li>
+</ul>
+</li>
+<li>if the type is not comparable like slice, the comparison will panic</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">w</span> <span class="o">:=</span> <span class="n">make</span><span class="p">(</span><span class="nb">map</span><span class="p">[</span><span class="n">io</span><span class="o">.</span><span class="n">Writer</span><span class="p">]</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">w</span><span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">Stdout</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">w</span><span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">Stdin</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%T</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">w</span><span class="p">)</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>map[io.Writer]int
+map[0x14000010010:0 0x14000010018:1]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">var</span> <span class="n">x</span> <span class="n">interface</span><span class="p">{}</span> <span class="o">=</span> <span class="p">[]</span><span class="nb">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span> <span class="n">x</span> <span class="o">==</span> <span class="n">x</span> <span class="p">)</span>  <span class="o">//</span> <span class="n">panic</span><span class="p">:</span> <span class="n">comparing</span> <span class="n">uncomparable</span> <span class="nb">type</span> <span class="p">[]</span><span class="nb">int</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>panic: runtime error: comparing uncomparable type []int
+
+goroutine 1 [running]:
+main.main()
+	 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">[[ Cell [34] Line 3 ]]</span> /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_c51d8ed0/main.go:227 +0xa0
+exit status 2
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">dynamic</span> <span class="n">types</span>
+<span class="o">%%</span>
+<span class="n">var</span> <span class="n">w</span> <span class="n">io</span><span class="o">.</span><span class="n">Writer</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%T</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="o">//</span> <span class="s2">&quot;&lt;nil&gt;&quot;</span>
+
+<span class="n">w</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">Stdout</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%T</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="o">//</span> <span class="s2">&quot;*os.File&quot;</span>
+
+<span class="n">w</span> <span class="o">=</span> <span class="n">new</span><span class="p">(</span><span class="nb">bytes</span><span class="o">.</span><span class="n">Buffer</span><span class="p">)</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%T</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="o">//</span> <span class="s2">&quot;*bytes.Buffer&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&lt;nil&gt;
+*os.File
+*bytes.Buffer
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="An-interface-containing-a-Nil-pointer-is-Non-Nil">An interface containing a Nil pointer is Non-Nil<a class="anchor-link" href="#An-interface-containing-a-Nil-pointer-is-Non-Nil">&#182;</a></h3><ul>
+<li>a nil interface value is not the same as an interface value with a nil pointer </li>
+</ul>
+<p><code>
+const debug = true</p>
+<p>func main() {
+    var buf *bytes.Buffer</p>
+<p>if debug {
+        buf = new(bytes.Buffer) // enable collection of output
+    }
+    f(buf) // NOTE: subtly incorrect!
+    if debug {
+        // ...use buf...
+    }
+}</p>
+<p>// If out is non-nil, output will be written to it.
+func f(out io.Writer) {
+    // ...do something...
+    if out != nil {
+        out.Write([]byte("done!\n"))
+    }
+}
+&lt;/code&gt;</p>
+<p><img src="https://github.com/skhuang/go2023/blob/main/ch7/fig7-5.png?raw=true" alt="SegmentLocal"></p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">debug</span><span class="o">=</span> <span class="n">false</span><span class="p">,</span> <span class="n">buf</span> <span class="o">*</span><span class="nb">bytes</span><span class="o">.</span><span class="n">Buffer</span> <span class="p">(</span><span class="n">nil</span> <span class="n">value</span><span class="p">),</span> 
+<span class="o">//</span><span class="n">const</span> <span class="n">debug</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">const</span> <span class="n">debug</span> <span class="o">=</span> <span class="n">false</span>
+
+<span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="o">//</span><span class="n">var</span> <span class="n">buf</span> <span class="o">*</span><span class="nb">bytes</span><span class="o">.</span><span class="n">Buffer</span>
+    <span class="n">var</span> <span class="n">buf</span> <span class="n">io</span><span class="o">.</span><span class="n">Writer</span>
+
+<span class="k">if</span> <span class="n">debug</span> <span class="p">{</span>
+        <span class="n">buf</span> <span class="o">=</span> <span class="n">new</span><span class="p">(</span><span class="nb">bytes</span><span class="o">.</span><span class="n">Buffer</span><span class="p">)</span> <span class="o">//</span> <span class="n">enable</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">output</span>
+    <span class="p">}</span>
+    <span class="n">f</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span> <span class="o">//</span> <span class="n">NOTE</span><span class="p">:</span> <span class="n">subtly</span> <span class="n">incorrect</span><span class="err">!</span>
+    <span class="k">if</span> <span class="n">debug</span> <span class="p">{</span>
+        <span class="o">//</span> <span class="o">...</span><span class="n">use</span> <span class="n">buf</span><span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="n">If</span> <span class="n">out</span> <span class="ow">is</span> <span class="n">non</span><span class="o">-</span><span class="n">nil</span><span class="p">,</span> <span class="n">output</span> <span class="n">will</span> <span class="n">be</span> <span class="n">written</span> <span class="n">to</span> <span class="n">it</span><span class="o">.</span>
+<span class="n">func</span> <span class="n">f</span><span class="p">(</span><span class="n">out</span> <span class="n">io</span><span class="o">.</span><span class="n">Writer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="o">...</span><span class="n">do</span> <span class="n">something</span><span class="o">...</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%T, %Q, %t</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">out</span><span class="p">,</span><span class="n">out</span><span class="p">,</span> <span class="n">out</span> <span class="o">==</span> <span class="n">nil</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">out</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">Write</span><span class="p">([]</span><span class="n">byte</span><span class="p">(</span><span class="s2">&quot;done!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span>
+        <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s2">&quot;out.Write&quot;</span><span class="p">,</span><span class="n">out</span><span class="o">.</span><span class="n">Write</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&lt;nil&gt;, %!Q(&lt;nil&gt;), true
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>if debug is false, buf is <em>bytes.Buffer (not nil, with type information) and f(buf) will execute (</em>bytes.Buffer).Write and receiver is nil</li>
+<li>if debug is false and buf is io.Writer, </li>
+</ul>
+
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -16948,7 +17310,7 @@ sort.Sort(StringSlice(names))
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Copyright</span> <span class="err">©</span> <span class="mi">2016</span> <span class="n">Alan</span> <span class="n">A</span><span class="o">.</span> <span class="n">A</span><span class="o">.</span> <span class="n">Donovan</span> <span class="o">&amp;</span> <span class="n">Brian</span> <span class="n">W</span><span class="o">.</span> <span class="n">Kernighan</span><span class="o">.</span>
@@ -17002,7 +17364,7 @@ sort.Sort(StringSlice(names))
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//!</span>-main
@@ -17032,7 +17394,7 @@ sort.Sort(StringSlice(names))
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//!</span>+artistcode
@@ -17121,7 +17483,7 @@ Go          Delilah         From the Roots Up  2012  3m38s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
