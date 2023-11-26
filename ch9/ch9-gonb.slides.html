@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>ch9 slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>ch9-gonb slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
@@ -14674,7 +14674,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">balance</span> <span class="nb">int</span>
@@ -14692,16 +14692,19 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[157]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Alice</span><span class="p">:</span>
 <span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">;</span><span class="s2">&quot;fmt&quot;</span><span class="p">)</span>
+<span class="o">%%</span>
 <span class="n">go</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">Deposit</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>                  <span class="o">//</span> <span class="n">A1</span>
     <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">Balance</span><span class="p">())</span>   <span class="o">//</span> <span class="n">A2</span>
 <span class="p">}()</span>
-<span class="n">time</span><span class="o">.</span><span class="n">Sleep</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span> <span class="n">time</span><span class="o">.</span><span class="n">Millisecond</span><span class="p">)</span>
+<span class="o">//</span> <span class="n">Bob</span><span class="p">:</span>
+<span class="n">go</span> <span class="n">Deposit</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>                  <span class="o">//</span><span class="n">B</span>
+<span class="n">time</span><span class="o">.</span><span class="n">Sleep</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span> <span class="n">time</span><span class="o">.</span><span class="n">Millisecond</span><span class="p">)</span><span class="o">//</span><span class="n">delay</span> <span class="n">termination</span>
 </pre></div>
 
      </div>
@@ -14723,7 +14726,7 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>= 1000
+<pre>= 300
 </pre>
 </div>
 </div>
@@ -14737,10 +14740,11 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Bob</span><span class="p">:</span>
+<span class="o">%%</span>
 <span class="n">go</span> <span class="n">Deposit</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>                  <span class="o">//</span><span class="n">B</span>
 </pre></div>
 
@@ -14754,10 +14758,11 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[160]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">{</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">{</span>
     <span class="n">balance</span><span class="o">=</span><span class="mi">0</span>
     <span class="k">for</span> <span class="n">j</span> <span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">{</span>
       <span class="n">go</span> <span class="n">Deposit</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
@@ -14788,105 +14793,105 @@ div.jp-OutputPrompt {
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>= 400
-= 392
 = 400
 = 400
-= 396
-= 392
-= 384
-= 384
-= 392
 = 400
 = 400
-= 396
-= 392
-= 392
-= 380
-= 392
-= 384
-= 396
-= 392
-= 388
-= 392
-= 396
-= 396
-= 396
-= 392
-= 384
-= 392
-= 396
-= 396
-= 392
-= 388
-= 396
-= 396
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
 = 400
 = 392
-= 388
-= 388
 = 392
-= 392
+= 364
 = 400
-= 396
-= 388
-= 396
-= 396
-= 396
-= 396
-= 384
-= 384
-= 396
-= 384
-= 384
+= 400
+= 400
+= 368
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
 = 352
-= 388
-= 400
-= 388
-= 392
 = 400
 = 400
-= 396
-= 396
-= 396
-= 380
-= 380
-= 388
-= 400
-= 380
-= 380
-= 400
-= 388
-= 392
-= 400
-= 392
-= 380
-= 392
-= 392
 = 400
 = 400
-= 388
-= 388
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
 = 388
 = 364
-= 388
-= 388
-= 396
-= 400
-= 392
 = 400
 = 400
 = 400
-= 392
-= 396
 = 400
-= 396
+= 400
 = 400
 = 388
 = 400
 = 400
 = 392
+= 400
+= 400
 = 400
 = 372
+= 400
+= 400
+= 384
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
+= 400
 </pre>
 </div>
 </div>
@@ -14900,13 +14905,14 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[291]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">x</span> <span class="p">[]</span><span class="nb">int</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">var</span> <span class="n">x</span> <span class="p">[]</span><span class="nb">int</span>
 <span class="n">go</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span> <span class="n">x</span> <span class="o">=</span> <span class="n">make</span><span class="p">([]</span><span class="nb">int</span><span class="p">,</span><span class="mi">10</span><span class="p">)}()</span>
 <span class="n">go</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span> <span class="n">x</span> <span class="o">=</span> <span class="n">make</span><span class="p">([]</span><span class="nb">int</span><span class="p">,</span><span class="mi">1000000</span><span class="p">)}()</span>
-<span class="n">time</span><span class="o">.</span><span class="n">Sleep</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span> <span class="n">time</span><span class="o">.</span><span class="n">Millisecond</span><span class="p">)</span>
+<span class="o">//</span><span class="n">time</span><span class="o">.</span><span class="n">Sleep</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span> <span class="n">time</span><span class="o">.</span><span class="n">Millisecond</span><span class="p">)</span>
 <span class="n">x</span><span class="p">[</span><span class="mi">999999</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">//</span> <span class="n">Note</span><span class="p">:</span> <span class="n">undefined</span> <span class="n">behavior</span><span class="p">;</span> <span class="n">memory</span> <span class="n">corruption</span> <span class="n">possible</span>
 </pre></div>
 
@@ -14929,8 +14935,13 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-reflect: slice index out of range</pre>
+<pre>panic: runtime error: index out of range [999999] with length 0
+
+goroutine 1 [running]:
+main.main()
+	 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">[[ Cell [291] Line 6 ]]</span> /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_cca68419/main.go:23 +0x13c
+exit status 2
+</pre>
 </div>
 </div>
 
@@ -14964,12 +14975,12 @@ reflect: slice index out of range</pre>
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[327]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">The</span> <span class="n">first</span> <span class="n">way</span><span class="p">:</span><span class="ow">not</span> <span class="n">to</span> <span class="n">write</span> <span class="n">the</span> <span class="n">variable</span>
@@ -14992,12 +15003,120 @@ reflect: slice index out of range</pre>
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+<style>
+.gonb-err-location {
+	background: var(--jp-err-color2);  
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-location:hover {
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-context {
+	display: none;
+}
+.gonb-err-location:hover + .gonb-err-context {
+	background: var(--jp-dialog-background);  
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+	display: block;
+	white-space: pre;
+	font-family: monospace;
+}
+.gonb-err-line {
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;	
+	border-color: var(--jp-border-color2);
+	background-color: var(--jp-rendermime-err-background);
+	font-weight: bold;
+}
+.gonb-cell-line-info {
+	background: var(--jp-layout-color2);
+	color: #999;
+	margin: 0.1em;
+	border: 1px solid var(--jp-border-color1);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+</style>
+<div class="lm-Widget p-Widget lm-Panel p-Panel jp-OutputArea-child">
+<div class="lm-Widget p-Widget jp-RenderedText jp-mod-trusted jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" style="font-family: monospace;">
+
+
+<span style="white-space: pre;"> # gonb_cca68419</span>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[327]: Line 4</span>
+<span class="gonb-err-location">./main.go:81:6: </span> missing function body
+<div class="gonb-err-context">
+	go teller() // start the monitor goroutine
+}
+
+<div class="gonb-err-line">func loadIcon(name string) image.Image
+</div>
+func teller() {
+
+</div>
+
+<br/>
+
+
+<span style="white-space: pre;"> </span>
+
+<br/>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_cca68419/gonb_cca68419&#34;: exit status 1</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[326]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;image&quot;</span>
@@ -15014,6 +15133,156 @@ reflect: slice index out of range</pre>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+<style>
+.gonb-err-location {
+	background: var(--jp-err-color2);  
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-location:hover {
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-context {
+	display: none;
+}
+.gonb-err-location:hover + .gonb-err-context {
+	background: var(--jp-dialog-background);  
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+	display: block;
+	white-space: pre;
+	font-family: monospace;
+}
+.gonb-err-line {
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;	
+	border-color: var(--jp-border-color2);
+	background-color: var(--jp-rendermime-err-background);
+	font-weight: bold;
+}
+.gonb-cell-line-info {
+	background: var(--jp-layout-color2);
+	color: #999;
+	margin: 0.1em;
+	border: 1px solid var(--jp-border-color1);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+</style>
+<div class="lm-Widget p-Widget lm-Panel p-Panel jp-OutputArea-child">
+<div class="lm-Widget p-Widget jp-RenderedText jp-mod-trusted jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" style="font-family: monospace;">
+
+
+<span style="white-space: pre;"> # gonb_cca68419</span>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[326]: Line 3</span>
+<span class="gonb-err-location">./main.go:18:20: </span> undefined: loadIcon
+<div class="gonb-err-context">
+	balances = make(chan int)
+	deposits = make(chan int)
+	icons = map[string]image.Image {
+<div class="gonb-err-line">    &#34;spades.png&#34;:  loadIcon(&#34;spades.png&#34;),
+</div>    &#34;hearts.png&#34;:  loadIcon(&#34;hearts.png&#34;),
+    &#34;diamonds.png&#34;:loadIcon(&#34;diamonds.png&#34;),
+
+</div>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[326]: Line 4</span>
+<span class="gonb-err-location">./main.go:19:20: </span> undefined: loadIcon
+<div class="gonb-err-context">
+	deposits = make(chan int)
+	icons = map[string]image.Image {
+    &#34;spades.png&#34;:  loadIcon(&#34;spades.png&#34;),
+<div class="gonb-err-line">    &#34;hearts.png&#34;:  loadIcon(&#34;hearts.png&#34;),
+</div>    &#34;diamonds.png&#34;:loadIcon(&#34;diamonds.png&#34;),
+    &#34;clubs.png&#34;:   loadIcon(&#34;clubs.png&#34;),
+
+</div>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[326]: Line 5</span>
+<span class="gonb-err-location">./main.go:20:20: </span> undefined: loadIcon
+<div class="gonb-err-context">
+	icons = map[string]image.Image {
+    &#34;spades.png&#34;:  loadIcon(&#34;spades.png&#34;),
+    &#34;hearts.png&#34;:  loadIcon(&#34;hearts.png&#34;),
+<div class="gonb-err-line">    &#34;diamonds.png&#34;:loadIcon(&#34;diamonds.png&#34;),
+</div>    &#34;clubs.png&#34;:   loadIcon(&#34;clubs.png&#34;),
+}
+
+</div>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[326]: Line 6</span>
+<span class="gonb-err-location">./main.go:21:20: </span> undefined: loadIcon
+<div class="gonb-err-context">
+    &#34;spades.png&#34;:  loadIcon(&#34;spades.png&#34;),
+    &#34;hearts.png&#34;:  loadIcon(&#34;hearts.png&#34;),
+    &#34;diamonds.png&#34;:loadIcon(&#34;diamonds.png&#34;),
+<div class="gonb-err-line">    &#34;clubs.png&#34;:   loadIcon(&#34;clubs.png&#34;),
+</div>}
+	sema = make (chan struct{},1)
+
+</div>
+
+<br/>
+
+
+<span style="white-space: pre;"> </span>
+
+<br/>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_cca68419/gonb_cca68419&#34;: exit status 1</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div></section><section>
@@ -15041,7 +15310,7 @@ reflect: slice index out of range</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[325]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ch9</span><span class="o">/</span><span class="n">bank1</span>
@@ -15088,7 +15357,7 @@ reflect: slice index out of range</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[323]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">back_test</span>
@@ -15140,10 +15409,11 @@ reflect: slice index out of range</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[324]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">t</span> <span class="n">testing</span><span class="o">.</span><span class="n">T</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">var</span> <span class="n">t</span> <span class="n">testing</span><span class="o">.</span><span class="n">T</span>
 <span class="n">TestBank</span><span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">)</span>
 </pre></div>
 
@@ -15166,7 +15436,7 @@ reflect: slice index out of range</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>= 5700
+<pre>= 300
 </pre>
 </div>
 </div>
@@ -15180,7 +15450,7 @@ reflect: slice index out of range</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[321]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
@@ -15213,11 +15483,12 @@ reflect: slice index out of range</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[322]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Cakes</span> <span class="n">are</span> <span class="n">serially</span> <span class="n">confied</span><span class="p">,</span> <span class="n">first</span> <span class="n">to</span> <span class="n">the</span> <span class="n">baker</span><span class="p">,</span> <span class="n">then</span> <span class="n">to</span> <span class="n">the</span> <span class="n">icer</span>
 <span class="kn">import</span> <span class="s2">&quot;time&quot;</span>
+<span class="o">%%</span>
 <span class="n">cooked</span> <span class="o">:=</span> <span class="n">make</span><span class="p">(</span><span class="n">chan</span> <span class="o">*</span><span class="n">Cake</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">iced</span> <span class="o">:=</span> <span class="n">make</span><span class="p">(</span><span class="n">chan</span> <span class="o">*</span><span class="n">Cake</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">go</span> <span class="n">icer</span><span class="p">(</span><span class="n">iced</span><span class="p">,</span> <span class="n">cooked</span><span class="p">)</span>
@@ -15274,7 +15545,7 @@ cooked
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[82]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[328]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ch9</span><span class="o">/</span><span class="n">bank2</span>
@@ -15305,10 +15576,11 @@ cooked
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[329]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">{</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">{</span>
     <span class="n">balance</span><span class="o">=</span><span class="mi">0</span>
     <span class="k">for</span> <span class="n">j</span> <span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">{</span>
       <span class="n">go</span> <span class="n">Deposit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -15360,7 +15632,7 @@ cooked
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[330]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">gopl</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ch9</span><span class="o">/</span><span class="n">bank3</span>
@@ -15393,10 +15665,11 @@ cooked
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[332]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">;</span><span class="s2">&quot;fmt&quot;</span><span class="p">)</span>
+<span class="o">%%</span>
 <span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">{</span>
     <span class="n">balance</span><span class="o">=</span><span class="mi">0</span>
     <span class="k">for</span> <span class="n">j</span> <span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">{</span>
@@ -15449,7 +15722,7 @@ cooked
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[90]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[333]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">Balance</span><span class="p">()</span> <span class="nb">int</span> <span class="p">{</span>
@@ -15488,7 +15761,7 @@ cooked
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[334]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Not</span> <span class="n">Atomic</span>
@@ -15512,7 +15785,7 @@ cooked
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[335]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">incorrect</span><span class="p">,</span> <span class="n">may</span> <span class="n">be</span> <span class="n">a</span> <span class="n">deadlock</span>
@@ -15538,7 +15811,7 @@ cooked
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[93]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[336]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">Withdraw</span><span class="p">(</span><span class="n">amount</span> <span class="nb">int</span><span class="p">)</span> <span class="nb">bool</span> <span class="p">{</span>
@@ -15589,7 +15862,7 @@ cooked
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[94]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[337]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;sync&quot;</span>
@@ -15620,10 +15893,11 @@ cooked
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[96]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[338]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">;</span><span class="s2">&quot;fmt&quot;</span><span class="p">)</span>
+<span class="o">%%</span>
 <span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">{</span>
     <span class="n">balance</span><span class="o">=</span><span class="mi">0</span>
     <span class="k">for</span> <span class="n">j</span> <span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">{</span>
@@ -15687,10 +15961,11 @@ cooked
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[339]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="nb">int</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">var</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="nb">int</span>
 
 <span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">{</span>
  <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
@@ -15729,15 +16004,15 @@ cooked
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>y:0 x:1 
+x:0 y:1 
+x:0 y:1 
+x:0 y:1 
 y:0 x:1 
-y:0 x:1 
-y:0 x:1 
-y:0 x:1 
-y:0 x:1 
-y:0 x:1 
-y:0 x:1 
-y:0 x:1 
-y:0 x:1 
+x:0 y:1 
+x:0 y:1 
+x:0 y:1 
+x:0 y:1 
+x:0 y:1 
 </pre>
 </div>
 </div>
@@ -15760,12 +16035,12 @@ y:0 x:1
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[97]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[340]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">Lazy</span> <span class="n">initialization</span> 
@@ -15794,15 +16069,125 @@ y:0 x:1
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+<style>
+.gonb-err-location {
+	background: var(--jp-err-color2);  
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-location:hover {
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-context {
+	display: none;
+}
+.gonb-err-location:hover + .gonb-err-context {
+	background: var(--jp-dialog-background);  
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+	display: block;
+	white-space: pre;
+	font-family: monospace;
+}
+.gonb-err-line {
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;	
+	border-color: var(--jp-border-color2);
+	background-color: var(--jp-rendermime-err-background);
+	font-weight: bold;
+}
+.gonb-cell-line-info {
+	background: var(--jp-layout-color2);
+	color: #999;
+	margin: 0.1em;
+	border: 1px solid var(--jp-border-color1);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+</style>
+<div class="lm-Widget p-Widget lm-Panel p-Panel jp-OutputArea-child">
+<div class="lm-Widget p-Widget jp-RenderedText jp-mod-trusted jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" style="font-family: monospace;">
+
+
+<span style="white-space: pre;"> # gonb_cca68419</span>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[340]: Line 4</span>
+<span class="gonb-err-location">./main.go:102:6: </span> missing function body
+<div class="gonb-err-context">
+	go teller() // start the monitor goroutine
+}
+
+<div class="gonb-err-line">func loadIcon(string)image.Image
+</div>
+func loadIcons(){
+
+</div>
+
+<br/>
+
+
+<span style="white-space: pre;"> </span>
+
+<br/>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_cca68419/gonb_cca68419&#34;: exit status 1</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[98]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[344]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">icons</span> <span class="n">may</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">nil</span><span class="p">,</span> <span class="n">but</span> <span class="n">the</span> <span class="n">initialization</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">complete</span>
+<span class="kn">import</span> <span class="s2">&quot;image&quot;</span>
+<span class="n">var</span> <span class="n">icons</span> <span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="n">image</span><span class="o">.</span><span class="n">Image</span>
 <span class="n">func</span> <span class="n">loadIcons</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">icons</span> <span class="o">=</span> <span class="n">make</span><span class="p">(</span><span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="n">image</span><span class="o">.</span><span class="n">Image</span><span class="p">)</span>
     <span class="n">icons</span><span class="p">[</span><span class="s2">&quot;spades.png&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">loadIcon</span><span class="p">(</span><span class="s2">&quot;spades.png&quot;</span><span class="p">)</span>
@@ -15817,15 +16202,167 @@ y:0 x:1
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+<style>
+.gonb-err-location {
+	background: var(--jp-err-color2);  
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-location:hover {
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-context {
+	display: none;
+}
+.gonb-err-location:hover + .gonb-err-context {
+	background: var(--jp-dialog-background);  
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+	display: block;
+	white-space: pre;
+	font-family: monospace;
+}
+.gonb-err-line {
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;	
+	border-color: var(--jp-border-color2);
+	background-color: var(--jp-rendermime-err-background);
+	font-weight: bold;
+}
+.gonb-cell-line-info {
+	background: var(--jp-layout-color2);
+	color: #999;
+	margin: 0.1em;
+	border: 1px solid var(--jp-border-color1);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+</style>
+<div class="lm-Widget p-Widget lm-Panel p-Panel jp-OutputArea-child">
+<div class="lm-Widget p-Widget jp-RenderedText jp-mod-trusted jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" style="font-family: monospace;">
+
+
+<span style="white-space: pre;"> # gonb_cca68419</span>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[344]: Line 6</span>
+<span class="gonb-err-location">./main.go:97:27: </span> undefined: loadIcon
+<div class="gonb-err-context">
+
+func loadIcons() {
+    icons = make(map[string]image.Image)
+<div class="gonb-err-line">    icons[&#34;spades.png&#34;] = loadIcon(&#34;spades.png&#34;)
+</div>    icons[&#34;hearts.png&#34;] = loadIcon(&#34;hearts.png&#34;)
+    icons[&#34;diamonds.png&#34;]=loadIcon(&#34;diamonds.png&#34;)
+
+</div>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[344]: Line 7</span>
+<span class="gonb-err-location">./main.go:98:27: </span> undefined: loadIcon
+<div class="gonb-err-context">
+func loadIcons() {
+    icons = make(map[string]image.Image)
+    icons[&#34;spades.png&#34;] = loadIcon(&#34;spades.png&#34;)
+<div class="gonb-err-line">    icons[&#34;hearts.png&#34;] = loadIcon(&#34;hearts.png&#34;)
+</div>    icons[&#34;diamonds.png&#34;]=loadIcon(&#34;diamonds.png&#34;)
+    icons[&#34;clubs.png&#34;] = loadIcon(&#34;clubs.png&#34;)
+
+</div>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[344]: Line 8</span>
+<span class="gonb-err-location">./main.go:99:27: </span> undefined: loadIcon
+<div class="gonb-err-context">
+    icons = make(map[string]image.Image)
+    icons[&#34;spades.png&#34;] = loadIcon(&#34;spades.png&#34;)
+    icons[&#34;hearts.png&#34;] = loadIcon(&#34;hearts.png&#34;)
+<div class="gonb-err-line">    icons[&#34;diamonds.png&#34;]=loadIcon(&#34;diamonds.png&#34;)
+</div>    icons[&#34;clubs.png&#34;] = loadIcon(&#34;clubs.png&#34;)
+}
+
+</div>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[344]: Line 9</span>
+<span class="gonb-err-location">./main.go:100:26: </span> undefined: loadIcon
+<div class="gonb-err-context">
+    icons[&#34;spades.png&#34;] = loadIcon(&#34;spades.png&#34;)
+    icons[&#34;hearts.png&#34;] = loadIcon(&#34;hearts.png&#34;)
+    icons[&#34;diamonds.png&#34;]=loadIcon(&#34;diamonds.png&#34;)
+<div class="gonb-err-line">    icons[&#34;clubs.png&#34;] = loadIcon(&#34;clubs.png&#34;)
+</div>}
+
+
+</div>
+
+<br/>
+
+
+<span style="white-space: pre;"> </span>
+
+<br/>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_cca68419/gonb_cca68419&#34;: exit status 1</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[100]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[342]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">concurrency</span> <span class="n">safe</span><span class="p">,</span> <span class="n">but</span> <span class="n">expensive</span> <span class="k">for</span> <span class="n">only</span> <span class="n">one</span> <span class="n">goroutine</span> <span class="n">can</span> <span class="n">access</span> <span class="n">Icon</span>
+<span class="kn">import</span> <span class="s2">&quot;sync&quot;</span>
+<span class="kn">import</span> <span class="s2">&quot;image&quot;</span>
 <span class="n">var</span> <span class="n">mu</span> <span class="n">sync</span><span class="o">.</span><span class="n">Mutex</span> <span class="o">//</span> <span class="n">guard</span> <span class="n">Icons</span>
 <span class="n">var</span> <span class="n">icons</span> <span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="n">image</span><span class="o">.</span><span class="n">Image</span>
 <span class="n">func</span> <span class="n">Icon</span><span class="p">(</span><span class="n">name</span> <span class="n">string</span><span class="p">)</span><span class="n">image</span><span class="o">.</span><span class="n">Image</span> <span class="p">{</span>
@@ -15843,12 +16380,148 @@ y:0 x:1
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+<style>
+.gonb-err-location {
+	background: var(--jp-err-color2);  
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-location:hover {
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-context {
+	display: none;
+}
+.gonb-err-location:hover + .gonb-err-context {
+	background: var(--jp-dialog-background);  
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+	display: block;
+	white-space: pre;
+	font-family: monospace;
+}
+.gonb-err-line {
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;	
+	border-color: var(--jp-border-color2);
+	background-color: var(--jp-rendermime-err-background);
+	font-weight: bold;
+}
+.gonb-cell-line-info {
+	background: var(--jp-layout-color2);
+	color: #999;
+	margin: 0.1em;
+	border: 1px solid var(--jp-border-color1);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+</style>
+<div class="lm-Widget p-Widget lm-Panel p-Panel jp-OutputArea-child">
+<div class="lm-Widget p-Widget jp-RenderedText jp-mod-trusted jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" style="font-family: monospace;">
+
+
+<span style="white-space: pre;"> # gonb_cca68419</span>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[337]: Line 13</span>
+<span class="gonb-err-location">./main.go:25:8: </span> mu.RLock undefined (type sync.Mutex has no field or method RLock)
+<div class="gonb-err-context">
+)
+
+func Balance()int {
+<div class="gonb-err-line">    mu.RLock()  // readers lock
+</div>    defer mu.RUnlock()
+    return balance
+
+</div>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[337]: Line 14</span>
+<span class="gonb-err-location">./main.go:26:14: </span> mu.RUnlock undefined (type sync.Mutex has no field or method RUnlock)
+<div class="gonb-err-context">
+
+func Balance()int {
+    mu.RLock()  // readers lock
+<div class="gonb-err-line">    defer mu.RUnlock()
+</div>    return balance
+}
+
+</div>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[342]: Line 10</span>
+<span class="gonb-err-location">./main.go:40:9: </span> undefined: loadIcons
+<div class="gonb-err-context">
+    mu.Lock()
+    defer mu.Unlock()
+    if icons == nil {
+<div class="gonb-err-line">        loadIcons()
+</div>    }
+    return icons[name]
+
+</div>
+
+<br/>
+
+
+<span style="white-space: pre;"> </span>
+
+<br/>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_cca68419/gonb_cca68419&#34;: exit status 1</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[102]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[351]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">mu</span> <span class="n">sync</span><span class="o">.</span><span class="n">RWMutex</span> <span class="o">//</span> <span class="n">guards</span> <span class="n">icons</span>
@@ -15878,12 +16551,120 @@ y:0 x:1
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+<style>
+.gonb-err-location {
+	background: var(--jp-err-color2);  
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-location:hover {
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-context {
+	display: none;
+}
+.gonb-err-location:hover + .gonb-err-context {
+	background: var(--jp-dialog-background);  
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+	display: block;
+	white-space: pre;
+	font-family: monospace;
+}
+.gonb-err-line {
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;	
+	border-color: var(--jp-border-color2);
+	background-color: var(--jp-rendermime-err-background);
+	font-weight: bold;
+}
+.gonb-cell-line-info {
+	background: var(--jp-layout-color2);
+	color: #999;
+	margin: 0.1em;
+	border: 1px solid var(--jp-border-color1);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+</style>
+<div class="lm-Widget p-Widget lm-Panel p-Panel jp-OutputArea-child">
+<div class="lm-Widget p-Widget jp-RenderedText jp-mod-trusted jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" style="font-family: monospace;">
+
+
+<span style="white-space: pre;"> # gonb_cca68419</span>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[351]: Line 15</span>
+<span class="gonb-err-location">./main.go:61:9: </span> undefined: loadIcons
+<div class="gonb-err-context">
+    //acquire an exclusive lock
+    mu.Lock()
+    if icons == nil {
+<div class="gonb-err-line">        loadIcons()
+</div>    }
+    icon := icons[name]
+
+</div>
+
+<br/>
+
+
+<span style="white-space: pre;"> </span>
+
+<br/>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_cca68419/gonb_cca68419&#34;: exit status 1</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[103]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[350]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">loadIconsOnce</span> <span class="n">sync</span><span class="o">.</span><span class="n">Once</span>
@@ -15898,6 +16679,114 @@ y:0 x:1
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+<style>
+.gonb-err-location {
+	background: var(--jp-err-color2);  
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-location:hover {
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-context {
+	display: none;
+}
+.gonb-err-location:hover + .gonb-err-context {
+	background: var(--jp-dialog-background);  
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+	display: block;
+	white-space: pre;
+	font-family: monospace;
+}
+.gonb-err-line {
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;	
+	border-color: var(--jp-border-color2);
+	background-color: var(--jp-rendermime-err-background);
+	font-weight: bold;
+}
+.gonb-cell-line-info {
+	background: var(--jp-layout-color2);
+	color: #999;
+	margin: 0.1em;
+	border: 1px solid var(--jp-border-color1);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+</style>
+<div class="lm-Widget p-Widget lm-Panel p-Panel jp-OutputArea-child">
+<div class="lm-Widget p-Widget jp-RenderedText jp-mod-trusted jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" style="font-family: monospace;">
+
+
+<span style="white-space: pre;"> # gonb_cca68419</span>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[350]: Line 5</span>
+<span class="gonb-err-location">./main.go:52:22: </span> undefined: loadIcons
+<div class="gonb-err-context">
+}
+
+func Icon(name string) image.Image {
+<div class="gonb-err-line">    loadIconsOnce.Do(loadIcons)
+</div>    return icons[name]
+}
+
+</div>
+
+<br/>
+
+
+<span style="white-space: pre;"> </span>
+
+<br/>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_cca68419/gonb_cca68419&#34;: exit status 1</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div></section></section><section><section>
@@ -15949,7 +16838,7 @@ y:0 x:1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[104]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[345]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Package</span> <span class="n">memo</span>  <span class="mi">1</span> <span class="n">provides</span> <span class="n">a</span> <span class="n">concurrency</span><span class="o">-</span><span class="n">unsafe</span>
@@ -16005,7 +16894,7 @@ y:0 x:1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[105]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[346]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Package</span> <span class="n">memo</span>  <span class="mi">2</span> <span class="n">provides</span> <span class="n">a</span> <span class="n">concurrency</span><span class="o">-</span><span class="n">safe</span> <span class="n">memoization</span> <span class="n">a</span> <span class="n">function</span> <span class="n">of</span>
@@ -16065,7 +16954,7 @@ y:0 x:1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[347]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Package</span> <span class="n">memo</span> <span class="mi">3</span> <span class="n">provides</span> <span class="n">a</span> <span class="n">concurrency</span><span class="o">-</span><span class="n">safe</span> <span class="n">memoization</span> <span class="n">a</span> <span class="n">function</span> <span class="n">of</span>
@@ -16129,7 +17018,7 @@ y:0 x:1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[348]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Package</span> <span class="n">memo</span> <span class="mi">4</span> <span class="n">provides</span> <span class="n">a</span> <span class="n">concurrency</span><span class="o">-</span><span class="n">safe</span> <span class="n">memoization</span> <span class="n">a</span> <span class="n">function</span> <span class="n">of</span>
@@ -16196,12 +17085,12 @@ y:0 x:1
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[349]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Package</span> <span class="n">memo</span> <span class="mi">5</span> <span class="n">provides</span> <span class="n">a</span> <span class="n">concurrency</span><span class="o">-</span><span class="n">safe</span> <span class="n">non</span><span class="o">-</span><span class="n">blocking</span> <span class="n">memoization</span>
@@ -16297,29 +17186,6 @@ y:0 x:1
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-repl.go:43:5: type main.Memo has no field or method &#34;server&#34;: memo.server</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></section></section><section><section>
