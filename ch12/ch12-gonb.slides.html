@@ -14643,7 +14643,7 @@ div.jp-OutputPrompt {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Reflection" data-toc-modified-id="Reflection-12"><span class="toc-item-num">12&nbsp;&nbsp;</span>Reflection</a></span><ul class="toc-item"><li><span><a href="#Why-Reflection?" data-toc-modified-id="Why-Reflection?-12.1"><span class="toc-item-num">12.1&nbsp;&nbsp;</span>Why Reflection?</a></span></li><li><span><a href="#reflect.Type-and-reflect.Value" data-toc-modified-id="reflect.Type-and-reflect.Value-12.2"><span class="toc-item-num">12.2&nbsp;&nbsp;</span>reflect.Type and reflect.Value</a></span></li><li><span><a href="#Display,-a-Recursive-Value-Printer" data-toc-modified-id="Display,-a-Recursive-Value-Printer-12.3"><span class="toc-item-num">12.3&nbsp;&nbsp;</span>Display, a Recursive Value Printer</a></span></li><li><span><a href="#Example:-Encoding-S-Expressions" data-toc-modified-id="Example:-Encoding-S-Expressions-12.4"><span class="toc-item-num">12.4&nbsp;&nbsp;</span>Example: Encoding S-Expressions</a></span></li><li><span><a href="#Setting-Variables-with-reflect.Value" data-toc-modified-id="Setting-Variables-with-reflect.Value-12.5"><span class="toc-item-num">12.5&nbsp;&nbsp;</span>Setting Variables with reflect.Value</a></span></li><li><span><a href="#Example:-Decoding-S-Expressions" data-toc-modified-id="Example:-Decoding-S-Expressions-12.6"><span class="toc-item-num">12.6&nbsp;&nbsp;</span>Example: Decoding S-Expressions</a></span></li><li><span><a href="#Accessing-Struct-Field-Tags" data-toc-modified-id="Accessing-Struct-Field-Tags-12.7"><span class="toc-item-num">12.7&nbsp;&nbsp;</span>Accessing Struct Field Tags</a></span></li><li><span><a href="#Displaying-the-Methods-of-a-Type" data-toc-modified-id="Displaying-the-Methods-of-a-Type-12.8"><span class="toc-item-num">12.8&nbsp;&nbsp;</span>Displaying the Methods of a Type</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Reflection" data-toc-modified-id="Reflection-12"><span class="toc-item-num">12&nbsp;&nbsp;</span>Reflection</a></span><ul class="toc-item"><li><span><a href="#Why-Reflection?" data-toc-modified-id="Why-Reflection?-12.1"><span class="toc-item-num">12.1&nbsp;&nbsp;</span>Why Reflection?</a></span><ul class="toc-item"><li><span><a href="#fmt.Fprintf-example" data-toc-modified-id="fmt.Fprintf-example-12.1.1"><span class="toc-item-num">12.1.1&nbsp;&nbsp;</span>fmt.Fprintf example</a></span></li><li><span><a href="#how-do-we-deal-with" data-toc-modified-id="how-do-we-deal-with-12.1.2"><span class="toc-item-num">12.1.2&nbsp;&nbsp;</span>how do we deal with</a></span></li></ul></li><li><span><a href="#reflect.Type-and-reflect.Value" data-toc-modified-id="reflect.Type-and-reflect.Value-12.2"><span class="toc-item-num">12.2&nbsp;&nbsp;</span>reflect.Type and reflect.Value</a></span></li><li><span><a href="#Display,-a-Recursive-Value-Printer" data-toc-modified-id="Display,-a-Recursive-Value-Printer-12.3"><span class="toc-item-num">12.3&nbsp;&nbsp;</span>Display, a Recursive Value Printer</a></span></li><li><span><a href="#Example:-Encoding-S-Expressions" data-toc-modified-id="Example:-Encoding-S-Expressions-12.4"><span class="toc-item-num">12.4&nbsp;&nbsp;</span>Example: Encoding S-Expressions</a></span></li><li><span><a href="#Setting-Variables-with-reflect.Value" data-toc-modified-id="Setting-Variables-with-reflect.Value-12.5"><span class="toc-item-num">12.5&nbsp;&nbsp;</span>Setting Variables with reflect.Value</a></span></li><li><span><a href="#Example:-Decoding-S-Expressions" data-toc-modified-id="Example:-Decoding-S-Expressions-12.6"><span class="toc-item-num">12.6&nbsp;&nbsp;</span>Example: Decoding S-Expressions</a></span></li><li><span><a href="#Accessing-Struct-Field-Tags" data-toc-modified-id="Accessing-Struct-Field-Tags-12.7"><span class="toc-item-num">12.7&nbsp;&nbsp;</span>Accessing Struct Field Tags</a></span></li><li><span><a href="#Displaying-the-Methods-of-a-Type" data-toc-modified-id="Displaying-the-Methods-of-a-Type-12.8"><span class="toc-item-num">12.8&nbsp;&nbsp;</span>Displaying the Methods of a Type</a></span></li></ul></li></ul></div>
 </div>
 </div>
 </div>
@@ -14665,16 +14665,71 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Why-Reflection?">Why Reflection?<a class="anchor-link" href="#Why-Reflection?">&#182;</a></h2>
+<ul>
+<li>A mechanism to update variables and inspect their values at run time<ul>
+<li>call their methods</li>
+<li>apply operations to their representation</li>
+<li>without knowing their types at compile time</li>
+</ul>
+</li>
+<li>Treat types as first-class values</li>
+<li>Crucial to APIs<ul>
+<li>fmt</li>
+<li>encoding/json and encoding/xml</li>
+<li>text/template and html/template</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Why-Reflection?">Why Reflection?<a class="anchor-link" href="#Why-Reflection?">&#182;</a></h2><ul>
+<li>Dealing with values of types<ul>
+<li>don’t satisfy a common interface</li>
+<li>don’t have a known representation</li>
+<li>don’t exist at the time we design the function</li>
+</ul>
+</li>
+<li>fmt.Printf and fmt.Sprintf<ul>
+<li>fmt.Printf: print arbitrary value of any type (including user-defined one)</li>
+<li>try to implement fmt.Sprintf</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="fmt.Fprintf-example">fmt.Fprintf example<a class="anchor-link" href="#fmt.Fprintf-example">&#182;</a></h3><ul>
+<li>arbitrary value of any type, including user-defined one</li>
+<li>implement a function like fmt.Fprintf, called it Sprint (like fmt.Sprint)</li>
+<li>type switch and test the dynamic type of basic types - string, int, and bool</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">Sprint</span><span class="p">(</span><span class="n">x</span> <span class="n">interface</span><span class="p">{})</span> <span class="n">string</span><span class="p">{</span>
@@ -14693,7 +14748,7 @@ div.jp-OutputPrompt {
             <span class="k">return</span> <span class="s2">&quot;true&quot;</span>
           <span class="p">}</span>
           <span class="k">return</span> <span class="s2">&quot;false&quot;</span>
-        <span class="n">defaut</span><span class="p">:</span>
+        <span class="n">default</span><span class="p">:</span>
           <span class="o">//</span> <span class="n">array</span><span class="p">,</span> <span class="n">chan</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="nb">map</span><span class="p">,</span> <span class="n">pointer</span><span class="p">,</span> <span class="nb">slice</span><span class="p">,</span> <span class="n">struct</span>
           <span class="k">return</span> <span class="s2">&quot;???&quot;</span>
     <span class="p">}</span>
@@ -14705,29 +14760,6 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-repl.go:11:18: undefined &#34;strconv&#34; in strconv.Itoa &lt;*ast.SelectorExpr&gt;</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -14735,19 +14767,44 @@ repl.go:11:18: undefined &#34;strconv&#34; in strconv.Itoa &lt;*ast.SelectorExpr
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="reflect.Type-and-reflect.Value">reflect.Type and reflect.Value<a class="anchor-link" href="#reflect.Type-and-reflect.Value">&#182;</a></h2>
+<h3 id="how-do-we-deal-with">how do we deal with<a class="anchor-link" href="#how-do-we-deal-with">&#182;</a></h3><ul>
+<li>[]float64, map[string][]sttring and number of such types is infinite</li>
+<li>what about named types like url.Values</li>
+<li>need a way to inspect the representation of values of unknown types</li>
+</ul>
+
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="reflect.Type-and-reflect.Value">reflect.Type and reflect.Value<a class="anchor-link" href="#reflect.Type-and-reflect.Value">&#182;</a></h2><ul>
+<li>Reflection is provided by the <a href="https://pkg.go.dev/reflect"><strong><em>reflect</em></strong></a> package</li>
+<li>two types: <a href="https://pkg.go.dev/reflect#Type">Type</a> and <a href="https://pkg.go.dev/reflect#Value">Value</a><ul>
+<li>Type: Go Type, type descriptor, dynamic type of an interface v alue</li>
+<li>Value: value of any type</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
+<span class="o">%%</span>
 <span class="n">t</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">TypeOf</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">//</span> <span class="n">a</span> <span class="n">reflect</span><span class="o">.</span><span class="n">Type</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">String</span><span class="p">())</span><span class="o">//</span> <span class="s2">&quot;int&quot;</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>         <span class="o">//</span> <span class="s2">&quot;int&quot;</span>
@@ -14758,54 +14815,17 @@ repl.go:11:18: undefined &#34;strconv&#34; in strconv.Itoa &lt;*ast.SelectorExpr
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>int
-int
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>4 &lt;nil&gt;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;io&quot;</span><span class="p">;</span><span class="s2">&quot;os&quot;</span><span class="p">)</span>
 <span class="n">var</span> <span class="n">w</span> <span class="n">io</span><span class="o">.</span><span class="n">Writer</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">Stdout</span> 
+<span class="o">%%</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">reflect</span><span class="o">.</span><span class="n">TypeOf</span><span class="p">(</span><span class="n">w</span><span class="p">))</span>
 </pre></div>
 
@@ -14814,52 +14834,16 @@ int
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>*os.File
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>9 &lt;nil&gt;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%T</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>   <span class="o">//</span> <span class="s2">&quot;int&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%T</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>   <span class="o">//</span> <span class="s2">&quot;int&quot;</span>
 </pre></div>
 
      </div>
@@ -14867,52 +14851,16 @@ int
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>int
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>4 &lt;nil&gt;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">v</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>          <span class="o">//</span> <span class="s2">&quot;3&quot;</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%v</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>    <span class="o">//</span> <span class="s2">&quot;3&quot;</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">String</span><span class="p">())</span> <span class="o">//</span> <span class="o">&lt;</span><span class="nb">int</span> <span class="n">Value</span><span class="o">&gt;</span>
@@ -14924,44 +14872,23 @@ int
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">v</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">:=</span> <span class="n">v</span><span class="o">.</span><span class="n">Type</span><span class="p">()</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">String</span><span class="p">())</span>
+</pre></div>
 
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>3
-3
-&lt;int Value&gt;
-3
-</pre>
+     </div>
 </div>
 </div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>2 &lt;nil&gt;</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14969,10 +14896,31 @@ int
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">package</span> <span class="nb">format</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span> 
+<span class="o">//</span> <span class="n">the</span> <span class="n">inverse</span> <span class="n">operation</span> <span class="n">to</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span> <span class="ow">is</span> <span class="n">reflect</span><span class="o">.</span><span class="n">Value</span><span class="o">.</span><span class="n">Interface</span> <span class="n">method</span>
+<span class="n">v</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">//</span> <span class="n">a</span> <span class="n">reflect</span><span class="o">.</span><span class="n">Value</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="n">v</span><span class="o">.</span><span class="n">Interface</span><span class="p">()</span>      <span class="o">//</span> <span class="n">an</span> <span class="n">interface</span><span class="p">()</span>
+<span class="n">i</span> <span class="o">:=</span> <span class="n">x</span><span class="o">.</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>            <span class="o">//</span> <span class="n">an</span> <span class="nb">int</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>    <span class="o">//</span> <span class="s2">&quot;3&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span><span class="n">package</span> <span class="nb">format</span>
 
 <span class="kn">import</span> <span class="p">(</span>
         <span class="s2">&quot;reflect&quot;</span>
@@ -15014,66 +14962,28 @@ int
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">;</span><span class="s2">&quot;gopl.io/ch12/format&quot;</span><span class="p">;</span><span class="s2">&quot;reflect&quot;</span><span class="p">;</span><span class="s2">&quot;fmt&quot;</span><span class="p">)</span>
 <span class="n">var</span> <span class="n">x</span> <span class="n">int64</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">var</span> <span class="n">d</span> <span class="n">time</span><span class="o">.</span><span class="n">Duration</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">time</span><span class="o">.</span><span class="n">Nanosecond</span>
+<span class="o">%%</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="nb">format</span><span class="o">.</span><span class="n">Any</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="nb">format</span><span class="o">.</span><span class="n">Any</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="nb">format</span><span class="o">.</span><span class="n">Any</span><span class="p">([]</span><span class="n">int64</span><span class="p">{</span><span class="n">x</span><span class="p">}))</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="nb">format</span><span class="o">.</span><span class="n">Any</span><span class="p">([]</span><span class="n">time</span><span class="o">.</span><span class="n">Duration</span><span class="p">{</span><span class="n">d</span><span class="p">}))</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="nb">format</span><span class="o">.</span><span class="n">Any</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Stdout</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>1
-1
-[]int64 0xc0000c5780
-[]time.Duration 0xc0000c57a0
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>29 &lt;nil&gt;</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -15092,7 +15002,7 @@ int
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;gopl.io/ch12/format&quot;</span>
@@ -15143,7 +15053,7 @@ int
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;fmt&quot;</span><span class="p">;</span><span class="s2">&quot;reflect&quot;</span><span class="p">)</span>
@@ -15158,16 +15068,18 @@ int
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;gopl.io/ch12/display&quot;</span><span class="p">;</span> <span class="s2">&quot;gopl.io/ch7/eval&quot;</span><span class="p">)</span>
+<span class="o">%%</span>
 <span class="n">e</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="nb">eval</span><span class="o">.</span><span class="n">Parse</span><span class="p">(</span><span class="s2">&quot;sqrt(A/pi)&quot;</span><span class="p">)</span>
+<span class="o">//</span><span class="n">f</span> <span class="o">:=</span> <span class="n">display</span><span class="o">.</span><span class="n">Display</span>
 <span class="n">display</span><span class="o">.</span><span class="n">Display</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
 <span class="n">display</span><span class="o">.</span><span class="n">Display</span><span class="p">(</span><span class="s2">&quot;slice&quot;</span><span class="p">,</span> <span class="p">[]</span><span class="o">*</span><span class="nb">int</span><span class="p">{</span><span class="n">new</span><span class="p">(</span><span class="nb">int</span><span class="p">),</span> <span class="n">nil</span><span class="p">})</span>
 </pre></div>
@@ -15177,51 +15089,19 @@ int
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Display e (eval.call):
-e.fn = &#34;sqrt&#34;
-e.args[0].type = eval.binary
-e.args[0].value.op = 47
-e.args[0].value.x.type = eval.Var
-e.args[0].value.x.value = &#34;A&#34;
-e.args[0].value.y.type = eval.Var
-e.args[0].value.y.value = &#34;pi&#34;
-Display slice ([]*int):
-(*slice[0]) = 0
-slice[1] = nil
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;io&quot;</span>
+<span class="o">%%</span>
 <span class="n">var</span> <span class="n">w</span> <span class="n">io</span><span class="o">.</span><span class="n">Writer</span>
 <span class="n">display</span><span class="o">.</span><span class="n">Display</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
-<span class="n">var</span> <span class="n">w</span> <span class="n">io</span><span class="o">.</span><span class="n">Writer</span>
+<span class="o">//</span><span class="n">var</span> <span class="n">w</span> <span class="n">io</span><span class="o">.</span><span class="n">Writer</span>
 <span class="n">display</span><span class="o">.</span><span class="n">Display</span><span class="p">(</span><span class="s2">&quot;&amp;w&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">w</span><span class="p">)</span>
 </pre></div>
 
@@ -15230,55 +15110,30 @@ slice[1] = nil
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Display w (&lt;nil&gt;):
-w = invalid
-Display &amp;w (*io.Writer):
-(*&amp;w) = nil
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span>   <span class="nb">type</span> <span class="n">Movie</span> <span class="n">struct</span> <span class="p">{</span>
                 <span class="n">Title</span><span class="p">,</span> <span class="n">Subtitle</span> <span class="n">string</span>
                 <span class="n">Year</span>            <span class="nb">int</span>
-                <span class="n">Color</span>           <span class="nb">bool</span>
+                <span class="o">//</span><span class="n">Color</span>           <span class="nb">bool</span>
                 <span class="n">Actor</span>           <span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="n">string</span>
                 <span class="n">Oscars</span>          <span class="p">[]</span><span class="n">string</span>
                 <span class="n">Sequel</span>          <span class="o">*</span><span class="n">string</span>
         <span class="p">}</span>
         <span class="o">//!</span>-movie
         <span class="o">//!</span>+strangelove
-        <span class="n">strangelove</span> <span class="o">:=</span> <span class="n">Movie</span><span class="p">{</span>
+
+        <span class="n">var</span> <span class="n">strangelove</span> <span class="o">=</span> <span class="n">Movie</span><span class="p">{</span>
                 <span class="n">Title</span><span class="p">:</span>    <span class="s2">&quot;Dr. Strangelove&quot;</span><span class="p">,</span>
                 <span class="n">Subtitle</span><span class="p">:</span> <span class="s2">&quot;How I Learned to Stop Worrying and Love the Bomb&quot;</span><span class="p">,</span>
                 <span class="n">Year</span><span class="p">:</span>     <span class="mi">1964</span><span class="p">,</span>
-                <span class="n">Color</span><span class="p">:</span>    <span class="n">false</span><span class="p">,</span>
+                <span class="o">//</span><span class="n">Color</span><span class="p">:</span>    <span class="n">false</span><span class="p">,</span>
                 <span class="n">Actor</span><span class="p">:</span> <span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="n">string</span><span class="p">{</span>
                         <span class="s2">&quot;Dr. Strangelove&quot;</span><span class="p">:</span>            <span class="s2">&quot;Peter Sellers&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;Grp. Capt. Lionel Mandrake&quot;</span><span class="p">:</span> <span class="s2">&quot;Peter Sellers&quot;</span><span class="p">,</span>
@@ -15294,6 +15149,7 @@ Display &amp;w (*io.Writer):
                         <span class="s2">&quot;Best Picture (Nomin.)&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
         <span class="p">}</span>
+<span class="o">%%</span>
         <span class="o">//!</span>-strangelove
         <span class="n">display</span><span class="o">.</span><span class="n">Display</span><span class="p">(</span><span class="s2">&quot;strangelove&quot;</span><span class="p">,</span> <span class="n">strangelove</span><span class="p">)</span>
 </pre></div>
@@ -15303,53 +15159,16 @@ Display &amp;w (*io.Writer):
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Display strangelove (struct { Title string; Subtitle string; Year int; Color bool; Actor map[string]string; Oscars []string; Sequel *string }):
-strangelove.Title = &#34;Dr. Strangelove&#34;
-strangelove.Subtitle = &#34;How I Learned to Stop Worrying and Love the Bomb&#34;
-strangelove.Year = 1964
-strangelove.Color = false
-strangelove.Actor[&#34;Dr. Strangelove&#34;] = &#34;Peter Sellers&#34;
-strangelove.Actor[&#34;Grp. Capt. Lionel Mandrake&#34;] = &#34;Peter Sellers&#34;
-strangelove.Actor[&#34;Pres. Merkin Muffley&#34;] = &#34;Peter Sellers&#34;
-strangelove.Actor[&#34;Gen. Buck Turgidson&#34;] = &#34;George C. Scott&#34;
-strangelove.Actor[&#34;Brig. Gen. Jack D. Ripper&#34;] = &#34;Sterling Hayden&#34;
-strangelove.Actor[&#34;Maj. T.J. \&#34;King\&#34; Kong&#34;] = &#34;Slim Pickens&#34;
-strangelove.Oscars[0] = &#34;Best Actor (Nomin.)&#34;
-strangelove.Oscars[1] = &#34;Best Adapted Screenplay (Nomin.)&#34;
-strangelove.Oscars[2] = &#34;Best Director (Nomin.)&#34;
-strangelove.Oscars[3] = &#34;Best Picture (Nomin.)&#34;
-strangelove.Sequel = nil
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;os&quot;</span>   
+<span class="o">%%</span>
 <span class="n">display</span><span class="o">.</span><span class="n">Display</span><span class="p">(</span><span class="s2">&quot;os.Stderr&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">Stderr</span><span class="p">)</span>
 </pre></div>
 
@@ -15358,43 +15177,43 @@ strangelove.Sequel = nil
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">the</span> <span class="nb">type</span> <span class="n">descriptor</span> <span class="n">of</span> <span class="o">*</span><span class="n">os</span><span class="o">.</span><span class="n">File</span>
+<span class="o">%%</span>
+<span class="n">display</span><span class="o">.</span><span class="n">Display</span><span class="p">(</span><span class="s2">&quot;rV&quot;</span><span class="p">,</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Stderr</span><span class="p">))</span>
+</pre></div>
 
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Display os.Stderr (*os.File):
-(*(*os.Stderr).file).pfd.fdmu.state = 0
-(*(*os.Stderr).file).pfd.fdmu.rsema = 0
-(*(*os.Stderr).file).pfd.fdmu.wsema = 0
-(*(*os.Stderr).file).pfd.Sysfd = 22
-(*(*os.Stderr).file).pfd.pd.runtimeCtx = 140160623848312
-(*(*os.Stderr).file).pfd.iovecs = nil
-(*(*os.Stderr).file).pfd.csema = 0
-(*(*os.Stderr).file).pfd.isBlocking = 0
-(*(*os.Stderr).file).pfd.IsStream = true
-(*(*os.Stderr).file).pfd.ZeroReadIsEOF = true
-(*(*os.Stderr).file).pfd.isFile = true
-(*(*os.Stderr).file).name = &#34;|1&#34;
-(*(*os.Stderr).file).dirinfo = nil
-(*(*os.Stderr).file).nonblock = true
-(*(*os.Stderr).file).stdoutOrErr = false
-(*(*os.Stderr).file).appendMode = false
-</pre>
+     </div>
+</div>
 </div>
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">a</span> <span class="n">struct</span> <span class="n">that</span> <span class="n">points</span> <span class="n">to</span> <span class="n">itself</span>
+<span class="o">%%</span>
+<span class="nb">type</span> <span class="n">Cycle</span> <span class="n">struct</span><span class="p">{</span> <span class="n">Value</span> <span class="nb">int</span><span class="p">;</span> <span class="n">Tail</span> <span class="o">*</span><span class="n">Cycle</span> <span class="p">}</span>
+<span class="n">var</span> <span class="n">c</span> <span class="n">Cycle</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">Cycle</span><span class="p">{</span><span class="mi">42</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">}</span>
+<span class="n">display</span><span class="o">.</span><span class="n">Display</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
 
+     </div>
+</div>
+</div>
 </div>
 
 </div>
@@ -15413,7 +15232,7 @@ strangelove.Sequel = nil
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span>
@@ -15508,11 +15327,20 @@ strangelove.Sequel = nil
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;gopl.io/ch12/sexpr&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span><span class="s2">&quot;gopl.io/ch12/sexpr&quot;</span><span class="p">;</span> <span class="s2">&quot;os&quot;</span><span class="p">;</span> <span class="s2">&quot;fmt&quot;</span><span class="p">)</span>
+<span class="o">%%</span>
 <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">sexpr</span><span class="o">.</span><span class="n">Marshal</span><span class="p">(</span><span class="n">strangelove</span><span class="p">)</span>
+<span class="o">//</span><span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">Marshal</span><span class="p">(</span><span class="n">strangelove</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">err</span>
+<span class="o">//</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+<span class="o">//</span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="o">//</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">strangelove</span><span class="p">)</span>
+<span class="o">//</span><span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">sexpr</span><span class="o">.</span><span class="n">Marshal</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Stderr</span><span class="p">)</span>
+<span class="o">//</span><span class="n">_</span> <span class="o">=</span> <span class="n">err</span>
+<span class="o">//</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 </pre></div>
 
@@ -15534,9 +15362,8 @@ strangelove.Sequel = nil
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-repl.go:2:28: undefined identifier: strangelove</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>((Title &#34;Dr. Strangelove&#34;) (Subtitle &#34;How I Learned to Stop Worrying and Love the Bomb&#34;) (Year 1964) (Actor ((&#34;Dr. Strangelove&#34; &#34;Peter Sellers&#34;) (&#34;Grp. Capt. Lionel Mandrake&#34; &#34;Peter Sellers&#34;) (&#34;Pres. Merkin Muffley&#34; &#34;Peter Sellers&#34;) (&#34;Gen. Buck Turgidson&#34; &#34;George C. Scott&#34;) (&#34;Brig. Gen. Jack D. Ripper&#34; &#34;Sterling Hayden&#34;) (&#34;Maj. T.J. \&#34;King\&#34; Kong&#34; &#34;Slim Pickens&#34;))) (Oscars (&#34;Best Actor (Nomin.)&#34; &#34;Best Adapted Screenplay (Nomin.)&#34; &#34;Best Director (Nomin.)&#34; &#34;Best Picture (Nomin.)&#34;)) (Sequel nil))</pre>
 </div>
 </div>
 
@@ -15560,55 +15387,17 @@ repl.go:2:28: undefined identifier: strangelove</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">:=</span> <span class="mi">2</span>                   <span class="o">//</span> <span class="n">value</span>   <span class="nb">type</span>   <span class="n">variable</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="mi">2</span>                   <span class="o">//</span> <span class="n">value</span>   <span class="nb">type</span>   <span class="n">variable</span>
 <span class="n">a</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="o">//</span> <span class="mi">2</span>       <span class="nb">int</span>    <span class="n">no</span>
 <span class="n">b</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="o">//</span> <span class="mi">2</span>       <span class="nb">int</span>    <span class="n">no</span>
 <span class="n">c</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">)</span> <span class="o">//</span> <span class="o">&amp;</span><span class="n">x</span>      <span class="o">*</span><span class="nb">int</span>   <span class="n">no</span>
 <span class="n">d</span> <span class="o">:=</span> <span class="n">c</span><span class="o">.</span><span class="n">Elem</span><span class="p">()</span>            <span class="o">//</span> <span class="mi">2</span>       <span class="nb">int</span>    <span class="n">yes</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
 
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>2</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">CanAddr</span><span class="p">())</span> 
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">CanAddr</span><span class="p">())</span> 
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">CanAddr</span><span class="p">())</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">CanAddr</span><span class="p">())</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">CanAddr</span><span class="p">())</span>
@@ -15641,20 +15430,6 @@ true
 </div>
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>5 &lt;nil&gt;</pre>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -15664,10 +15439,11 @@ true
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">:=</span> <span class="mi">2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="mi">2</span>
 <span class="n">d</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">Elem</span><span class="p">()</span>
 <span class="n">px</span> <span class="o">:=</span> <span class="n">d</span><span class="o">.</span><span class="n">Addr</span><span class="p">()</span><span class="o">.</span><span class="n">Interface</span><span class="p">()</span><span class="o">.</span><span class="p">(</span><span class="o">*</span><span class="nb">int</span><span class="p">)</span>
 <span class="o">*</span><span class="n">px</span> <span class="o">=</span> <span class="mi">3</span>
@@ -15698,20 +15474,6 @@ true
 </div>
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>2 &lt;nil&gt;</pre>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -15721,10 +15483,13 @@ true
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="mi">2</span>
+<span class="n">d</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">Elem</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  
 </pre></div>
 
@@ -15752,20 +15517,6 @@ true
 </div>
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>2 &lt;nil&gt;</pre>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -15775,10 +15526,13 @@ true
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="n">int64</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="mi">2</span>
+<span class="n">d</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">Elem</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="n">int64</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>
 </pre></div>
 
      </div>
@@ -15800,8 +15554,17 @@ true
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-reflect.Set: value of type int64 is not assignable to type int</pre>
+<pre>panic: reflect.Set: value of type int64 is not assignable to type int
+
+goroutine 1 [running]:
+reflect.Value.assignTo({0x100143de0?, 0x10013ad50?, 0x10022ca68?}, {0x10011a0b9, 0xb}, 0x100143d20, 0x0)
+	/opt/homebrew/Cellar/go@1.19/1.19.13/libexec/src/reflect/value.go:3145 +0x214
+reflect.Value.Set({0x100143d20?, 0x14000114018?, 0x14000044768?}, {0x100143de0?, 0x10013ad50?, 0x0?})
+	/opt/homebrew/Cellar/go@1.19/1.19.13/libexec/src/reflect/value.go:2160 +0xc8
+main.main()
+	 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">[[ Cell [26] Line 4 ]]</span> /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_ce37c8f7/main.go:124 +0x204
+exit status 2
+</pre>
 </div>
 </div>
 
@@ -15814,10 +15577,11 @@ reflect.Set: value of type int64 is not assignable to type int</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">:=</span> <span class="mi">2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="mi">2</span>
 <span class="n">b</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="n">b</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="n">reflect</span><span class="o">.</span><span class="n">Value</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>  
 </pre></div>
@@ -15840,9 +15604,94 @@ reflect.Set: value of type int64 is not assignable to type int</pre>
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+<style>
+.gonb-err-location {
+	background: var(--jp-err-color2);  
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-location:hover {
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--jp-border-color2);
+}
+.gonb-err-context {
+	display: none;
+}
+.gonb-err-location:hover + .gonb-err-context {
+	background: var(--jp-dialog-background);  
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--jp-border-color2);
+	display: block;
+	white-space: pre;
+	font-family: monospace;
+}
+.gonb-err-line {
+	border-radius: 3px;
+	border-style: dotted;
+	border-width: 1px;	
+	border-color: var(--jp-border-color2);
+	background-color: var(--jp-rendermime-err-background);
+	font-weight: bold;
+}
+.gonb-cell-line-info {
+	background: var(--jp-layout-color2);
+	color: #999;
+	margin: 0.1em;
+	border: 1px solid var(--jp-border-color1);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+</style>
+<div class="lm-Widget p-Widget lm-Panel p-Panel jp-OutputArea-child">
+<div class="lm-Widget p-Widget jp-RenderedText jp-mod-trusted jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" style="font-family: monospace;">
+
+
+<span style="white-space: pre;"> # gonb_ce37c8f7</span>
+
+<br/>
+
+<span class="gonb-cell-line-info">Cell[27]: Line 4</span>
+<span class="gonb-err-location">./main.go:124:22: </span> cannot convert 3 (untyped int constant) to type reflect.Value
+<div class="gonb-err-context">
+	flag.Parse()
+	x := 2
+	b := reflect.ValueOf(x)
+<div class="gonb-err-line">	b.Set(reflect.Value(3))  
+</div>
+}
+
+</div>
+
+<br/>
+
+
+<span style="white-space: pre;"> </span>
+
+<br/>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>
-cannot convert untyped constant {int 3} to &lt;reflect.Value&gt;</pre>
+failed to run &#34;/opt/homebrew/bin/go build -o /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_ce37c8f7/gonb_ce37c8f7&#34;: exit status 1</pre>
 </div>
 </div>
 
@@ -15855,10 +15704,12 @@ cannot convert untyped constant {int 3} to &lt;reflect.Value&gt;</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">Elem</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="mi">2</span>
+<span class="n">d</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">Elem</span><span class="p">()</span>
 <span class="n">d</span><span class="o">.</span><span class="n">SetInt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
@@ -15887,20 +15738,6 @@ cannot convert untyped constant {int 3} to &lt;reflect.Value&gt;</pre>
 </div>
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>2 &lt;nil&gt;</pre>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -15910,10 +15747,11 @@ cannot convert untyped constant {int 3} to &lt;reflect.Value&gt;</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">:=</span> <span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="mi">1</span>
 <span class="n">rx</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">Elem</span><span class="p">()</span>
 <span class="n">rx</span><span class="o">.</span><span class="n">SetInt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">rx</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
@@ -15929,10 +15767,13 @@ cannot convert untyped constant {int 3} to &lt;reflect.Value&gt;</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rx</span><span class="o">.</span><span class="n">SetString</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="mi">1</span>
+<span class="n">rx</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">Elem</span><span class="p">()</span>
+<span class="n">rx</span><span class="o">.</span><span class="n">SetString</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
 <span class="n">rx</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">))</span>
 </pre></div>
 
@@ -15955,8 +15796,17 @@ cannot convert untyped constant {int 3} to &lt;reflect.Value&gt;</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-reflect: call of reflect.Value.SetString on int Value</pre>
+<pre>panic: reflect: call of reflect.Value.SetString on int Value
+
+goroutine 1 [running]:
+reflect.flag.mustBe(...)
+	/opt/homebrew/Cellar/go@1.19/1.19.13/libexec/src/reflect/value.go:221
+reflect.Value.SetString({0x104ba3d20?, 0x14000120018?, 0x104c34c80?}, {0x104b79333, 0x5})
+	/opt/homebrew/Cellar/go@1.19/1.19.13/libexec/src/reflect/value.go:2362 +0xe8
+main.main()
+	 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">[[ Cell [31] Line 4 ]]</span> /var/folders/4d/tg201k8x6yb81f_lrvt4440m0000gn/T/gonb_ce37c8f7/main.go:124 +0x148
+exit status 2
+</pre>
 </div>
 </div>
 
@@ -15969,10 +15819,11 @@ reflect: call of reflect.Value.SetString on int Value</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="n">y</span> <span class="n">interface</span><span class="p">{}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">var</span> <span class="n">y</span> <span class="n">interface</span><span class="p">{}</span>
 <span class="n">ry</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">Elem</span><span class="p">()</span>
 <span class="o">//</span><span class="n">ry</span><span class="o">.</span><span class="n">SetInt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="o">//</span><span class="n">ry</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
@@ -15990,10 +15841,11 @@ reflect: call of reflect.Value.SetString on int Value</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stdout</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Stdout</span><span class="p">)</span><span class="o">.</span><span class="n">Elem</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">stdout</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Stdout</span><span class="p">)</span><span class="o">.</span><span class="n">Elem</span><span class="p">()</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">stdout</span><span class="o">.</span><span class="n">Type</span><span class="p">())</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;%q&quot;</span><span class="p">,</span> <span class="n">stdout</span><span class="p">)</span>
 <span class="n">fd</span> <span class="o">:=</span> <span class="n">stdout</span><span class="o">.</span><span class="n">FieldByName</span><span class="p">(</span><span class="s2">&quot;fd&quot;</span><span class="p">)</span>
@@ -16021,23 +15873,9 @@ reflect: call of reflect.Value.SetString on int Value</pre>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>os.File
-{%!q(*os.file=&amp;{{{0 0 0} 24 {140160623845992} &lt;nil&gt; 0 0 true true true} |1 &lt;nil&gt; true false false})}false false
+{%!q(*os.file=&amp;{{{0 0 0} 1 {0} &lt;nil&gt; 0 1 true true true} /dev/stdout &lt;nil&gt; false true false})}false false
 </pre>
 </div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[63]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>12 &lt;nil&gt;</pre>
-</div>
-
 </div>
 
 </div>
@@ -16049,10 +15887,12 @@ reflect: call of reflect.Value.SetString on int Value</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;gopl.io/ch12/display&quot;</span>
+<span class="o">%%</span>
+<span class="n">stdout</span> <span class="o">:=</span> <span class="n">reflect</span><span class="o">.</span><span class="n">ValueOf</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Stdout</span><span class="p">)</span><span class="o">.</span><span class="n">Elem</span><span class="p">()</span>
 <span class="n">display</span><span class="o">.</span><span class="n">Display</span><span class="p">(</span><span class="s2">&quot;os.stdout&quot;</span><span class="p">,</span> <span class="n">stdout</span><span class="p">)</span>
 </pre></div>
 
@@ -16078,15 +15918,15 @@ reflect: call of reflect.Value.SetString on int Value</pre>
 <pre>Display os.stdout (reflect.Value):
 (*os.stdout.typ).size = 8
 (*os.stdout.typ).ptrdata = 8
-(*os.stdout.typ).hash = 1205328019
+(*os.stdout.typ).hash = 1971918968
 (*os.stdout.typ).tflag = 15
 (*os.stdout.typ).align = 8
 (*os.stdout.typ).fieldAlign = 8
 (*os.stdout.typ).kind = 57
-(*os.stdout.typ).equal = func(unsafe.Pointer, unsafe.Pointer) bool 0x80f1a0
+(*os.stdout.typ).equal = func(unsafe.Pointer, unsafe.Pointer) bool 0x100936cb0
 (*(*os.stdout.typ).gcdata) = 1
-(*os.stdout.typ).str = 26948
-(*os.stdout.typ).ptrToThis = 2002784
+(*os.stdout.typ).str = 4916
+(*os.stdout.typ).ptrToThis = 93632
 os.stdout.ptr = unsafe.Pointer value
 os.stdout.flag = 409
 </pre>
@@ -16102,10 +15942,11 @@ os.stdout.flag = 409
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="o">.</span><span class="n">Display</span><span class="p">(</span><span class="s2">&quot;os.stdout&quot;</span><span class="p">,</span><span class="n">os</span><span class="o">.</span><span class="n">Stdout</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>
+<span class="n">display</span><span class="o">.</span><span class="n">Display</span><span class="p">(</span><span class="s2">&quot;os.stdout&quot;</span><span class="p">,</span><span class="n">os</span><span class="o">.</span><span class="n">Stdout</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16131,18 +15972,18 @@ os.stdout.flag = 409
 (*(*os.stdout).file).pfd.fdmu.state = 0
 (*(*os.stdout).file).pfd.fdmu.rsema = 0
 (*(*os.stdout).file).pfd.fdmu.wsema = 0
-(*(*os.stdout).file).pfd.Sysfd = 20
-(*(*os.stdout).file).pfd.pd.runtimeCtx = 140160623848776
+(*(*os.stdout).file).pfd.Sysfd = 1
+(*(*os.stdout).file).pfd.pd.runtimeCtx = 0
 (*(*os.stdout).file).pfd.iovecs = nil
 (*(*os.stdout).file).pfd.csema = 0
-(*(*os.stdout).file).pfd.isBlocking = 0
+(*(*os.stdout).file).pfd.isBlocking = 1
 (*(*os.stdout).file).pfd.IsStream = true
 (*(*os.stdout).file).pfd.ZeroReadIsEOF = true
 (*(*os.stdout).file).pfd.isFile = true
-(*(*os.stdout).file).name = &#34;|1&#34;
+(*(*os.stdout).file).name = &#34;/dev/stdout&#34;
 (*(*os.stdout).file).dirinfo = nil
-(*(*os.stdout).file).nonblock = true
-(*(*os.stdout).file).stdoutOrErr = false
+(*(*os.stdout).file).nonblock = false
+(*(*os.stdout).file).stdoutOrErr = true
 (*(*os.stdout).file).appendMode = false
 </pre>
 </div>
@@ -16168,7 +16009,7 @@ os.stdout.flag = 409
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span>
@@ -16200,12 +16041,12 @@ os.stdout.flag = 409
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">read</span><span class="p">(</span><span class="n">lex</span> <span class="o">*</span><span class="n">lexer</span><span class="p">,</span> <span class="n">v</span> <span class="n">reflect</span><span class="o">.</span><span class="n">Value</span><span class="p">)</span> <span class="p">{</span>
@@ -16285,35 +16126,12 @@ os.stdout.flag = 409
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-repl.go:33:25: undefined identifier: read</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="n">endList</span><span class="p">(</span><span class="n">lex</span> <span class="o">*</span><span class="n">lexer</span><span class="p">)</span> <span class="nb">bool</span> <span class="p">{</span>
@@ -16348,7 +16166,7 @@ repl.go:33:25: undefined identifier: read</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;net/http&quot;</span>
@@ -16382,7 +16200,7 @@ repl.go:33:25: undefined identifier: read</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;log&quot;</span>
@@ -16456,7 +16274,7 @@ repl.go:33:25: undefined identifier: read</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//!</span>+populate
@@ -16498,7 +16316,7 @@ repl.go:33:25: undefined identifier: read</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;net/http&quot;</span>
@@ -16569,7 +16387,7 @@ repl.go:33:25: undefined identifier: read</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;strings&quot;</span>
@@ -16593,12 +16411,12 @@ repl.go:33:25: undefined identifier: read</pre>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;time&quot;</span>
@@ -16610,44 +16428,12 @@ repl.go:33:25: undefined identifier: read</pre>
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>type time.Duration
-func (time.Duration) Hours() float64
-func (time.Duration) Microseconds() int64
-func (time.Duration) Milliseconds() int64
-func (time.Duration) Minutes() float64
-func (time.Duration) Nanoseconds() int64
-func (time.Duration) Round(time.Duration) time.Duration
-func (time.Duration) Seconds() float64
-func (time.Duration) String() string
-func (time.Duration) Truncate(time.Duration) time.Duration
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;strings&quot;</span>
@@ -16657,31 +16443,6 @@ func (time.Duration) Truncate(time.Duration) time.Duration
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>type *strings.Replacer
-func (*strings.Replacer) Replace(string) string
-func (*strings.Replacer) WriteString(io.Writer, string) (int, error)
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></section></section>
